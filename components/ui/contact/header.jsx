@@ -19,12 +19,12 @@ export default forwardRef(function Header(props, ref) {
           <CanvasGradient />
         </div>
         <div className="w-full absolute bottom-0 left-0 p-12 text-white pointer-events-none">
-          <div className="font-bold text-8xl leading-thight">
+          <div className="font-bold text-7xl leading-thight">
             We Would ❤️ to
             <br />
             Hear From You.
           </div>
-          <div className="w-full font-light text-xl leading-relaxed mt-10 flex grid-cols-2">
+          <div className="w-full font-light text-lg leading-relaxed mt-10 flex grid-cols-2">
             <div className="w-full flex justify-start">
               Let&apos;s cut the bs, here we keep all things simple.
               <br />

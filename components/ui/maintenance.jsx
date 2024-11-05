@@ -11,7 +11,7 @@ export default forwardRef(function Maintenance(props, ref) {
       <div
         className={`text-center lowercase pb-6 text-white text-xl animate-pulse font-semibold ${Roboto_Mono.className} ${className}`}
       >
-        we are still under maintenance.
+        sorry, we are still under maintenance.
       </div>
     </div>
   );
