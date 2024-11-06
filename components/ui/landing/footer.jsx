@@ -29,6 +29,14 @@ export default function Footer() {
           href: "/",
         },
         {
+          title: "solutions",
+          href: "/solutions",
+        },
+        {
+          title: "work",
+          href: "/work",
+        },
+        {
           title: "contact",
           href: "/contact",
         },

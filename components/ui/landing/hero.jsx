@@ -29,7 +29,7 @@ export default function Hero() {
             href={`${process.env.NEXT_PUBLIC_CONSULTATION_BOOKING_LINK}`}
             target="_blank"
           >
-            <RainbowButton className="gap-2 text-black">
+            <RainbowButton className="gap-2 text-black transition-transform duration-500 hover:scale-105 active:scale-100 active:bg-black">
               Book a Free Consultation <PhoneCall className="w-4 h-4" />
             </RainbowButton>
           </Link>
