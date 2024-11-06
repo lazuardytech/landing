@@ -1,19 +1,11 @@
-"use client";
-
 import Link from "next/link";
 import BlurFade from "@/components/magicui/blur-fade";
 import Logo from "@/components/ui/logo";
 import { Badge } from "@/components/ui/badge";
-import { useRouter } from "next/navigation";
 
-export default function Header(props) {
-  const { className } = props;
-  const router = useRouter();
-
+export default function Header() {
   return (
-    <div
-      className={`${className} select-none sticky top-0 right-0 z-50 w-full bg-black/30 backdrop-filter backdrop-blur bg-opacity-30 text-white border-b border-zinc-800`}
-    >
+    <div className="select-none sticky top-0 right-0 z-50 w-full bg-black/30 backdrop-filter backdrop-blur bg-opacity-30 text-white border-b border-zinc-800">
       <div className="container px-16 py-4 grid grid-cols-4">
         <div className="col-span-1 flex justify-start pt-1.5">
           <BlurFade key={"header-title"} delay={0.25 + 0 * 0.05} inView>
@@ -25,7 +17,7 @@ export default function Header(props) {
             key={"header-nav-1"}
             delay={0.25 + 1 * 0.05}
             inView
-            className="text-end transition-colors text-white font-medium hover:text-white hover:cursor-pointer pt-1.5"
+            className="text-end transition-colors text-gray-400 font-medium hover:text-white hover:cursor-pointer pt-1.5"
           >
             <Link href="/">home</Link>
           </BlurFade>
