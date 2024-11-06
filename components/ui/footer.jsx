@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BlurFade from "@/components/magicui/blur-fade";
 import Logo from "@/components/ui/logo";
 import WordRotate from "@/components/magicui/word-rotate";
 
@@ -10,14 +11,22 @@ export default function Footer() {
         {
           title: "Instagram",
           href: "https://instagram.com/lazuardy.tech",
+          target: "_blank",
         },
         {
           title: "LinkedIn",
           href: "https://linkedin.com/company/lazuardy/?viewAsMember=true",
+          target: "_blank",
         },
         {
           title: "Medium",
           href: "https://blog.lazuardy.tech",
+          target: "_blank",
+        },
+        {
+          title: "GitHub",
+          href: "https://github.com/lazuardy-tech",
+          target: "_blank",
         },
       ],
     },
@@ -29,20 +38,18 @@ export default function Footer() {
           href: "/",
         },
         {
-          title: "solutions",
-          href: "/solutions",
-        },
-        {
-          title: "work",
-          href: "/work",
-        },
-        {
           title: "contact",
           href: "/contact",
         },
         {
           title: "articles",
           href: "https://blog.lazuardy.tech",
+          target: "_blank",
+        },
+        {
+          title: "manifesto",
+          href: "https://manifesto.lazuardy.tech",
+          target: "_blank",
         },
       ],
     },
@@ -118,34 +125,94 @@ export default function Footer() {
         <div className="grid lg:grid-cols-2 gap-10">
           <div className="flex gap-8 flex-col items-start">
             <div className="flex gap-2 flex-col">
-              <Logo className="w-full text-start text-2xl" withTM="true" />
-              <div className="flex text-lg font-light max-w-lg leading-relaxed tracking-tight text-background/75 text-left">
+              <BlurFade key={"footer-title"} delay={0.25 + 0 * 0.05} inView>
+                <Logo className="w-full text-start text-2xl" withTM="true" />
+              </BlurFade>
+              <BlurFade
+                key={"footer-text-1"}
+                delay={0.25 + 1 * 0.05}
+                inView
+                className="flex text-lg font-light max-w-lg text-left"
+              >
                 <span className="pt-2">Helping your businesses </span>
                 <WordRotate
                   className="ms-1 text-black dark:text-white"
                   words={phrases}
                 />
-              </div>
+              </BlurFade>
             </div>
             <div className="flex gap-20 flex-row">
-              <div className="flex flex-col text-sm max-w-lg text-background/75 text-left font-light text-gray-400">
-                <p className="text-white mb-2">PT Inovasi Kolektif Digital</p>
-                <p>Menara Suara Merdeka</p>
-                <p>Jl. Pandanaran No. 30, Semarang</p>
-                <p>Indonesia 50134</p>
+              <div className="flex flex-col text-sm text-left font-light text-gray-400">
+                <div className="text-white mb-2">
+                  <BlurFade
+                    key={"footer-text-2"}
+                    delay={0.25 + 2 * 0.05}
+                    inView
+                  >
+                    PT Inovasi Kolektif Digital
+                  </BlurFade>
+                </div>
+                <div>
+                  <BlurFade
+                    key={"footer-text-3"}
+                    delay={0.25 + 3 * 0.05}
+                    inView
+                  >
+                    Menara Suara Merdeka
+                  </BlurFade>
+                </div>
+                <div>
+                  <BlurFade
+                    key={"footer-text-4"}
+                    delay={0.25 + 4 * 0.05}
+                    inView
+                  >
+                    Jl. Pandanaran No. 30, Semarang
+                  </BlurFade>
+                </div>
+                <div>
+                  <BlurFade
+                    key={"footer-text-5"}
+                    delay={0.25 + 5 * 0.05}
+                    inView
+                  >
+                    Indonesia 50134
+                  </BlurFade>
+                </div>
+                <div className="mt-14">
+                  <BlurFade
+                    key={"footer-text-6"}
+                    delay={0.25 + 6 * 0.05}
+                    inView
+                  >
+                    © Lazuardy 2024. All rights reserved.
+                  </BlurFade>
+                </div>
               </div>
               <div className="flex flex-col text-sm max-w-lg text-background/75 text-left">
                 <Link
                   href="/terms"
                   className="transition-colors duration-500 font-light text-gray-200 text-sm hover:text-white mb-2"
                 >
-                  Terms of Service
+                  <BlurFade
+                    key={"footer-link-1"}
+                    delay={0.25 + 2 * 0.05}
+                    inView
+                  >
+                    Terms of Service
+                  </BlurFade>
                 </Link>
                 <Link
                   href="/privacy"
-                  className="transition-colors duration-500 font-light text-gray-200 text-sm hover:text-white"
+                  className="transition-colors duration-500 font-light text-gray-200 text-sm hover:text-white mb-2"
                 >
-                  Privacy Policy
+                  <BlurFade
+                    key={"footer-link-2"}
+                    delay={0.25 + 3 * 0.05}
+                    inView
+                  >
+                    Privacy Policy
+                  </BlurFade>
                 </Link>
               </div>
             </div>
@@ -157,27 +224,40 @@ export default function Footer() {
                 className="flex text-base gap-1 flex-col items-start"
               >
                 <div className="flex flex-col gap-2">
-                  {item.href ? (
-                    <Link
-                      href={item.href}
-                      className="flex justify-between items-center"
-                    >
-                      <span className="text-lg">{item.title}</span>
-                    </Link>
-                  ) : (
-                    <p className="text-lg">{item.title}</p>
-                  )}
-                  {item.items &&
-                    item.items.map((subItem, index) => (
+                  <BlurFade
+                    key={"footer-link-" + item.title}
+                    delay={0.25 + 0 * 0.05}
+                    inView
+                  >
+                    {item.href ? (
                       <Link
-                        key={index}
-                        href={subItem.href}
+                        href={item.href}
                         className="flex justify-between items-center"
                       >
-                        <span className="transition-colors duration-500 font-light text-gray-400 text-sm hover:text-white">
-                          {subItem.title}
-                        </span>
+                        <span className="text-lg">{item.title}</span>
                       </Link>
+                    ) : (
+                      <div className="text-lg">{item.title}</div>
+                    )}
+                  </BlurFade>
+                  {item.items &&
+                    item.items.map((subItem, index) => (
+                      <BlurFade
+                        key={"footer-link-" + index + subItem.href}
+                        delay={0.25 + (index + 1) * 0.05}
+                        inView
+                      >
+                        <Link
+                          key={index}
+                          href={subItem.href}
+                          target={subItem.target ?? ""}
+                          className="flex justify-between items-center"
+                        >
+                          <span className="transition-colors duration-500 font-light text-gray-400 text-sm hover:text-white">
+                            {subItem.title}
+                          </span>
+                        </Link>
+                      </BlurFade>
                     ))}
                 </div>
               </div>
