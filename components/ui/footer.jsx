@@ -113,8 +113,8 @@ export default function Footer() {
   ];
 
   return (
-    <div className="mx-auto w-full bg-foreground text-background border-t border-zinc-800 bg-black">
-      <div className="container py-12">
+    <div className="w-full bg-foreground text-background border-t border-zinc-800 bg-black">
+      <div className="container px-16 py-14">
         <div className="grid lg:grid-cols-2 gap-10">
           <div className="flex gap-8 flex-col items-start">
             <div className="flex gap-2 flex-col">

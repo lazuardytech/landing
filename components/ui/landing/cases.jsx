@@ -28,23 +28,23 @@ export default function Cases() {
   }, [api, current]);
 
   return (
-    <div className="container pb-12">
-      <div className="flex flex-col gap-10">
+    <>
+      <div className="container pt-0">
         <h2 className="w-full text-xl md:text-3xl font-regular text-center">
           Trusted by businesses worldwide
         </h2>
-        <Carousel setApi={setApi} className="">
-          <CarouselContent>
-            {Array.from({ length: 15 }).map((_, index) => (
-              <CarouselItem className="basis-1/4 lg:basis-1/6" key={index}>
-                <div className="flex rounded-md aspect-square bg-zinc-900 items-center justify-center p-6">
-                  <span className="text-sm">Logo {index + 1}</span>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
       </div>
-    </div>
+      <Carousel setApi={setApi} className="mt-10">
+        <CarouselContent>
+          {Array.from({ length: 15 }).map((_, index) => (
+            <CarouselItem className="basis-1/4 lg:basis-1/6" key={index}>
+              <div className="flex rounded-md aspect-square bg-zinc-900 items-center justify-center p-6">
+                <span className="text-sm">Logo {index + 1}</span>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
+    </>
   );
 }

@@ -5,7 +5,7 @@ import { RainbowButton } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <div className="container mx-auto">
+    <div className="container">
       <div className="flex gap-8 pb-20 min-h-screen items-center justify-center flex-col">
         <div>
           <ShinyBadge>

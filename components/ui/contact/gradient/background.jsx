@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { Plane } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import { cnoise21 } from "@/components/ui/gradient/noise";
+import { cnoise21 } from "@/components/ui/contact/gradient/noise";
 
 export default function Background() {
   const target = new THREE.Vector2();

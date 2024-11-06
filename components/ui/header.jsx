@@ -11,9 +11,9 @@ export default function Header(props) {
 
   return (
     <div
-      className={`${className} mx-auto sticky top-0 right-0 z-50 w-full bg-black/30 backdrop-filter backdrop-blur bg-opacity-30 text-white border-b border-zinc-800`}
+      className={`${className} sticky top-0 right-0 z-50 w-full bg-black/30 backdrop-filter backdrop-blur bg-opacity-30 text-white border-b border-zinc-800`}
     >
-      <div className="container py-4 grid grid-cols-4">
+      <div className="container px-16 py-4 grid grid-cols-4">
         <div className="col-span-1 flex justify-start">
           <Logo className="text-xl" />
         </div>
@@ -55,7 +55,7 @@ export default function Header(props) {
         <div className="col-span-1 flex justify-end">
           <Link href="/urgent">
             <Badge
-              className="text-xs font-medium px-4 py-1 dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:border-zinc-400 transition-colors duration-500"
+              className="text-xs font-medium px-4 py-1 dark:bg-zinc-900 dark:hover:bg-zinc-700 dark:border-zinc-400 transition-colors duration-500"
               variant="outline"
             >
               Feeling Urgent?
@@ -68,5 +68,9 @@ export default function Header(props) {
 }
 
 export function HeaderNavigationDivider() {
-  return <span className="ms-6 text-end text-zinc-600 font-2xl">/</span>;
+  return (
+    <span className="select-none hover:cursor-default ms-6 text-end text-zinc-600 font-2xl">
+      /
+    </span>
+  );
 }
