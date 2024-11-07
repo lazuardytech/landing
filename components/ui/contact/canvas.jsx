@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function Canvas() {
   return (
-    <div className="container px-16 mb-16 mt-40">
+    <div className="container px-16 mb-12 mt-40">
       <div className="font-bold text-7xl mb-10">
         <BlurFade key={"canvas-title"} delay={0.25 + 0 * 0.05} inView>
           We Would ❤️ to
@@ -15,7 +15,7 @@ export default function Canvas() {
       <div className="w-full grid grid-cols-2">
         <div className="col-span-1">
           <div className="font-light text-lg text-gray-400">
-            <div className="w-full flex justify-start">
+            <div className="w-full flex justify-start pt-2">
               <BlurFade key={"canvas-text-1"} delay={0.25 + 1 * 0.05} inView>
                 Let&apos;s cut the bs, here we keep all things simple.
                 <br />

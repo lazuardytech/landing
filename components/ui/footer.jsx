@@ -51,6 +51,11 @@ export default function Footer() {
           href: "https://manifesto.lazuardy.tech",
           target: "_blank",
         },
+        {
+          title: "partnership",
+          href: "https://partnership.lazuardy.tech",
+          target: "_blank",
+        },
       ],
     },
     {

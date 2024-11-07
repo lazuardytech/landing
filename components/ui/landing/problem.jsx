@@ -4,10 +4,10 @@ import { MoveDownLeft, MoveUpRight } from "lucide-react";
 export default function Problem() {
   return (
     <div className="w-full bg-neutral-950 mt-40">
-      <div className="container mx-auto py-40">
+      <div className="container px-20 py-40">
         <div className="flex flex-col text-center items-center">
           <div className="flex flex-col">
-            <div className="text-4xl md:text-5xl font-light mb-8">
+            <div className="text-3xl md:text-5xl font-light mb-8">
               <BlurFade key={"problem-title"} delay={0.25 + 0 * 0.05} inView>
                 We know you&apos;re tired with this.
               </BlurFade>
@@ -39,11 +39,11 @@ export default function Problem() {
 
 export function Stat() {
   return (
-    <div className="grid text-left grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full gap-4 lg:gap-8">
+    <div className="grid text-left grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full gap-4 lg:gap-8 px-20">
       <BlurFade key={"problem-stat-1"} delay={0.25 + 2 * 0.05} inView>
         <div className="flex gap-0 flex-col justify-between p-6 border rounded-md">
           <MoveUpRight className="w-4 h-4 mb-10 text-primary" />
-          <div className="text-4xl tracking-tighter max-w-xl text-left font-regular flex flex-row gap-4 items-end">
+          <div className="text-3xl tracking-tighter max-w-xl text-left font-regular flex flex-row gap-4 items-end">
             500.000
             <span className="text-muted-foreground text-sm tracking-normal">
               +20.1%
@@ -57,7 +57,7 @@ export function Stat() {
       <BlurFade key={"problem-stat-2"} delay={0.25 + 3 * 0.05} inView>
         <div className="flex gap-0 flex-col justify-between p-6 border rounded-md">
           <MoveDownLeft className="w-4 h-4 mb-10 text-destructive" />
-          <h2 className="text-4xl tracking-tighter max-w-xl text-left font-regular flex flex-row gap-4 items-end">
+          <h2 className="text-3xl tracking-tighter max-w-xl text-left font-regular flex flex-row gap-4 items-end">
             20.105
             <span className="text-muted-foreground text-sm tracking-normal">
               -2%
@@ -71,7 +71,7 @@ export function Stat() {
       <BlurFade key={"problem-stat-3"} delay={0.25 + 4 * 0.05} inView>
         <div className="flex gap-0 flex-col justify-between p-6 border rounded-md">
           <MoveUpRight className="w-4 h-4 mb-10 text-success" />
-          <h2 className="text-4xl tracking-tighter max-w-xl text-left font-regular flex flex-row gap-4 items-end">
+          <h2 className="text-3xl tracking-tighter max-w-xl text-left font-regular flex flex-row gap-4 items-end">
             $523.520
             <span className="text-muted-foreground text-sm tracking-normal">
               +8%
@@ -85,7 +85,7 @@ export function Stat() {
       <BlurFade key={"problem-stat-4"} delay={0.25 + 5 * 0.05} inView>
         <div className="flex gap-0 flex-col justify-between p-6 border rounded-md">
           <MoveUpRight className="w-4 h-4 mb-10 text-primary" />
-          <h2 className="text-4xl tracking-tighter max-w-xl text-left font-regular flex flex-row gap-4 items-end">
+          <h2 className="text-3xl tracking-tighter max-w-xl text-left font-regular flex flex-row gap-4 items-end">
             $1052
             <span className="text-muted-foreground text-sm tracking-normal">
               +2%

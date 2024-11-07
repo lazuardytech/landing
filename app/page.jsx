@@ -5,6 +5,9 @@ import Hero from "@/components/ui/landing/hero";
 import Cases from "@/components/ui/landing/cases";
 import Description from "@/components/ui/landing/description";
 import Problem from "@/components/ui/landing/problem";
+import Benefit from "@/components/ui/landing/benefit";
+import Division from "@/components/ui/landing/division";
+import Timeline from "@/components/ui/landing/timeline";
 import Solution from "@/components/ui/landing/solution";
 import FAQ from "@/components/ui/landing/faq";
 import Article from "@/components/ui/landing/article";
@@ -16,11 +19,14 @@ export default function Page() {
   return (
     <>
       <Header />
-      <div className="w-full mb-16">
+      <div className="w-full">
         <Hero />
         <Cases />
         <Description />
         <Problem />
+        <Benefit />
+        <Division />
+        <Timeline />
         <Solution />
         <Article />
         <FAQ />

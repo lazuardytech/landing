@@ -9,7 +9,7 @@ const images = Array.from({ length: 3 }, (_, i) => {
 
 export default function Description() {
   return (
-    <div className="container px-16 pt-40">
+    <div className="container px-20 pt-40">
       <div className="grid grid-cols-1 gap-8 items-center md:grid-cols-2">
         <div className="flex gap-4 flex-col">
           <div className="flex gap-4 flex-col">

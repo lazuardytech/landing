@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 export default function Header() {
   return (
     <div className="select-none sticky top-0 right-0 z-50 w-full bg-black/30 backdrop-filter backdrop-blur bg-opacity-30 text-white border-b border-zinc-800">
-      <div className="container px-16 py-4 grid grid-cols-4">
+      <div className="container px-20 py-4 grid grid-cols-4">
         <div className="col-span-1 flex justify-start pt-1.5">
           <BlurFade key={"header-title"} delay={0.25 + 0 * 0.05} inView>
             <Logo className="text-xl" />
@@ -71,6 +71,24 @@ export default function Header() {
           >
             <Link href="https://manifesto.lazuardy.tech" target="_blank">
               manifesto
+            </Link>
+          </BlurFade>
+          <BlurFade
+            key={"header-div-4"}
+            delay={0.25 + 8 * 0.05}
+            inView
+            className="pt-1.5"
+          >
+            <HeaderNavigationDivider />
+          </BlurFade>
+          <BlurFade
+            key={"header-nav-5"}
+            delay={0.25 + 9 * 0.05}
+            inView
+            className="text-end transition-colors text-gray-400 font-medium hover:text-white hover:cursor-pointer ms-6 pt-1.5"
+          >
+            <Link href="https://partnership.lazuardy.tech" target="_blank">
+              partnership
             </Link>
           </BlurFade>
         </div>

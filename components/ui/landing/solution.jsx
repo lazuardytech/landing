@@ -1,7 +1,7 @@
 import Image from "next/image";
 import BlurFade from "@/components/magicui/blur-fade";
 import { Button } from "@/components/ui/button";
-import { Building, BookText } from "lucide-react";
+import { Download } from "lucide-react";
 
 const images = Array.from({ length: 4 }, (_, i) => {
   const width = 1000;
@@ -11,7 +11,7 @@ const images = Array.from({ length: 4 }, (_, i) => {
 
 export default function Solution() {
   return (
-    <div className="container px-16 pt-40">
+    <div className="container pt-40 px-20">
       <div className="grid grid-cols-1 gap-8 items-center md:grid-cols-2">
         <div className="grid grid-cols-2 gap-8 pe-32 select-none pointer-events-none">
           <div className="row-span-1 aspect-square">
@@ -89,19 +89,25 @@ export default function Solution() {
         </div>
         <div className="flex gap-4 flex-col">
           <div className="flex gap-4 flex-col">
-            <div className="text-5xl md:text-6xl text-left font-regular">
+            <div className="text-3xl md:text-5xl text-left font-regular mb-2">
               <BlurFade key={"solution-title"} delay={0.25 + 4 * 0.05} inView>
-                We got a complete solutions, ready to help you.
+                Do we got your interest?
               </BlurFade>
             </div>
-            <div className="flex gap-4 mt-10">
+            <div className="text-md text-left font-light text-gray-400 max-w-lg">
+              <BlurFade key={"solution-title"} delay={0.25 + 4 * 0.05} inView>
+                Read our Company Profile and Service Offering documents below to
+                know more about us.
+              </BlurFade>
+            </div>
+            <div className="flex gap-6 mt-6">
               <BlurFade
                 key={"solution-button-1"}
                 delay={0.25 + 5 * 0.05}
                 inView
               >
                 <Button className="gap-2" variant="default" size="sm">
-                  Download Our Company Profile <Building className="w-4 h-4" />
+                  Company Profile <Download className="w-4 h-4" />
                 </Button>
               </BlurFade>
               <BlurFade
@@ -110,7 +116,7 @@ export default function Solution() {
                 inView
               >
                 <Button className="gap-2" variant="default" size="sm">
-                  Download Our Service Offering <BookText className="w-4 h-4" />
+                  Service Offering <Download className="w-4 h-4" />
                 </Button>
               </BlurFade>
             </div>

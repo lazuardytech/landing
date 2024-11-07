@@ -30,8 +30,8 @@ export default function Cases() {
 
   return (
     <>
-      <div className="container pt-0">
-        <h2 className="w-full text-xl md:text-3xl font-regular text-center">
+      <div className="container px-20">
+        <h2 className="w-full text-xl md:text-2xl font-light text-center">
           <BlurFade key={"cases-title"} delay={0.25 + 0 * 0.05} inView>
             Trusted by businesses worldwide
           </BlurFade>

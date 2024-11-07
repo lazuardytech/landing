@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 
 export default function FAQ() {
   return (
-    <div className="container px-16 mt-40">
+    <div className="container px-16 mt-40 mb-20">
       <div className="grid lg:grid-cols-2 gap-10">
         <div className="flex gap-10 flex-col">
           <div className="flex gap-4 flex-col">
