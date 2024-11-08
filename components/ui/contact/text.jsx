@@ -2,7 +2,7 @@ import Link from "next/link";
 import BlurFade from "@/components/magicui/blur-fade";
 import { ArrowRight } from "lucide-react";
 
-export default function Canvas() {
+export default function Text() {
   return (
     <div className="container px-16 mb-12 mt-40">
       <div className="font-bold text-7xl mb-10">

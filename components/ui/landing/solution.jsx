@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import BlurFade from "@/components/magicui/blur-fade";
 import { Button } from "@/components/ui/button";
@@ -96,18 +97,28 @@ export default function Solution() {
                 delay={0.25 + 5 * 0.05}
                 inView
               >
-                <Button className="gap-2" variant="default" size="sm">
-                  Company Profile <Download className="w-4 h-4" />
-                </Button>
+                <Link
+                  href={process.env.NEXT_PUBLIC_COMPANY_PROFILE_DOCUMENT_LINK}
+                  target="_blank"
+                >
+                  <Button className="gap-2" variant="default" size="sm">
+                    Company Profile <Download className="w-4 h-4" />
+                  </Button>
+                </Link>
               </BlurFade>
               <BlurFade
                 key={"solution-button-2"}
                 delay={0.25 + 6 * 0.05}
                 inView
               >
-                <Button className="gap-2" variant="default" size="sm">
-                  Service Offering <Download className="w-4 h-4" />
-                </Button>
+                <Link
+                  href={process.env.NEXT_PUBLIC_SERVICE_OFFERING_DOCUMENT_LINK}
+                  target="_blank"
+                >
+                  <Button className="gap-2" variant="default" size="sm">
+                    Service Offering <Download className="w-4 h-4" />
+                  </Button>
+                </Link>
               </BlurFade>
             </div>
           </div>

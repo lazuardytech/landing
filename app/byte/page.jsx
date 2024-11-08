@@ -1,7 +1,7 @@
 import Maintenance from "@/components/ui/maintenance";
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
-import Text from "@/components/ui/contact/text";
+import Text from "@/components/ui/wip/text";
 import { isMaintenanceMode } from "@/lib/config";
 
 export default function Page() {

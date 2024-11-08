@@ -183,7 +183,7 @@ export default function Text() {
             </div>
             <div className="mt-2">
               <Link
-                href="mailto:contact@lazuardy.tech"
+                href="https://wa.me/%2B6287777437000"
                 target="_blank"
                 className="hover:underline"
               >

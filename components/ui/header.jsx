@@ -1,18 +1,38 @@
+"use client";
+
 import Link from "next/link";
 import BlurFade from "@/components/magicui/blur-fade";
 import Logo from "@/components/ui/logo";
 import { ZincBadge } from "@/components/ui/badge";
+import { usePathname } from "next/navigation";
+
+const routes = {
+  "/": "",
+  "/byte": "Byte",
+  "/things": "Things",
+  "/studio": "Studio",
+  "/ai": "AI",
+};
 
 export default function Header() {
+  const pathname = usePathname();
+
   return (
     <div className="select-none sticky top-0 right-0 z-50 w-full bg-black/30 backdrop-filter backdrop-blur bg-opacity-30 text-white border-b border-zinc-800">
       <div className="container px-16 py-4 grid grid-cols-4">
-        <div className="col-span-1 flex justify-start pt-1.5">
-          <BlurFade key={"header-title"} delay={0.25 + 0 * 0.05} inView>
-            <Link href="/">
-              <Logo className="text-xl" />
-            </Link>
-          </BlurFade>
+        <div className="col-span-1">
+          <Link href="/">
+            <div className="flex gap-1 justify-start pt-1.5">
+              <BlurFade key="header-title" delay={0.25 + 0 * 0.05} inView>
+                <Logo className="text-xl" />
+              </BlurFade>
+              <BlurFade key="header-subtitle" delay={0.25 + 24 * 0.05} inView>
+                <div className="font-regular text-xl">
+                  {routes[pathname] || ""}
+                </div>
+              </BlurFade>
+            </div>
+          </Link>
         </div>
         <div className="col-span-2 flex justify-center text-center text-md pt-1">
           <BlurFade
