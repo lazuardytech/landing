@@ -34,7 +34,7 @@ export default function CookieConfirmation() {
               </button>
               <Link
                 className="text-xs text-white font-regular py-1 px-2 bg-zinc-950 hover:bg-zinc-700 transition-colors duration-500 border border-zinc-600 text-center"
-                href="/policy"
+                href="/privacy"
               >
                 Policy
               </Link>
