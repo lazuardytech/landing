@@ -7,7 +7,7 @@ import { RainbowButton } from "@/components/ui/button";
 export default function Hero() {
   return (
     <div className="container px-16">
-      <div className="flex pb-16 gap-8 min-h-screen items-center justify-center flex-col">
+      <div className="flex pb-20 gap-8 min-h-screen items-center justify-center flex-col">
         <BlurFade key="hero-badge" delay={0.25 + 0 * 0.05} inView>
           <ShinyBadge>
             <span>🇮🇩</span>
