@@ -48,7 +48,7 @@ export default function Timeline() {
 
 export function One() {
   return (
-    <div className="py-12 px-8 border border-zinc-800">
+    <div className="pt-12 pb-10 px-8 border border-zinc-800">
       <div className="flex gap-10 flex-col">
         <div className="flex gap-4 flex-col">
           <div className="flex gap-2 flex-col">
@@ -76,7 +76,8 @@ export function One() {
                 delay={0.25 + 5 * 0.05}
                 inView
               >
-                Managing a small business today is already tough.
+                Begin with an in-depth discussion to understand your goals and
+                needs.
               </BlurFade>
             </div>
           </div>
@@ -88,7 +89,7 @@ export function One() {
 
 export function Two() {
   return (
-    <div className="py-12 px-8 border border-zinc-800">
+    <div className="pt-12 pb-10 px-8 border border-zinc-800">
       <div className="flex gap-10 flex-col">
         <div className="flex gap-4 flex-col">
           <div className="flex gap-2 flex-col">
@@ -116,7 +117,7 @@ export function Two() {
                 delay={0.25 + 6 * 0.05}
                 inView
               >
-                Managing a small business today is already tough.
+                We craft a tailored solution plan that aligns with your vision.
               </BlurFade>
             </div>
           </div>
@@ -128,7 +129,7 @@ export function Two() {
 
 export function Three() {
   return (
-    <div className="py-12 px-8 border border-zinc-800">
+    <div className="pt-12 pb-10 px-8 border border-zinc-800">
       <div className="flex gap-10 flex-col">
         <div className="flex gap-4 flex-col">
           <div className="flex gap-2 flex-col">
@@ -156,7 +157,8 @@ export function Three() {
                 delay={0.25 + 7 * 0.05}
                 inView
               >
-                Managing a small business today is already tough.
+                Our team builds and implements your project with precision and
+                expertise.
               </BlurFade>
             </div>
           </div>
@@ -168,7 +170,7 @@ export function Three() {
 
 export function Four() {
   return (
-    <div className="py-12 px-8 border border-zinc-800">
+    <div className="pt-12 pb-10 px-8 border border-zinc-800">
       <div className="flex gap-10 flex-col">
         <div className="flex gap-4 flex-col">
           <div className="flex gap-2 flex-col">
@@ -196,7 +198,7 @@ export function Four() {
                 delay={0.25 + 8 * 0.05}
                 inView
               >
-                Managing a small business today is already tough.
+                We provide ongoing support to keep your solution up-to-date.
               </BlurFade>
             </div>
           </div>
