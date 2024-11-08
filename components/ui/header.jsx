@@ -1,15 +1,17 @@
 import Link from "next/link";
 import BlurFade from "@/components/magicui/blur-fade";
 import Logo from "@/components/ui/logo";
-import { Badge } from "@/components/ui/badge";
+import { ZincBadge } from "@/components/ui/badge";
 
 export default function Header() {
   return (
     <div className="select-none sticky top-0 right-0 z-50 w-full bg-black/30 backdrop-filter backdrop-blur bg-opacity-30 text-white border-b border-zinc-800">
-      <div className="container px-20 py-4 grid grid-cols-4">
+      <div className="container px-16 py-4 grid grid-cols-4">
         <div className="col-span-1 flex justify-start pt-1.5">
           <BlurFade key={"header-title"} delay={0.25 + 0 * 0.05} inView>
-            <Logo className="text-xl" />
+            <Link href="/">
+              <Logo className="text-xl" />
+            </Link>
           </BlurFade>
         </div>
         <div className="col-span-2 flex justify-center text-center text-md pt-1">
@@ -99,13 +101,11 @@ export default function Header() {
             inView
             className="pt-1.5"
           >
-            <Link href="/urgent">
-              <Badge
-                className="text-xs font-medium px-4 py-1 dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:border-zinc-400 transition-colors duration-500"
-                variant="outline"
-              >
-                Feeling Urgent?
-              </Badge>
+            <Link
+              href={process.env.NEXT_PUBLIC_CONSULTATION_BOOKING_LINK}
+              target="_blank"
+            >
+              <ZincBadge>Feeling Urgent?</ZincBadge>
             </Link>
           </BlurFade>
         </div>

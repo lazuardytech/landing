@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import BlurFade from "@/components/magicui/blur-fade";
 import {
   Carousel,
@@ -7,6 +8,35 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
+
+const cases = [
+  {
+    title: "Case 1",
+    image: "/images/landing/case-1.webp",
+  },
+  {
+    title: "Case 2",
+    image: "/images/landing/case-2.webp",
+  },
+  {
+    title: "Case 3",
+    image: "/images/landing/case-3.webp",
+  },
+  {
+    title: "Case 4",
+    image: "/images/landing/case-4.webp",
+  },
+  {
+    title: "Case 5",
+    image: "/images/landing/case-5.webp",
+  },
+  {
+    title: "Case 6",
+    image: "/images/landing/case-6.webp",
+  },
+];
+
+const items = cases.concat(cases).concat(cases);
 
 export default function Cases() {
   const [api, setApi] = useState();
@@ -29,27 +59,29 @@ export default function Cases() {
   }, [api, current]);
 
   return (
-    <>
-      <div className="container px-20">
-        <h2 className="w-full text-xl md:text-2xl font-light text-center">
+    <div className="mt-8 mb-16">
+      <div className="container">
+        <div className="w-full px-16 text-xl md:text-2xl font-light text-center">
           <BlurFade key={"cases-title"} delay={0.25 + 0 * 0.05} inView>
             Trusted by businesses worldwide
           </BlurFade>
-        </h2>
+        </div>
       </div>
-      <BlurFade key={"cases-carousel"} delay={0.25 + 1 * 0.05} inView>
-        <Carousel setApi={setApi} className="mt-10">
+      <BlurFade key="cases-carousel" delay={0.25 + 1 * 0.05} inView>
+        <Carousel setApi={setApi}>
           <CarouselContent>
-            {Array.from({ length: 15 }).map((_, index) => (
+            {items.map((item, index) => (
               <CarouselItem className="basis-1/4 lg:basis-1/6" key={index}>
-                <div className="flex rounded-md aspect-square bg-zinc-900 items-center justify-center p-6">
-                  <span className="text-sm">Logo {index + 1}</span>
+                <div className="relative aspect-square flex items-center justify-center">
+                  <div className="relative w-full h-full">
+                    <Image src={item.image} alt={item.title} fill />
+                  </div>
                 </div>
               </CarouselItem>
             ))}
           </CarouselContent>
         </Carousel>
       </BlurFade>
-    </>
+    </div>
   );
 }

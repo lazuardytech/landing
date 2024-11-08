@@ -41,7 +41,7 @@ const articles = [
 
 export default function Article() {
   return (
-    <div className="container mt-40 px-20 flex flex-col gap-14">
+    <div className="container mt-40 px-16 flex flex-col gap-14">
       <div className="flex w-full flex-col sm:flex-row sm:justify-between sm:items-center gap-8">
         <BlurFade
           className="relative w-full h-full"
@@ -49,7 +49,7 @@ export default function Article() {
           delay={0.25 + 0 * 0.05}
           inView
         >
-          <div className="text-2xl md:text-4xl">Our Latest Articles</div>
+          <div className="text-2xl md:text-3xl">Our Latest Articles</div>
         </BlurFade>
         <BlurFade key={"article-button-1"} delay={0.25 + 1 * 0.05} inView>
           <Link href="https://blog.lazuardy.tech" target="_blank">
@@ -69,17 +69,16 @@ export default function Article() {
               <div className="flex flex-col gap-2 hover:opacity-75 cursor-pointer">
                 <div className="relative aspect-video mb-4">
                   <BlurFade
-                    className="relative w-full h-full"
-                    key={"image" + article.title}
+                    className="relative w-full h-full border border-zinc-800"
+                    key={"image-" + article.title}
                     delay={0.25 + (index + 2) * 0.05}
                     inView
                   >
                     <Image
                       src={article.image}
                       alt={article.title}
-                      layout="fill"
-                      objectFit="cover"
-                      className="rounded-lg"
+                      className="object-cover w-full h-full"
+                      fill
                     />
                   </BlurFade>
                 </div>

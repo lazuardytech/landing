@@ -1,31 +1,51 @@
 import BlurFade from "@/components/magicui/blur-fade";
-import { MoveDownLeft, MoveUpRight } from "lucide-react";
+import {
+  Database,
+  MoveDownLeft,
+  MoveUpRight,
+  Receipt,
+  RefreshCcw,
+  RefreshCw,
+  Settings,
+} from "lucide-react";
+import Link from "next/link";
 
 export default function Problem() {
   return (
-    <div className="w-full bg-neutral-950 mt-40">
-      <div className="container px-20 py-40">
+    <div className="w-full bg-neutral-950 mt-40 py-40">
+      <div className="container px-16">
         <div className="flex flex-col text-center items-center">
           <div className="flex flex-col">
             <div className="text-3xl md:text-5xl font-light mb-8">
               <BlurFade key={"problem-title"} delay={0.25 + 0 * 0.05} inView>
-                We know you&apos;re tired with this.
+                We know you&apos;re tired
+                <br />
+                to grow your business
               </BlurFade>
             </div>
-            <div className="text-md font-light text-gray-400 text-center max-w-xl mx-auto mb-16">
+            <div className="text-md font-light text-gray-400 text-center max-w-4xl mx-auto mb-16">
               <BlurFade key={"problem-text-1"} delay={0.25 + 1 * 0.05} inView>
-                Managing a small business today is already tough. Avoid further
-                complications by ditching outdated, tedious trade methods. Our
-                goal is to streamline SMB trade, making it easier and faster
-                than ever.
+                Statistic says, 90% of startups that exist are failing, while
+                18.4% business tend to fail at the first year. —{" "}
+                <Link
+                  href="https://luisazhou.com/blog/businesses-that-fail/"
+                  target="_blank"
+                  className="text-gray-200 hover:underline"
+                >
+                  luisazhou.com
+                </Link>
+                <br />
+                We know your journey is tough, and growth can feel exhausting
+                for now.
               </BlurFade>
             </div>
-            <div className="mb-20">
+            <div className="mb-16">
               <Stat />
             </div>
             <div className="text-md font-regular text-gray-200 text-center max-w-xl mx-auto">
               <BlurFade key={"problem-text-2"} delay={0.25 + 6 * 0.05} inView>
-                Let us handle the hard work for you, so you don&apos;t have to.
+                Thus, let us handle the hard work for you, so you don&apos;t
+                have to.
                 <br />
                 You can focus on what you do best for the next step.
               </BlurFade>
@@ -41,59 +61,47 @@ export function Stat() {
   return (
     <div className="grid text-left grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full gap-4 lg:gap-8 px-20">
       <BlurFade key={"problem-stat-1"} delay={0.25 + 2 * 0.05} inView>
-        <div className="flex gap-0 flex-col justify-between p-6 border rounded-md">
-          <MoveUpRight className="w-4 h-4 mb-10 text-primary" />
-          <div className="text-3xl tracking-tighter max-w-xl text-left font-regular flex flex-row gap-4 items-end">
-            500.000
-            <span className="text-muted-foreground text-sm tracking-normal">
-              +20.1%
-            </span>
+        <div className="flex gap-0 flex-col justify-between p-6 border border-zinc-800">
+          <Settings className="w-6 h-6 mb-10 text-primary" />
+          <div className="text-3xl max-w-xl text-left font-regular text-white flex flex-row gap-4 items-end">
+            74%
           </div>
-          <div className="text-base leading-relaxed tracking-tight text-muted-foreground max-w-xl text-left">
-            Monthly active users
+          <div className="text-light text-gray-300 text-md text-left max-w-xl me-2 mt-2">
+            Business with Operational Bottlenecks
           </div>
         </div>
       </BlurFade>
       <BlurFade key={"problem-stat-2"} delay={0.25 + 3 * 0.05} inView>
-        <div className="flex gap-0 flex-col justify-between p-6 border rounded-md">
-          <MoveDownLeft className="w-4 h-4 mb-10 text-destructive" />
-          <h2 className="text-3xl tracking-tighter max-w-xl text-left font-regular flex flex-row gap-4 items-end">
-            20.105
-            <span className="text-muted-foreground text-sm tracking-normal">
-              -2%
-            </span>
-          </h2>
-          <p className="text-base leading-relaxed tracking-tight text-muted-foreground max-w-xl text-left">
-            Daily active users
-          </p>
+        <div className="flex gap-0 flex-col justify-between p-6 border border-zinc-800">
+          <Database className="w-6 h-6 mb-10 text-primary" />
+          <div className="text-3xl max-w-xl text-left font-regular text-white flex flex-row gap-4 items-end">
+            68%
+          </div>
+          <div className="text-light text-gray-300 text-md text-left max-w-xl me-2 mt-2">
+            Business Struggle to Leverage Data Effectively
+          </div>
         </div>
       </BlurFade>
       <BlurFade key={"problem-stat-3"} delay={0.25 + 4 * 0.05} inView>
-        <div className="flex gap-0 flex-col justify-between p-6 border rounded-md">
-          <MoveUpRight className="w-4 h-4 mb-10 text-success" />
-          <h2 className="text-3xl tracking-tighter max-w-xl text-left font-regular flex flex-row gap-4 items-end">
-            $523.520
-            <span className="text-muted-foreground text-sm tracking-normal">
-              +8%
-            </span>
-          </h2>
-          <p className="text-base leading-relaxed tracking-tight text-muted-foreground max-w-xl text-left">
-            Monthly recurring revenue
-          </p>
+        <div className="flex gap-0 flex-col justify-between p-6 border border-zinc-800">
+          <Receipt className="w-6 h-6 mb-10 text-primary" />
+          <div className="text-3xl max-w-xl text-left font-regular text-white flex flex-row gap-4 items-end">
+            60%
+          </div>
+          <div className="text-light text-gray-300 text-md text-left max-w-xl me-2 mt-2">
+            Higher Cost to Performance Ratio
+          </div>
         </div>
       </BlurFade>
       <BlurFade key={"problem-stat-4"} delay={0.25 + 5 * 0.05} inView>
-        <div className="flex gap-0 flex-col justify-between p-6 border rounded-md">
-          <MoveUpRight className="w-4 h-4 mb-10 text-primary" />
-          <h2 className="text-3xl tracking-tighter max-w-xl text-left font-regular flex flex-row gap-4 items-end">
-            $1052
-            <span className="text-muted-foreground text-sm tracking-normal">
-              +2%
-            </span>
-          </h2>
-          <p className="text-base leading-relaxed tracking-tight text-muted-foreground max-w-xl text-left">
-            Cost per acquisition
-          </p>
+        <div className="flex gap-0 flex-col justify-between p-6 border border-zinc-800">
+          <RefreshCw className="w-6 h-6 mb-10 text-primary" />
+          <div className="text-3xl max-w-xl text-left font-regular text-white flex flex-row gap-4 items-end">
+            40%
+          </div>
+          <div className="text-light text-gray-300 text-md text-left max-w-xl me-2 mt-2">
+            Hours a Week Spent Doing Repetitive Jobs
+          </div>
         </div>
       </BlurFade>
     </div>

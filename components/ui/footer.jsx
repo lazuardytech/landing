@@ -3,130 +3,130 @@ import BlurFade from "@/components/magicui/blur-fade";
 import Logo from "@/components/ui/logo";
 import WordRotate from "@/components/magicui/word-rotate";
 
+const navigationItems = [
+  {
+    title: "Connect.",
+    items: [
+      {
+        title: "Instagram",
+        href: "https://instagram.com/lazuardy.tech",
+        target: "_blank",
+      },
+      {
+        title: "LinkedIn",
+        href: "https://linkedin.com/company/lazuardy/?viewAsMember=true",
+        target: "_blank",
+      },
+      {
+        title: "Medium",
+        href: "https://blog.lazuardy.tech",
+        target: "_blank",
+      },
+      {
+        title: "GitHub",
+        href: "https://github.com/lazuardy-tech",
+        target: "_blank",
+      },
+    ],
+  },
+  {
+    title: "Navigate.",
+    items: [
+      {
+        title: "home",
+        href: "/",
+      },
+      {
+        title: "contact",
+        href: "/contact",
+      },
+      {
+        title: "articles",
+        href: "https://blog.lazuardy.tech",
+        target: "_blank",
+      },
+      {
+        title: "manifesto",
+        href: "https://manifesto.lazuardy.tech",
+        target: "_blank",
+      },
+      {
+        title: "partnership",
+        href: "https://partnership.lazuardy.tech",
+        target: "_blank",
+      },
+    ],
+  },
+  {
+    title: "Solutions.",
+    items: [
+      {
+        title: "technology consultation",
+        href: "/byte",
+      },
+      {
+        title: "cloud infrastructure",
+        href: "/byte",
+      },
+      {
+        title: "software engineering",
+        href: "/byte",
+      },
+      {
+        title: "hardware engineering",
+        href: "/things",
+      },
+      {
+        title: "internet of things",
+        href: "/things",
+      },
+      {
+        title: "ui/ux design",
+        href: "/studio",
+      },
+      {
+        title: "brand identity",
+        href: "/studio",
+      },
+      {
+        title: "artificial intelligence",
+        href: "/ai",
+      },
+      {
+        title: "computer vision",
+        href: "/ai",
+      },
+    ],
+  },
+];
+
+const phrases = [
+  "grow bigger.",
+  "outstands other.",
+  "shine brighter.",
+  "be better.",
+  "succeed faster.",
+  "thrive stronger.",
+  "achieve more.",
+  "reach higher.",
+  "stand out.",
+  "innovate boldly.",
+  "perform better.",
+  "connect deeper.",
+  "expand wider.",
+  "excel further.",
+  "progress smarter.",
+  "evolve faster.",
+  "transform successfully.",
+  "lead confidently.",
+  "build trust.",
+  "adapt easier.",
+];
+
 export default function Footer() {
-  const navigationItems = [
-    {
-      title: "Connect.",
-      items: [
-        {
-          title: "Instagram",
-          href: "https://instagram.com/lazuardy.tech",
-          target: "_blank",
-        },
-        {
-          title: "LinkedIn",
-          href: "https://linkedin.com/company/lazuardy/?viewAsMember=true",
-          target: "_blank",
-        },
-        {
-          title: "Medium",
-          href: "https://blog.lazuardy.tech",
-          target: "_blank",
-        },
-        {
-          title: "GitHub",
-          href: "https://github.com/lazuardy-tech",
-          target: "_blank",
-        },
-      ],
-    },
-    {
-      title: "Navigate.",
-      items: [
-        {
-          title: "home",
-          href: "/",
-        },
-        {
-          title: "contact",
-          href: "/contact",
-        },
-        {
-          title: "articles",
-          href: "https://blog.lazuardy.tech",
-          target: "_blank",
-        },
-        {
-          title: "manifesto",
-          href: "https://manifesto.lazuardy.tech",
-          target: "_blank",
-        },
-        {
-          title: "partnership",
-          href: "https://partnership.lazuardy.tech",
-          target: "_blank",
-        },
-      ],
-    },
-    {
-      title: "Solutions.",
-      items: [
-        {
-          title: "technology consultation",
-          href: "/byte",
-        },
-        {
-          title: "cloud infrastructure",
-          href: "/byte",
-        },
-        {
-          title: "software engineering",
-          href: "/byte",
-        },
-        {
-          title: "hardware engineering",
-          href: "/things",
-        },
-        {
-          title: "internet of things",
-          href: "/things",
-        },
-        {
-          title: "ui/ux design",
-          href: "/studio",
-        },
-        {
-          title: "brand identity",
-          href: "/studio",
-        },
-        {
-          title: "artificial intelligence",
-          href: "/ai",
-        },
-        {
-          title: "computer vision",
-          href: "/ai",
-        },
-      ],
-    },
-  ];
-
-  const phrases = [
-    "grow bigger.",
-    "outstands other.",
-    "shine brighter.",
-    "be better.",
-    "succeed faster.",
-    "thrive stronger.",
-    "achieve more.",
-    "reach higher.",
-    "stand out.",
-    "innovate boldly.",
-    "perform better.",
-    "connect deeper.",
-    "expand wider.",
-    "excel further.",
-    "progress smarter.",
-    "evolve faster.",
-    "transform successfully.",
-    "lead confidently.",
-    "build trust.",
-    "adapt easier.",
-  ];
-
   return (
     <div className="w-full bg-foreground text-background border-t border-zinc-800 bg-black">
-      <div className="container px-16 py-14">
+      <div className="container p-16">
         <div className="grid lg:grid-cols-2 gap-10">
           <div className="flex gap-8 flex-col items-start">
             <div className="flex gap-2 flex-col">

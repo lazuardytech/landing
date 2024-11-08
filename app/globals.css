@@ -89,3 +89,7 @@ body {
     background-size: 100% 3px;
     background-position: 0 100%;
 }
+
+.case {
+    padding: 100px !important;
+}

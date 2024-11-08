@@ -11,6 +11,7 @@ import Timeline from "@/components/ui/landing/timeline";
 import Solution from "@/components/ui/landing/solution";
 import FAQ from "@/components/ui/landing/faq";
 import Article from "@/components/ui/landing/article";
+import CookieConfirmation from "@/components/ui/cookie-confirmation";
 import { isMaintenanceMode } from "@/lib/config";
 
 export default function Page() {
@@ -32,6 +33,7 @@ export default function Page() {
         <FAQ />
       </div>
       <Footer />
+      <CookieConfirmation />
     </>
   );
 }

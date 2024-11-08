@@ -3,7 +3,7 @@ import BlurFade from "@/components/magicui/blur-fade";
 export default function Timeline() {
   return (
     <>
-      <div className="container mt-40 px-20 ">
+      <div className="container mt-40 px-16">
         <div className="grid grid-rows gap-12">
           <div className="text-left">
             <div className="text-3xl md:text-5xl font-regular mb-6">
@@ -18,7 +18,7 @@ export default function Timeline() {
               </BlurFade>
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-12 h-auto">
+          <div className="grid grid-cols-4 gap-12 h-auto">
             <BlurFade key={"timeline-card-1"} delay={0.25 + 2 * 0.05} inView>
               <One />
             </BlurFade>
@@ -27,6 +27,9 @@ export default function Timeline() {
             </BlurFade>
             <BlurFade key={"timeline-card-3"} delay={0.25 + 4 * 0.05} inView>
               <Three />
+            </BlurFade>
+            <BlurFade key={"timeline-card-4"} delay={0.25 + 5 * 0.05} inView>
+              <Four />
             </BlurFade>
           </div>
         </div>
@@ -45,7 +48,7 @@ export default function Timeline() {
 
 export function One() {
   return (
-    <div className="py-12 px-8 border border-zinc-800 rounded-lg">
+    <div className="py-12 px-8 border border-zinc-800">
       <div className="flex gap-10 flex-col">
         <div className="flex gap-4 flex-col">
           <div className="flex gap-2 flex-col">
@@ -85,7 +88,7 @@ export function One() {
 
 export function Two() {
   return (
-    <div className="py-12 px-8 border border-zinc-800 rounded-lg">
+    <div className="py-12 px-8 border border-zinc-800">
       <div className="flex gap-10 flex-col">
         <div className="flex gap-4 flex-col">
           <div className="flex gap-2 flex-col">
@@ -125,7 +128,7 @@ export function Two() {
 
 export function Three() {
   return (
-    <div className="py-12 px-8 border border-zinc-800 rounded-lg">
+    <div className="py-12 px-8 border border-zinc-800">
       <div className="flex gap-10 flex-col">
         <div className="flex gap-4 flex-col">
           <div className="flex gap-2 flex-col">
@@ -151,6 +154,46 @@ export function Three() {
               <BlurFade
                 key={"timeline-card-3-description"}
                 delay={0.25 + 7 * 0.05}
+                inView
+              >
+                Managing a small business today is already tough.
+              </BlurFade>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function Four() {
+  return (
+    <div className="py-12 px-8 border border-zinc-800">
+      <div className="flex gap-10 flex-col">
+        <div className="flex gap-4 flex-col">
+          <div className="flex gap-2 flex-col">
+            <BlurFade
+              key={"timeline-card-4-number"}
+              delay={0.25 + 6 * 0.05}
+              inView
+            >
+              <div className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+                4
+              </div>
+            </BlurFade>
+            <div className="w-full text-2xl lg:text-4xl text-center font-regular">
+              <BlurFade
+                key={"timeline-card-4-title"}
+                delay={0.25 + 7 * 0.05}
+                inView
+              >
+                Maintain
+              </BlurFade>
+            </div>
+            <div className="text-md font-light text-gray-400 text-center mt-6">
+              <BlurFade
+                key={"timeline-card-4-description"}
+                delay={0.25 + 8 * 0.05}
                 inView
               >
                 Managing a small business today is already tough.
