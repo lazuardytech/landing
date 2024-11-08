@@ -10,6 +10,7 @@ export default function CookieConfirmation() {
   useEffect(() => {
     if (localStorage.getItem("cookie-confirmation")) return;
     setTimeout(() => {
+      toast.dismiss();
       toast.custom(
         (t) => (
           <div className="px-4 py-1 w-auto border border-zinc-800 bg-zinc-950 grid grid-cols-6 shadow-2xl">
