@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import BlurFade from "@/components/magicui/blur-fade";
 import Logo from "@/components/ui/logo";
+import BlurFade from "@/components/magicui/blur-fade";
 import { ZincBadge } from "@/components/ui/badge";
 import { usePathname } from "next/navigation";
 
