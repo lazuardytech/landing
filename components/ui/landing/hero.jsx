@@ -9,10 +9,15 @@ export default function Hero() {
     <div className="container px-16">
       <div className="flex pb-20 gap-8 min-h-screen items-center justify-center flex-col">
         <BlurFade key="hero-badge" delay={0.25 + 0 * 0.05} inView>
-          <ShinyBadge>
-            <span>🇮🇩</span>
-            <span className="ms-2">We&apos;re registered on Indonesia!</span>
-          </ShinyBadge>
+          <Link
+            href="https://lazuardytech.medium.com/were-now-registered-on-indonesia-f2d9b9cffdc1"
+            target="_blank"
+          >
+            <ShinyBadge>
+              <span>🇮🇩</span>
+              <span className="ms-2">We&apos;re registered on Indonesia!</span>
+            </ShinyBadge>
+          </Link>
         </BlurFade>
         <div className="flex gap-4 flex-col">
           <div className="text-5xl md:text-7xl max-w-3xl tracking-normal text-center font-regular">
