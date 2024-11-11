@@ -11,4 +11,4 @@ This is a repository for the landing page of Lazuardy. Built using [Next](https:
 > You are not allowed to use this project for commercial purposes.
 
 > © Lazuardy 2024. All rights reserved. <br/>
-> PT Inovasi Kolektif Digital. <br/> > [Terms of Service](https://lazuardy.tech/terms) | [Privacy Policy](https://lazuardy.tech/privacy)
+> PT Inovasi Kolektif Digital. <br/> [Terms of Service](https://lazuardy.tech/terms) | [Privacy Policy](https://lazuardy.tech/privacy)
