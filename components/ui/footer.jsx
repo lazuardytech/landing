@@ -2,101 +2,20 @@ import Link from "next/link";
 import BlurFade from "@/components/magicui/blur-fade";
 import Logo from "@/components/ui/logo";
 import WordRotate from "@/components/magicui/word-rotate";
+import { socials, navigations, solutions } from "@/lib/state";
 
 export const navigationItems = [
   {
     label: "Connect.",
-    items: [
-      {
-        label: "Instagram",
-        link: "https://instagram.com/lazuardy.tech",
-        target: "_blank",
-      },
-      {
-        label: "LinkedIn",
-        link: "https://linkedin.com/company/lazuardy/?viewAsMember=true",
-        target: "_blank",
-      },
-      {
-        label: "Medium",
-        link: "https://blog.lazuardy.tech",
-        target: "_blank",
-      },
-      {
-        label: "GitHub",
-        link: "https://github.com/lazuardy-tech",
-        target: "_blank",
-      },
-    ],
+    items: socials,
   },
   {
     label: "Navigate.",
-    items: [
-      {
-        label: "home",
-        link: "/",
-      },
-      {
-        label: "contact",
-        link: "/contact",
-      },
-      {
-        label: "articles",
-        link: "https://blog.lazuardy.tech",
-        target: "_blank",
-      },
-      {
-        label: "manifesto",
-        link: "https://manifesto.lazuardy.tech",
-        target: "_blank",
-      },
-      {
-        label: "partnership",
-        link: "https://partnership.lazuardy.tech",
-        target: "_blank",
-      },
-    ],
+    items: navigations,
   },
   {
     label: "Solutions.",
-    items: [
-      {
-        label: "technology consultation",
-        link: "/byte",
-      },
-      {
-        label: "cloud infrastructure",
-        link: "/byte",
-      },
-      {
-        label: "software engineering",
-        link: "/byte",
-      },
-      {
-        label: "hardware engineering",
-        link: "/things",
-      },
-      {
-        label: "internet of things",
-        link: "/things",
-      },
-      {
-        label: "ui/ux design",
-        link: "/studio",
-      },
-      {
-        label: "brand identity",
-        link: "/studio",
-      },
-      {
-        label: "artificial intelligence",
-        link: "/ai",
-      },
-      {
-        label: "computer vision",
-        link: "/ai",
-      },
-    ],
+    items: solutions,
   },
 ];
 
@@ -125,7 +44,12 @@ export const phrases = [
 
 export default function Footer() {
   return (
-    <div className="w-full bg-foreground text-background border-t border-zinc-800 bg-black">
+    <BlurFade
+      key="footer"
+      className="w-full bg-foreground text-background border-t border-zinc-800 bg-black"
+      delay={0.25 + 0 * 0.05}
+      inView
+    >
       <div className="container py-10 px-10 lg:px-16">
         <div className="grid lg:grid-cols-2 gap-10">
           <div className="flex gap-8 flex-col items-start">
@@ -256,6 +180,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </div>
+    </BlurFade>
   );
 }

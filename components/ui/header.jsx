@@ -8,8 +8,20 @@ import { ZincBadge } from "@/components/ui/badge";
 import { ChevronDown } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { navigations } from "@/lib/state";
 
-const routes = {
+export const routes = {
+  "/": "/",
+  "/solutions": "/solutions",
+  "/byte": "/solutions",
+  "/things": "/solutions",
+  "/studio": "/solutions",
+  "/ai": "/solutions",
+  "/works": "/works",
+  "/contact": "/contact",
+};
+
+export const solutionRoutes = {
   "/": "",
   "/byte": "Byte",
   "/things": "Things",
@@ -17,46 +29,17 @@ const routes = {
   "/ai": "AI",
 };
 
-export const navigations = [
-  {
-    label: "home",
-    link: "/",
-  },
-  {
-    label: "solutions",
-    link: "/solutions",
-  },
-  {
-    label: "works",
-    link: "/works",
-  },
-  {
-    label: "articles",
-    link: "https://blog.lazuardy.tech",
-    target: "_blank",
-  },
-  {
-    label: "contact",
-    link: "/contact",
-  },
-  // {
-  //   label: "manifesto",
-  //   link: "https://manifesto.lazuardy.tech",
-  //   target: "_blank",
-  // },
-  {
-    label: "partnership",
-    link: "https://partnership.lazuardy.tech",
-    target: "_blank",
-  },
-];
-
 export default function Header() {
   const pathname = usePathname();
   const [menuExpanded, setMenuExpanded] = useState(false);
 
   return (
-    <div className="select-none sticky top-0 right-0 z-50 w-full bg-black/30 backdrop-filter backdrop-blur bg-opacity-30 text-white border-b border-zinc-800">
+    <BlurFade
+      key="header"
+      className="select-none sticky top-0 right-0 z-50 w-full bg-black/30 backdrop-filter backdrop-blur bg-opacity-30 text-white border-b border-zinc-800"
+      delay={0.25 + 0 * 0.05}
+      inView
+    >
       <div className="container px-10 lg:px-16 py-4 grid grid-rows">
         <HeaderDesktop
           pathname={pathname}
@@ -64,14 +47,9 @@ export default function Header() {
           setMenuExpanded={setMenuExpanded}
           navigations={navigations}
         />
-        <HeaderMobile
-          pathname={pathname}
-          menuExpanded={menuExpanded}
-          setMenuExpanded={setMenuExpanded}
-          navigations={navigations}
-        />
+        <HeaderMobile menuExpanded={menuExpanded} navigations={navigations} />
       </div>
-    </div>
+    </BlurFade>
   );
 }
 
@@ -99,7 +77,7 @@ export function HeaderDesktop({
             </BlurFade>
             <BlurFade key="header-subtitle" delay={0.25 + 24 * 0.05} inView>
               <div className="font-regular text-xl">
-                {routes[pathname] || ""}
+                {solutionRoutes[pathname] || ""}
               </div>
             </BlurFade>
           </div>
@@ -110,7 +88,7 @@ export function HeaderDesktop({
           <div key={"header-desktop-nav-" + index} className="flex gap-5">
             <BlurFade
               key={"header-desktop-nav-label-" + index}
-              className="text-end transition-colors text-gray-400 font-medium hover:text-white pt-1.5"
+              className={`text-end transition-colors font-medium hover:text-white pt-1.5 ${routes[pathname] === nav.link ? "text-white" : "text-gray-400"}`}
               delay={0.25 + (index + 1) * 0.05}
               inView
             >
@@ -158,12 +136,7 @@ export function HeaderDesktop({
   );
 }
 
-export function HeaderMobile({
-  pathname,
-  menuExpanded,
-  setMenuExpanded,
-  navigations,
-}) {
+export function HeaderMobile({ menuExpanded, navigations }) {
   return (
     <Transition
       show={menuExpanded}
