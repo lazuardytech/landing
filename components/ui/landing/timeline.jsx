@@ -3,7 +3,7 @@ import BlurFade from "@/components/magicui/blur-fade";
 export default function Timeline() {
   return (
     <>
-      <div className="container mt-40 px-16">
+      <div className="container mt-40 px-10 lg:px-16">
         <div className="grid grid-rows gap-12">
           <div className="text-left">
             <div className="text-3xl md:text-5xl font-regular mb-6">
@@ -18,7 +18,7 @@ export default function Timeline() {
               </BlurFade>
             </div>
           </div>
-          <div className="grid grid-cols-4 gap-12 h-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 h-auto">
             <BlurFade key={"timeline-card-1"} delay={0.25 + 2 * 0.05} inView>
               <One />
             </BlurFade>
@@ -33,7 +33,7 @@ export default function Timeline() {
             </BlurFade>
           </div>
         </div>
-        <div className="text-md font-light text-gray-400 text-left mt-12">
+        <div className="text-md font-light text-gray-400 text-left mt-12 max-w-lg lg:max-w-full">
           <BlurFade key={"division-text-1"} delay={0.25 + 6 * 0.05} inView>
             Our first-time consulting services are free of charge.
             <br />

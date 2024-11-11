@@ -13,7 +13,7 @@ import Link from "next/link";
 export default function Problem() {
   return (
     <div className="w-full bg-neutral-950 mt-40 py-40">
-      <div className="container px-16">
+      <div className="container px-12 lg:px-16">
         <div className="flex flex-col text-center items-center">
           <div className="flex flex-col">
             <div className="text-3xl md:text-5xl font-light mb-8">
@@ -23,7 +23,7 @@ export default function Problem() {
                 to grow your business
               </BlurFade>
             </div>
-            <div className="text-md font-light text-gray-400 text-center max-w-4xl mx-auto mb-16">
+            <div className="text-md font-light text-gray-400 text-center lg:max-w-4xl mx-auto mb-8 lg:mb-16">
               <BlurFade key={"problem-text-1"} delay={0.25 + 1 * 0.05} inView>
                 Statistic says, 90% of startups that exist are failing, while
                 18.4% business tend to fail at the first year. —{" "}
@@ -39,11 +39,11 @@ export default function Problem() {
                 for now.
               </BlurFade>
             </div>
-            <div className="mb-16">
+            <div className="mb-8 lg:mb-16">
               <Stat />
             </div>
             <div className="text-md font-regular text-gray-200 text-center max-w-xl mx-auto">
-              <BlurFade key={"problem-text-2"} delay={0.25 + 6 * 0.05} inView>
+              <BlurFade key="problem-text-2" delay={0.25 + 6 * 0.05} inView>
                 Thus, let us handle the hard work for you, so you don&apos;t
                 have to.
                 <br />
@@ -59,14 +59,14 @@ export default function Problem() {
 
 export function Stat() {
   return (
-    <div className="grid text-left grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full gap-4 lg:gap-8 px-20">
+    <div className="grid text-left grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full gap-8 lg:px-16">
       <BlurFade key={"problem-stat-1"} delay={0.25 + 2 * 0.05} inView>
         <div className="flex gap-0 flex-col justify-between p-6 border border-zinc-800">
           <Settings className="w-6 h-6 mb-10 text-primary" />
-          <div className="text-3xl max-w-xl text-left font-regular text-white flex flex-row gap-4 items-end">
+          <div className="text-2xl lg:text-3xl max-w-xl text-left font-regular text-white flex flex-row gap-4 items-end">
             74%
           </div>
-          <div className="text-light text-gray-300 text-md text-left max-w-xl me-2 mt-2">
+          <div className="text-md text-light text-gray-300 text-left mt-2">
             Business with Operational Bottlenecks
           </div>
         </div>
@@ -74,32 +74,34 @@ export function Stat() {
       <BlurFade key={"problem-stat-2"} delay={0.25 + 3 * 0.05} inView>
         <div className="flex gap-0 flex-col justify-between p-6 border border-zinc-800">
           <Database className="w-6 h-6 mb-10 text-primary" />
-          <div className="text-3xl max-w-xl text-left font-regular text-white flex flex-row gap-4 items-end">
+
+          <div className="text-2xl lg:text-3xl max-w-xl text-left font-regular text-white flex flex-row gap-4 items-end">
             68%
           </div>
-          <div className="text-light text-gray-300 text-md text-left max-w-xl me-2 mt-2">
-            Business Struggle to Leverage Data Effectively
+          <div className="text-md text-light text-gray-300 text-left mt-2">
+            Business Struggle to Use Data Effectively
           </div>
         </div>
       </BlurFade>
       <BlurFade key={"problem-stat-3"} delay={0.25 + 4 * 0.05} inView>
         <div className="flex gap-0 flex-col justify-between p-6 border border-zinc-800">
           <Receipt className="w-6 h-6 mb-10 text-primary" />
-          <div className="text-3xl max-w-xl text-left font-regular text-white flex flex-row gap-4 items-end">
+
+          <div className="text-2xl lg:text-3xl max-w-xl text-left font-regular text-white flex flex-row gap-4 items-end">
             60%
           </div>
-          <div className="text-light text-gray-300 text-md text-left max-w-xl me-2 mt-2">
-            Higher Cost to Performance Ratio
+          <div className="text-md text-light text-gray-300 text-left mt-2">
+            Higher Cost to Performance Average Ratio
           </div>
         </div>
       </BlurFade>
       <BlurFade key={"problem-stat-4"} delay={0.25 + 5 * 0.05} inView>
         <div className="flex gap-0 flex-col justify-between p-6 border border-zinc-800">
           <RefreshCw className="w-6 h-6 mb-10 text-primary" />
-          <div className="text-3xl max-w-xl text-left font-regular text-white flex flex-row gap-4 items-end">
+          <div className="text-2xl lg:text-3xl max-w-xl text-left font-regular text-white flex flex-row gap-4 items-end">
             40%
           </div>
-          <div className="text-light text-gray-300 text-md text-left max-w-xl me-2 mt-2">
+          <div className="text-md text-light text-gray-300 text-left mt-2">
             Hours a Week Spent Doing Repetitive Jobs
           </div>
         </div>

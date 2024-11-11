@@ -4,12 +4,15 @@ import { ArrowRight } from "lucide-react";
 
 export default function Text() {
   return (
-    <div className="container px-16 mb-16 mt-40">
-      <div className="font-bold text-7xl leading-tight mb-6">
-        <BlurFade key="wip-title" delay={0.25 + 0 * 0.05} inView>
-          We Would ❤️ to
-          <br />
-          Hear From You.
+    <div className="container px-10 lg:px-16 mb-16 mt-16 lg:mt-40">
+      <div className="font-bold text-4xl lg:text-7xl leading-tight mb-6">
+        <BlurFade
+          key="wip-title"
+          className="max-w-xs lg:max-w-xl"
+          delay={0.25 + 0 * 0.05}
+          inView
+        >
+          We Would ❤️ to Hear From You.
         </BlurFade>
       </div>
       <div className="w-full grid lg:grid-cols-2">
@@ -22,35 +25,35 @@ export default function Text() {
             </BlurFade>
           </div>
         </div>
-        <div className="flex justify-end items-end">
-          <div className="grid grid-rows gap-0">
+        <div className="flex lg:justify-end items-end pt-4 lg:pt-0">
+          <div className="grid grid-rows gap-4 lg:gap-0">
             <div className="text-md font-light text-gray-400">
               <BlurFade
                 key="wip-text-2"
                 delay={0.25 + 3 * 0.05}
                 inView
-                className="flex gap-2 justify-end"
+                className="flex gap-2 lg:justify-end"
               >
                 <div>Have something in mind?</div>
                 <div>
                   <Link
                     href={process.env.NEXT_PUBLIC_CONSULTATION_BOOKING_LINK}
                     target="_blank"
-                    className="font-bold transform-colors duration-500 hover:text-white hover:underline"
+                    className="text-white font-bold transform-colors duration-500 hover:underline"
                   >
                     Let&apos;s talk.
                   </Link>
                 </div>
               </BlurFade>
             </div>
-            <div className="text-white text-2xl font-light hover:underline">
+            <div className="text-white text-xl lg:text-2xl font-light hover:underline">
               <BlurFade
                 key="wip-text-3"
                 delay={0.25 + 4 * 0.05}
                 inView
-                className="flex gap-2 justify-end"
+                className="flex lg:gap-2 lg:justify-end"
               >
-                <ArrowRight className="w-8 h-8 mt-1" />
+                <ArrowRight className="hidden lg:block w-8 h-8 mt-1" />
                 <Link href="mailto:contact@lazuardy.tech" target="_blank">
                   contact@lazuardy.tech
                 </Link>

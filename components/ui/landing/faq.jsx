@@ -34,7 +34,7 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <div className="container mt-40 mb-40 px-16">
+    <div className="container mt-40 mb-10 px-10 lg:px-16">
       <div className="grid lg:grid-cols-2 gap-10">
         <div className="flex gap-10 flex-col">
           <div className="flex gap-4 flex-col">

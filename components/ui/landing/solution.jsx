@@ -6,9 +6,9 @@ import { Download } from "lucide-react";
 
 export default function Solution() {
   return (
-    <div className="container pt-40 px-16">
+    <div className="container pt-40 px-10 lg:px-16">
       <div className="grid grid-cols-1 gap-8 items-center md:grid-cols-2">
-        <div className="grid grid-cols-2 gap-8 pe-32 select-none pointer-events-none">
+        <div className="grid grid-cols-2 gap-8 lg:pe-32 select-none pointer-events-none">
           <div className="row-span-1 aspect-square">
             <BlurFade
               className="w-full h-full aspect-square border border-zinc-800"
@@ -80,23 +80,19 @@ export default function Solution() {
         </div>
         <div className="flex gap-4 flex-col">
           <div className="flex gap-4 flex-col">
-            <div className="text-3xl md:text-5xl text-left font-regular mb-2">
-              <BlurFade key={"solution-title"} delay={0.25 + 4 * 0.05} inView>
+            <div className="text-3xl md:text-5xl text-center lg:text-left font-regular mb-2">
+              <BlurFade key="solution-title" delay={0.25 + 4 * 0.05} inView>
                 Do we got your interest?
               </BlurFade>
             </div>
-            <div className="text-md text-left font-light text-gray-400 max-w-lg">
-              <BlurFade key={"solution-title"} delay={0.25 + 4 * 0.05} inView>
+            <div className="text-center lg:text-left text-md font-light text-gray-400 max-w-sm lg:max-w-lg mx-auto lg:mx-0">
+              <BlurFade key="solution-title" delay={0.25 + 4 * 0.05} inView>
                 Read our Company Profile and Service Offering documents below to
                 know more about us.
               </BlurFade>
             </div>
-            <div className="flex gap-6 mt-6">
-              <BlurFade
-                key={"solution-button-1"}
-                delay={0.25 + 5 * 0.05}
-                inView
-              >
+            <div className="flex justify-center lg:justify-start gap-6 mt-6">
+              <BlurFade key="solution-button-1" delay={0.25 + 5 * 0.05} inView>
                 <Link
                   href={process.env.NEXT_PUBLIC_COMPANY_PROFILE_DOCUMENT_LINK}
                   target="_blank"

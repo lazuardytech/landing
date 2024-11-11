@@ -18,9 +18,9 @@ import {
 export default function Division() {
   return (
     <>
-      <div className="container mt-40 px-16">
+      <div className="container mt-40 px-10 lg:px-16">
         <div className="grid grid-rows gap-12">
-          <div className="text-2xl md:text-4xl text-center font-regular">
+          <div className="text-2xl md:text-4xl text-center font-regular mx-auto max-w-sm md:max-w-xl lg:max-w-xl">
             <BlurFade key={"division-title"} delay={0.25 + 0 * 0.05} inView>
               We got a complete solutions, ready to help you.
             </BlurFade>
@@ -57,7 +57,7 @@ export default function Division() {
 
 export function Byte() {
   return (
-    <ShineBorder color="#0D92F4" borderRadius={0} className="px-16 py-12">
+    <ShineBorder color="#0D92F4" borderRadius={0} className="p-8">
       <div className="flex gap-8 flex-col">
         <div className="flex gap-2 flex-col">
           <div className="text-xl lg:text-2xl text-left font-light mb-2">
@@ -146,7 +146,7 @@ export function Byte() {
 
 export function Things() {
   return (
-    <ShineBorder color="#F95454" borderRadius={0} className="px-16 py-12">
+    <ShineBorder color="#F95454" borderRadius={0} className="p-8">
       <div className="flex gap-8 flex-col">
         <div className="flex gap-2 flex-col">
           <div className="text-xl lg:text-2xl text-left font-light mb-2">
@@ -233,7 +233,7 @@ export function Things() {
 
 export function Studio() {
   return (
-    <ShineBorder color="#FFFFFF" borderRadius={0} className="px-16 py-12">
+    <ShineBorder color="#FFFFFF" borderRadius={0} className="p-8">
       <div className="flex gap-8 flex-col">
         <div className="flex gap-2 flex-col">
           <div className="text-xl lg:text-2xl text-left font-light mb-2">
@@ -322,7 +322,7 @@ export function Studio() {
 
 export function AI() {
   return (
-    <ShineBorder color="#219B9D" borderRadius={0} className="px-16 py-12">
+    <ShineBorder color="#219B9D" borderRadius={0} className="p-8">
       <div className="flex gap-8 flex-col">
         <div className="flex gap-2 flex-col">
           <div className="text-xl lg:text-2xl text-left font-light mb-2">

@@ -41,7 +41,7 @@ const articles = [
 
 export default function Article() {
   return (
-    <div className="container mt-40 px-16 flex flex-col gap-14">
+    <div className="container mt-40 px-10 lg:px-16 flex flex-col gap-14">
       <div className="flex w-full flex-col sm:flex-row sm:justify-between sm:items-center gap-8">
         <BlurFade
           className="relative w-full h-full"
@@ -88,7 +88,7 @@ export default function Article() {
                   delay={0.25 + (index + 1) * 0.05}
                   inView
                 >
-                  <span style={{ whiteSpace: "pre-line" }} className="text-lg">
+                  <span className="text-lg sm:whitespace-pre-line">
                     {article.title.length <= 34
                       ? article.title + "\n\n"
                       : article.title}

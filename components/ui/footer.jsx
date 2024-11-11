@@ -126,15 +126,15 @@ const phrases = [
 export default function Footer() {
   return (
     <div className="w-full bg-foreground text-background border-t border-zinc-800 bg-black">
-      <div className="container p-16">
+      <div className="container py-10 px-10 lg:px-16">
         <div className="grid lg:grid-cols-2 gap-10">
           <div className="flex gap-8 flex-col items-start">
             <div className="flex gap-2 flex-col">
-              <BlurFade key={"footer-title"} delay={0.25 + 0 * 0.05} inView>
-                <Logo className="w-full text-start text-2xl" withTM="true" />
+              <BlurFade key="footer-title" delay={0.25 + 0 * 0.05} inView>
+                <Logo className="w-full text-start text-xl" withTM="true" />
               </BlurFade>
               <BlurFade
-                key={"footer-text-1"}
+                key="footer-text-1"
                 delay={0.25 + 1 * 0.05}
                 inView
                 className="flex text-lg font-light max-w-lg text-left"
@@ -146,47 +146,31 @@ export default function Footer() {
                 />
               </BlurFade>
             </div>
-            <div className="flex gap-20 flex-row">
+            <div className="flex gap-10 flex-row">
               <div className="flex flex-col text-sm text-left font-light text-gray-400">
                 <div className="text-white mb-2">
-                  <BlurFade
-                    key={"footer-text-2"}
-                    delay={0.25 + 2 * 0.05}
-                    inView
-                  >
+                  <BlurFade key="footer-text-2" delay={0.25 + 2 * 0.05} inView>
                     PT Inovasi Kolektif Digital
                   </BlurFade>
                 </div>
                 <div>
-                  <BlurFade
-                    key={"footer-text-3"}
-                    delay={0.25 + 3 * 0.05}
-                    inView
-                  >
+                  <BlurFade key="footer-text-3" delay={0.25 + 3 * 0.05} inView>
                     Menara Suara Merdeka
                   </BlurFade>
                 </div>
                 <div>
-                  <BlurFade
-                    key={"footer-text-4"}
-                    delay={0.25 + 4 * 0.05}
-                    inView
-                  >
+                  <BlurFade key="footer-text-4" delay={0.25 + 4 * 0.05} inView>
                     Jl. Pandanaran No. 30, Semarang
                   </BlurFade>
                 </div>
                 <div>
-                  <BlurFade
-                    key={"footer-text-5"}
-                    delay={0.25 + 5 * 0.05}
-                    inView
-                  >
+                  <BlurFade key="footer-text-5" delay={0.25 + 5 * 0.05} inView>
                     Indonesia 50134
                   </BlurFade>
                 </div>
-                <div className="mt-14">
+                <div className="hidden lg:block mt-14">
                   <BlurFade
-                    key={"footer-text-6"}
+                    key="footer-desktop-copyright"
                     delay={0.25 + 6 * 0.05}
                     inView
                   >
@@ -194,7 +178,7 @@ export default function Footer() {
                   </BlurFade>
                 </div>
               </div>
-              <div className="flex flex-col text-sm max-w-lg text-background/75 text-left">
+              <div className="flex flex-col text-sm max-w-lg text-background/75 text-left ps-1 lg:ps-0">
                 <Link
                   href="/terms"
                   className="transition-colors duration-500 font-light text-gray-200 text-sm hover:text-white mb-2"
@@ -222,7 +206,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="grid lg:grid-cols-3 gap-10 items-start">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 items-start">
             {navigationItems.map((item, index) => (
               <div
                 key={index}
@@ -267,6 +251,16 @@ export default function Footer() {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="flex lg:hidden mb-10 font-light text-sm text-gray-400">
+            <BlurFade
+              key="footer-mobile-copyright"
+              className="text-center w-full"
+              delay={0.25 + 6 * 0.05}
+              inView
+            >
+              © Lazuardy 2024. All rights reserved.
+            </BlurFade>
           </div>
         </div>
       </div>
