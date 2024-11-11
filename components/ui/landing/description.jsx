@@ -4,7 +4,7 @@ import { Parallax } from "@/components/parallax";
 
 export default function Description() {
   return (
-    <div className="container pt-40 px-10 lg:px-16">
+    <div className="container pt-20 lg:pt-40 px-10 lg:px-16">
       <div className="grid grid-cols-1 gap-8 items-center md:grid-cols-2">
         <div className="flex gap-4 flex-col">
           <div className="flex gap-4 flex-col">

@@ -3,7 +3,7 @@ import BlurFade from "@/components/magicui/blur-fade";
 
 export default function Benefit() {
   return (
-    <div className="container pt-40 px-10 lg:px-16">
+    <div className="container pt-20 lg:pt-40 px-10 lg:px-16">
       <div className="flex flex-col gap-10">
         <div className="flex gap-4 flex-col items-start">
           <div className="flex gap-2 flex-col">

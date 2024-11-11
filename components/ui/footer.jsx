@@ -137,7 +137,7 @@ export default function Footer() {
                 key="footer-text-1"
                 delay={0.25 + 1 * 0.05}
                 inView
-                className="flex text-lg font-light max-w-lg text-left"
+                className="flex text-md lg:text-lg font-light max-w-lg text-left"
               >
                 <span className="pt-2">Helping your businesses </span>
                 <WordRotate
@@ -146,7 +146,7 @@ export default function Footer() {
                 />
               </BlurFade>
             </div>
-            <div className="flex gap-10 flex-row">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div className="flex flex-col text-sm text-left font-light text-gray-400">
                 <div className="text-white mb-2">
                   <BlurFade key="footer-text-2" delay={0.25 + 2 * 0.05} inView>
@@ -178,28 +178,20 @@ export default function Footer() {
                   </BlurFade>
                 </div>
               </div>
-              <div className="flex flex-col text-sm max-w-lg text-background/75 text-left ps-1 lg:ps-0">
+              <div className="flex flex-rows-1 lg:flex-rows-2 gap-4 text-sm max-w-lg text-left">
                 <Link
                   href="/terms"
-                  className="transition-colors duration-500 font-light text-gray-200 text-sm hover:text-white mb-2"
+                  className="transition-colors duration-500 font-light text-gray-200 text-sm hover:text-white"
                 >
-                  <BlurFade
-                    key={"footer-link-1"}
-                    delay={0.25 + 2 * 0.05}
-                    inView
-                  >
+                  <BlurFade key="footer-link-1" delay={0.25 + 2 * 0.05} inView>
                     Terms of Service
                   </BlurFade>
                 </Link>
                 <Link
                   href="/privacy"
-                  className="transition-colors duration-500 font-light text-gray-200 text-sm hover:text-white mb-2"
+                  className="transition-colors duration-500 font-light text-gray-200 text-sm hover:text-white"
                 >
-                  <BlurFade
-                    key={"footer-link-2"}
-                    delay={0.25 + 3 * 0.05}
-                    inView
-                  >
+                  <BlurFade key="footer-link-2" delay={0.25 + 3 * 0.05} inView>
                     Privacy Policy
                   </BlurFade>
                 </Link>

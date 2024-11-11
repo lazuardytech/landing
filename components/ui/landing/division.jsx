@@ -18,7 +18,7 @@ import {
 export default function Division() {
   return (
     <>
-      <div className="container mt-40 px-10 lg:px-16">
+      <div className="container mt-20 lg:mt-40 px-10 lg:px-16">
         <div className="grid grid-rows gap-12">
           <div className="text-2xl md:text-4xl text-center font-regular mx-auto max-w-sm md:max-w-xl lg:max-w-xl">
             <BlurFade key={"division-title"} delay={0.25 + 0 * 0.05} inView>
@@ -40,13 +40,14 @@ export default function Division() {
             </BlurFade>
           </div>
         </div>
-        <div className="text-md font-light text-gray-200 text-center mt-12">
-          <BlurFade key={"division-text-1"} delay={0.25 + 6 * 0.05} inView>
-            <div>You don&apos;t have to choose anything though.</div>
-            <div className="mt-2">
-              Let us give you the best solution for your business,
-              <br />
-              through our free consultation, with no commitment needed.
+        <div className="text-md font-light text-gray-400 mt-12 text-center max-w-lg lg:max-w-xl mx-auto">
+          <BlurFade key="division-text-1" delay={0.25 + 6 * 0.05} inView>
+            <div className="mb-2">
+              You don&apos;t have to choose anything though.
+            </div>
+            <div>
+              Let us give you the best solution for your business, through our
+              free consultation, with no commitment needed.
             </div>
           </BlurFade>
         </div>
