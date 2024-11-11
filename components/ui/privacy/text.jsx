@@ -3,15 +3,15 @@ import BlurFade from "@/components/magicui/blur-fade";
 
 export default function Text() {
   return (
-    <div className="container px-16 my-32">
-      <div className="text-white font-bold text-2xl lg:text-6xl max-w-2xl mx-auto text-justify">
+    <div className="container px-10 lg:px-16 mt-16 mb-16 lg:mt-32 lg:mb-32">
+      <div className="text-4xl md:text-5xl text-white font-bold max-w-2xl mx-auto text-justify">
         <BlurFade key="privacy-title" delay={0.25 + 0 * 0.05} inView>
           Privacy Policy.
         </BlurFade>
       </div>
       <div className="text-white font-light text-md lg:text-md max-w-2xl mx-auto text-justify">
         <BlurFade key="privacy-text-1" delay={0.25 + 1 * 0.05} inView>
-          <div className="mt-16">
+          <div className="mt-8 lg:mt-16">
             At Lazuardy, we value your privacy and are committed to protecting
             the personal information you share with us. This Privacy Policy
             explains how we collect, use, and protect your data when you visit
@@ -20,7 +20,7 @@ export default function Text() {
           </div>
         </BlurFade>
         <BlurFade key="privacy-text-2" delay={0.25 + 1 * 0.05} inView>
-          <div className="font-semibold text-xl mt-12">
+          <div className="font-semibold text-xl mt-6 lg:mt-12">
             Information We Collect
           </div>
           <div className="mt-4">
@@ -46,7 +46,7 @@ export default function Text() {
           </div>
         </BlurFade>
         <BlurFade key="privacy-text-3" delay={0.25 + 1 * 0.05} inView>
-          <div className="font-semibold text-xl mt-12">
+          <div className="font-semibold text-xl mt-6 lg:mt-12">
             How We Use Your Information
           </div>
           <div className="mt-4">
@@ -70,7 +70,7 @@ export default function Text() {
           </div>
         </BlurFade>
         <BlurFade key="privacy-text-4" delay={0.25 + 1 * 0.05} inView>
-          <div className="font-semibold text-xl mt-12">
+          <div className="font-semibold text-xl mt-6 lg:mt-12">
             How We Protect Your Information
           </div>
           <div className="mt-4">
@@ -82,7 +82,7 @@ export default function Text() {
           </div>
         </BlurFade>
         <BlurFade key="privacy-text-5" delay={0.25 + 1 * 0.05} inView>
-          <div className="font-semibold text-xl mt-12">
+          <div className="font-semibold text-xl mt-6 lg:mt-12">
             Sharing Your Information
           </div>
           <div className="mt-4">
@@ -106,7 +106,7 @@ export default function Text() {
           </div>
         </BlurFade>
         <BlurFade key="privacy-text-6" delay={0.25 + 1 * 0.05} inView>
-          <div className="font-semibold text-xl mt-12">
+          <div className="font-semibold text-xl mt-6 lg:mt-12">
             Cookies and Tracking Technologies
           </div>
           <div className="mt-4">
@@ -118,7 +118,9 @@ export default function Text() {
           </div>
         </BlurFade>
         <BlurFade key="privacy-text-7" delay={0.25 + 1 * 0.05} inView>
-          <div className="font-semibold text-xl mt-12">Your Data Rights</div>
+          <div className="font-semibold text-xl mt-6 lg:mt-12">
+            Your Data Rights
+          </div>
           <div className="mt-4">
             You have the right to:
             <ul className="list-disc ml-8 mb-8">
@@ -146,7 +148,7 @@ export default function Text() {
             <Link
               href="mailto:contact@lazuardy.tech"
               target="_blank"
-              className="font-bold hover:underline"
+              className="hover:underline font-mono"
             >
               contact@lazuardy.tech
             </Link>
@@ -154,7 +156,9 @@ export default function Text() {
           </div>
         </BlurFade>
         <BlurFade key="privacy-text-8" delay={0.25 + 1 * 0.05} inView>
-          <div className="font-semibold text-xl mt-12">Third-party Links</div>
+          <div className="font-semibold text-xl mt-6 lg:mt-12">
+            Third-party Links
+          </div>
           <div className="mt-4">
             Our website may contain links to third-party websites. These
             websites have their own privacy policies, and we are not responsible
@@ -163,7 +167,7 @@ export default function Text() {
           </div>
         </BlurFade>
         <BlurFade key="privacy-text-9" delay={0.25 + 1 * 0.05} inView>
-          <div className="font-semibold text-xl mt-12">
+          <div className="font-semibold text-xl mt-6 lg:mt-12">
             Children&apos;s Privacy
           </div>
           <div className="mt-4">
@@ -175,7 +179,7 @@ export default function Text() {
           </div>
         </BlurFade>
         <BlurFade key="privacy-text-10" delay={0.25 + 1 * 0.05} inView>
-          <div className="font-semibold text-xl mt-12">
+          <div className="font-semibold text-xl mt-6 lg:mt-12">
             Changes to This Privacy Policy
           </div>
           <div className="mt-4">
@@ -186,7 +190,7 @@ export default function Text() {
           </div>
         </BlurFade>
         <BlurFade key="privacy-text-11" delay={0.25 + 1 * 0.05} inView>
-          <div className="font-semibold text-xl mt-12">Contact Us</div>
+          <div className="font-semibold text-xl mt-6 lg:mt-12">Contact Us</div>
           <div className="mt-4">
             If you have any questions or concerns about this Privacy Policy or
             our data practices, please contact us at:
@@ -212,7 +216,7 @@ export default function Text() {
               <Link
                 href="mailto:contact@lazuardy.tech"
                 target="_blank"
-                className="hover:underline"
+                className="hover:underline font-mono"
               >
                 contact@lazuardy.tech
               </Link>
@@ -224,7 +228,7 @@ export default function Text() {
               <Link
                 href="https://wa.me/%2B6287777437000"
                 target="_blank"
-                className="hover:underline"
+                className="hover:underline font-mono"
               >
                 +62 8777 7437 000
               </Link>
@@ -232,11 +236,11 @@ export default function Text() {
           </div>
         </BlurFade>
         <BlurFade key="privacy-text-12" delay={0.25 + 1 * 0.05} inView>
-          <div className="mt-16">
+          <div className="mt-8 lg:mt-16">
             By using our website and services, you agree to the terms of this
             Privacy Policy.
             <div className="mt-4">
-              <span className="font-mono">
+              <span className="font-bold">
                 Effective Date: 01 November 2024
               </span>
               .

@@ -3,15 +3,15 @@ import BlurFade from "@/components/magicui/blur-fade";
 
 export default function Text() {
   return (
-    <div className="container px-16 my-32">
-      <div className="text-white font-bold text-2xl lg:text-6xl max-w-2xl mx-auto text-justify">
+    <div className="container px-10 lg:px-16 mt-16 mb-16 lg:mt-32 lg:mb-32">
+      <div className="text-4xl md:text-5xl text-white font-bold max-w-2xl mx-auto text-justify">
         <BlurFade key="terms-title" delay={0.25 + 0 * 0.05} inView>
           Terms of Service.
         </BlurFade>
       </div>
       <div className="text-white font-light text-md lg:text-md max-w-2xl mx-auto text-justify">
         <BlurFade key="terms-text-1" delay={0.25 + 1 * 0.05} inView>
-          <div className="mt-16">
+          <div className="mt-8 lg:mt-16">
             Welcome to Lazuardy! By accessing or using our website and services,
             you agree to be bound by these Terms of Service. Please read these
             terms carefully, as they outline your rights, responsibilities, and
@@ -21,7 +21,9 @@ export default function Text() {
           </div>
         </BlurFade>
         <BlurFade key="terms-text-2" delay={0.25 + 1 * 0.05} inView>
-          <div className="font-semibold text-xl mt-12">Acceptance of Terms</div>
+          <div className="font-semibold text-xl mt-6 lg:mt-12">
+            Acceptance of Terms
+          </div>
           <div className="mt-4">
             By accessing our website or using our services, you acknowledge that
             you have read, understood, and agree to these Terms of Service and
@@ -31,7 +33,9 @@ export default function Text() {
           </div>
         </BlurFade>
         <BlurFade key="terms-text-3" delay={0.25 + 1 * 0.05} inView>
-          <div className="font-semibold text-xl mt-12">Use of Our Services</div>
+          <div className="font-semibold text-xl mt-6 lg:mt-12">
+            Use of Our Services
+          </div>
           <div className="mt-4">
             You agree to use our website and services only for lawful purposes
             and in compliance with all applicable laws and regulations. You must
@@ -51,7 +55,9 @@ export default function Text() {
           </div>
         </BlurFade>
         <BlurFade key="terms-text-4" delay={0.25 + 1 * 0.05} inView>
-          <div className="font-semibold text-xl mt-12">User Accounts</div>
+          <div className="font-semibold text-xl mt-6 lg:mt-12">
+            User Accounts
+          </div>
           <div className="mt-4">
             To access certain features of our services, you may be required to
             create an account. You agree to provide accurate, complete
@@ -62,7 +68,7 @@ export default function Text() {
           </div>
         </BlurFade>
         <BlurFade key="terms-text-5" delay={0.25 + 1 * 0.05} inView>
-          <div className="font-semibold text-xl mt-12">
+          <div className="font-semibold text-xl mt-6 lg:mt-12">
             Intellectual Property Rights
           </div>
           <div className="mt-4">
@@ -74,7 +80,7 @@ export default function Text() {
           </div>
         </BlurFade>
         <BlurFade key="terms-text-6" delay={0.25 + 1 * 0.05} inView>
-          <div className="font-semibold text-xl mt-12">
+          <div className="font-semibold text-xl mt-6 lg:mt-12">
             Payments and Billing
           </div>
           <div className="mt-4">
@@ -85,7 +91,7 @@ export default function Text() {
           </div>
         </BlurFade>
         <BlurFade key="terms-text-7" delay={0.25 + 1 * 0.05} inView>
-          <div className="font-semibold text-xl mt-12">
+          <div className="font-semibold text-xl mt-6 lg:mt-12">
             Termination of Service
           </div>
           <div className="mt-4">
@@ -97,7 +103,7 @@ export default function Text() {
           </div>
         </BlurFade>
         <BlurFade key="terms-text-8" delay={0.25 + 1 * 0.05} inView>
-          <div className="font-semibold text-xl mt-12">
+          <div className="font-semibold text-xl mt-6 lg:mt-12">
             Limitation of Liability
           </div>
           <div className="mt-4">
@@ -109,7 +115,9 @@ export default function Text() {
           </div>
         </BlurFade>
         <BlurFade key="terms-text-9" delay={0.25 + 1 * 0.05} inView>
-          <div className="font-semibold text-xl mt-12">Indemnification</div>
+          <div className="font-semibold text-xl mt-6 lg:mt-12">
+            Indemnification
+          </div>
           <div className="mt-4">
             You agree to indemnify and hold harmless Lazuardy, its affiliates,
             and employees from any claims, liabilities, damages, or expenses
@@ -118,7 +126,9 @@ export default function Text() {
           </div>
         </BlurFade>
         <BlurFade key="terms-text-10" delay={0.25 + 1 * 0.05} inView>
-          <div className="font-semibold text-xl mt-12">Third-party Links</div>
+          <div className="font-semibold text-xl mt-6 lg:mt-12">
+            Third-party Links
+          </div>
           <div className="mt-4">
             Our website may contain links to third-party websites. These links
             are provided for your convenience, but we do not endorse or control
@@ -127,7 +137,9 @@ export default function Text() {
           </div>
         </BlurFade>
         <BlurFade key="terms-text-11" delay={0.25 + 1 * 0.05} inView>
-          <div className="font-semibold text-xl mt-12">Governing Law</div>
+          <div className="font-semibold text-xl mt-6 lg:mt-12">
+            Governing Law
+          </div>
           <div className="mt-4">
             These Terms of Service are governed by the laws of the Republic of
             Indonesia, without regard to its conflict of law provisions. Any
@@ -136,7 +148,7 @@ export default function Text() {
           </div>
         </BlurFade>
         <BlurFade key="terms-text-12" delay={0.25 + 1 * 0.05} inView>
-          <div className="font-semibold text-xl mt-12">
+          <div className="font-semibold text-xl mt-6 lg:mt-12">
             Changes to These Terms
           </div>
           <div className="mt-4">
@@ -147,7 +159,7 @@ export default function Text() {
           </div>
         </BlurFade>
         <BlurFade key="terms-text-13" delay={0.25 + 1 * 0.05} inView>
-          <div className="font-semibold text-xl mt-12">Contact Us</div>
+          <div className="font-semibold text-xl mt-6 lg:mt-12">Contact Us</div>
           <div className="mt-4">
             If you have any questions or concerns regarding these Terms of
             Service, please contact us at:
@@ -173,7 +185,7 @@ export default function Text() {
               <Link
                 href="mailto:contact@lazuardy.tech"
                 target="_blank"
-                className="hover:underline"
+                className="hover:underline font-mono"
               >
                 contact@lazuardy.tech
               </Link>
@@ -185,7 +197,7 @@ export default function Text() {
               <Link
                 href="https://wa.me/%2B6287777437000"
                 target="_blank"
-                className="hover:underline"
+                className="hover:underline font-mono"
               >
                 +62 8777 7437 000
               </Link>
@@ -193,11 +205,11 @@ export default function Text() {
           </div>
         </BlurFade>
         <BlurFade key="terms-text-14" delay={0.25 + 1 * 0.05} inView>
-          <div className="mt-16">
+          <div className="mt-8 lg:mt-16">
             By accessing or using our services, you acknowledge and agree to
             these Terms of Service.
             <div className="mt-4">
-              <span className="font-mono">
+              <span className="font-bold">
                 Effective Date: 01 November 2024
               </span>
               .

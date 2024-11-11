@@ -7,7 +7,7 @@ import { RainbowButton } from "@/components/ui/button";
 export default function Hero() {
   return (
     <div className="container px-10 lg:px-16">
-      <div className="flex pb-20 md:pb-0 lg:pb-20 gap-8 min-h-screen items-center justify-center flex-col">
+      <div className="flex pb-28 md:pb-20 lg:pb-20 gap-8 min-h-screen items-center justify-center flex-col">
         <BlurFade key="hero-badge" delay={0.25 + 0 * 0.05} inView>
           <Link
             href="https://lazuardytech.medium.com/were-now-registered-on-indonesia-f2d9b9cffdc1"
@@ -20,13 +20,13 @@ export default function Hero() {
           </Link>
         </BlurFade>
         <div className="flex gap-4 flex-col">
-          <div className="lg:max-w-3xl text-5xl md:text-7xl tracking-normal text-center font-regular mx-auto">
+          <div className="max-w-lg md:max-w-3xl mx-auto text-5xl md:text-7xl tracking-normal text-center font-regular">
             <BlurFade key="hero-title" delay={0.25 + 1 * 0.05} inView>
               We help businesses <span className="underline">grow bigger</span>{" "}
               through technology
             </BlurFade>
           </div>
-          <div className="lg:max-w-3xl text-md md:text-xl font-light leading-relaxed tracking-tight text-muted-foreground text-gray-400 text-center mt-4 mb-4">
+          <div className="max-w-lg md:max-w-3xl mx-auto text-md md:text-xl font-light leading-relaxed tracking-tight text-muted-foreground text-gray-400 text-center mt-4 mb-4">
             <BlurFade key="hero-text" delay={0.25 + 2 * 0.05} inView>
               With a team that understands your unique challenges, we’re here to
               bring the best of technology to help your business thrive, adapt,

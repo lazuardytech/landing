@@ -39,13 +39,13 @@ export default function FAQ() {
         <div className="flex gap-10 flex-col">
           <div className="flex gap-4 flex-col">
             <div className="flex gap-2 flex-col">
-              <div className="text-3xl md:text-5xl max-w-xl text-left font-regular mb-5">
-                <BlurFade key={"faq-title"} delay={0.25 + 0 * 0.05} inView>
+              <div className="text-3xl md:text-4xl lg:text-5xl max-w-sm md:max-w-xl text-left font-regular mb-5">
+                <BlurFade key="faq-title" delay={0.25 + 0 * 0.05} inView>
                   Ready to build products that outstands other?
                 </BlurFade>
               </div>
-              <div className="text-lg max-w-xl lg:max-w-lg leading-relaxed tracking-tight text-muted-foreground text-left">
-                <BlurFade key={"faq-text"} delay={0.25 + 1 * 0.05} inView>
+              <div className="text-md lg:text-lg max-w-md lg:max-w-lg text-left font-light text-gray-400">
+                <BlurFade key="faq-text" delay={0.25 + 1 * 0.05} inView>
                   Feel free to reach out if you want to collaborate with us, or
                   simply have a chat. We would love to hear from you.
                 </BlurFade>

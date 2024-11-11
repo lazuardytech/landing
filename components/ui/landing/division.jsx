@@ -20,7 +20,7 @@ export default function Division() {
     <>
       <div className="container mt-20 lg:mt-40 px-10 lg:px-16">
         <div className="grid grid-rows gap-12">
-          <div className="text-2xl md:text-4xl text-center font-regular mx-auto max-w-sm md:max-w-xl lg:max-w-xl">
+          <div className="text-3xl md:text-4xl lg:text-5xl text-center font-regular mx-auto max-w-md md:max-w-xl lg:max-w-3xl">
             <BlurFade key={"division-title"} delay={0.25 + 0 * 0.05} inView>
               We got a complete solutions, ready to help you.
             </BlurFade>

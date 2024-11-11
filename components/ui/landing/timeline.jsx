@@ -6,7 +6,7 @@ export default function Timeline() {
       <div className="container pt-20 lg:pt-40 px-10 lg:px-16">
         <div className="grid grid-rows gap-12">
           <div className="text-left">
-            <div className="text-3xl md:text-5xl font-regular mb-6">
+            <div className="text-3xl md:text-4xl lg:text-5xl font-regular mb-6">
               <BlurFade key={"timeline-title"} delay={0.25 + 0 * 0.05} inView>
                 How It Works?
               </BlurFade>

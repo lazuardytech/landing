@@ -3,104 +3,104 @@ import BlurFade from "@/components/magicui/blur-fade";
 import Logo from "@/components/ui/logo";
 import WordRotate from "@/components/magicui/word-rotate";
 
-const navigationItems = [
+export const navigationItems = [
   {
-    title: "Connect.",
+    label: "Connect.",
     items: [
       {
-        title: "Instagram",
-        href: "https://instagram.com/lazuardy.tech",
+        label: "Instagram",
+        link: "https://instagram.com/lazuardy.tech",
         target: "_blank",
       },
       {
-        title: "LinkedIn",
-        href: "https://linkedin.com/company/lazuardy/?viewAsMember=true",
+        label: "LinkedIn",
+        link: "https://linkedin.com/company/lazuardy/?viewAsMember=true",
         target: "_blank",
       },
       {
-        title: "Medium",
-        href: "https://blog.lazuardy.tech",
+        label: "Medium",
+        link: "https://blog.lazuardy.tech",
         target: "_blank",
       },
       {
-        title: "GitHub",
-        href: "https://github.com/lazuardy-tech",
+        label: "GitHub",
+        link: "https://github.com/lazuardy-tech",
         target: "_blank",
       },
     ],
   },
   {
-    title: "Navigate.",
+    label: "Navigate.",
     items: [
       {
-        title: "home",
-        href: "/",
+        label: "home",
+        link: "/",
       },
       {
-        title: "contact",
-        href: "/contact",
+        label: "contact",
+        link: "/contact",
       },
       {
-        title: "articles",
-        href: "https://blog.lazuardy.tech",
+        label: "articles",
+        link: "https://blog.lazuardy.tech",
         target: "_blank",
       },
       {
-        title: "manifesto",
-        href: "https://manifesto.lazuardy.tech",
+        label: "manifesto",
+        link: "https://manifesto.lazuardy.tech",
         target: "_blank",
       },
       {
-        title: "partnership",
-        href: "https://partnership.lazuardy.tech",
+        label: "partnership",
+        link: "https://partnership.lazuardy.tech",
         target: "_blank",
       },
     ],
   },
   {
-    title: "Solutions.",
+    label: "Solutions.",
     items: [
       {
-        title: "technology consultation",
-        href: "/byte",
+        label: "technology consultation",
+        link: "/byte",
       },
       {
-        title: "cloud infrastructure",
-        href: "/byte",
+        label: "cloud infrastructure",
+        link: "/byte",
       },
       {
-        title: "software engineering",
-        href: "/byte",
+        label: "software engineering",
+        link: "/byte",
       },
       {
-        title: "hardware engineering",
-        href: "/things",
+        label: "hardware engineering",
+        link: "/things",
       },
       {
-        title: "internet of things",
-        href: "/things",
+        label: "internet of things",
+        link: "/things",
       },
       {
-        title: "ui/ux design",
-        href: "/studio",
+        label: "ui/ux design",
+        link: "/studio",
       },
       {
-        title: "brand identity",
-        href: "/studio",
+        label: "brand identity",
+        link: "/studio",
       },
       {
-        title: "artificial intelligence",
-        href: "/ai",
+        label: "artificial intelligence",
+        link: "/ai",
       },
       {
-        title: "computer vision",
-        href: "/ai",
+        label: "computer vision",
+        link: "/ai",
       },
     ],
   },
 ];
 
-const phrases = [
+export const phrases = [
   "grow bigger.",
   "outstands other.",
   "shine brighter.",
@@ -137,7 +137,7 @@ export default function Footer() {
                 key="footer-text-1"
                 delay={0.25 + 1 * 0.05}
                 inView
-                className="flex text-md lg:text-lg font-light max-w-lg text-left"
+                className="text-md md:text-md lg:text-lg flex font-light max-w-lg text-left"
               >
                 <span className="pt-2">Helping your businesses </span>
                 <WordRotate
@@ -206,36 +206,36 @@ export default function Footer() {
               >
                 <div className="flex flex-col gap-2">
                   <BlurFade
-                    key={"footer-link-" + item.title}
+                    key={"footer-link-" + item.label}
                     delay={0.25 + 0 * 0.05}
                     inView
                   >
-                    {item.href ? (
+                    {item.link ? (
                       <Link
-                        href={item.href}
+                        href={item.link}
                         className="flex justify-between items-center"
                       >
-                        <span className="text-lg">{item.title}</span>
+                        <span className="text-lg">{item.label}</span>
                       </Link>
                     ) : (
-                      <div className="text-lg">{item.title}</div>
+                      <div className="text-lg">{item.label}</div>
                     )}
                   </BlurFade>
                   {item.items &&
                     item.items.map((subItem, index) => (
                       <BlurFade
-                        key={"footer-link-" + index + subItem.href}
+                        key={"footer-link-" + index + subItem.link}
                         delay={0.25 + (index + 1) * 0.05}
                         inView
                       >
                         <Link
                           key={index}
-                          href={subItem.href}
+                          href={subItem.link}
                           target={subItem.target ?? ""}
                           className="flex justify-between items-center"
                         >
                           <span className="transition-colors duration-500 font-light text-gray-400 text-sm hover:text-white">
-                            {subItem.title}
+                            {subItem.label}
                           </span>
                         </Link>
                       </BlurFade>

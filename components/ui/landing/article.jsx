@@ -45,11 +45,13 @@ export default function Article() {
       <div className="flex w-full flex-col sm:flex-row sm:justify-between sm:items-center gap-8">
         <BlurFade
           className="relative w-full h-full"
-          key={"article-title"}
+          key="article-title"
           delay={0.25 + 0 * 0.05}
           inView
         >
-          <div className="text-2xl md:text-3xl">Our Latest Articles</div>
+          <div className="text-3xl md:text-4xl lg:text-5xl">
+            Our Latest Articles
+          </div>
         </BlurFade>
         <BlurFade key={"article-button-1"} delay={0.25 + 1 * 0.05} inView>
           <Link href="https://blog.lazuardy.tech" target="_blank">

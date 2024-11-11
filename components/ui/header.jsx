@@ -17,25 +17,33 @@ const routes = {
   "/ai": "AI",
 };
 
-const navigations = [
+export const navigations = [
   {
     label: "home",
     link: "/",
   },
   {
-    label: "contact",
-    link: "/contact",
+    label: "solutions",
+    link: "/solutions",
   },
   {
-    label: "blog",
+    label: "works",
+    link: "/works",
+  },
+  {
+    label: "articles",
     link: "https://blog.lazuardy.tech",
     target: "_blank",
   },
   {
-    label: "manifesto",
-    link: "https://manifesto.lazuardy.tech",
-    target: "_blank",
+    label: "contact",
+    link: "/contact",
   },
+  // {
+  //   label: "manifesto",
+  //   link: "https://manifesto.lazuardy.tech",
+  //   target: "_blank",
+  // },
   {
     label: "partnership",
     link: "https://partnership.lazuardy.tech",
@@ -99,7 +107,7 @@ export function HeaderDesktop({
       </div>
       <div className="hidden lg:flex col-span-2 justify-center text-center text-md pt-1 gap-6">
         {navigations.map((nav, index) => (
-          <div key={"header-desktop-nav-" + index} className="flex gap-6">
+          <div key={"header-desktop-nav-" + index} className="flex gap-5">
             <BlurFade
               key={"header-desktop-nav-label-" + index}
               className="text-end transition-colors text-gray-400 font-medium hover:text-white pt-1.5"
@@ -123,13 +131,8 @@ export function HeaderDesktop({
           </div>
         ))}
       </div>
-      <div className="hidden lg:flex col-span-1 justify-end">
-        <BlurFade
-          key={"header-nav-5"}
-          delay={0.25 + 8 * 0.05}
-          inView
-          className="pt-1.5"
-        >
+      <div className="hidden lg:flex col-span-1 justify-end pt-2">
+        <BlurFade key="header-nav-5" delay={0.25 + 8 * 0.05} inView>
           <Link
             href={process.env.NEXT_PUBLIC_CONSULTATION_BOOKING_LINK}
             target="_blank"

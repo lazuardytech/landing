@@ -80,12 +80,12 @@ export default function Solution() {
         </div>
         <div className="flex gap-4 flex-col">
           <div className="flex gap-4 flex-col">
-            <div className="text-3xl md:text-5xl text-center lg:text-left font-regular mb-2">
+            <div className="text-3xl md:text-4xl lg:text-5xl text-center md:text-left lg:text-left font-regular mb-2">
               <BlurFade key="solution-title" delay={0.25 + 4 * 0.05} inView>
                 Do we got your interest?
               </BlurFade>
             </div>
-            <div className="text-center lg:text-left text-md font-light text-gray-400 max-w-sm lg:max-w-lg mx-auto lg:mx-0">
+            <div className="text-center md:text-left lg:text-left text-md font-light text-gray-400 max-w-sm lg:max-w-lg mx-auto lg:mx-0">
               <BlurFade key="solution-title" delay={0.25 + 4 * 0.05} inView>
                 Read our Company Profile and Service Offering documents below to
                 know more about us.

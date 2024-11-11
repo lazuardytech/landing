@@ -7,9 +7,9 @@ export default function Description() {
     <div className="container pt-20 lg:pt-40 px-10 lg:px-16">
       <div className="grid grid-cols-1 gap-8 items-center md:grid-cols-2">
         <div className="flex gap-4 flex-col">
-          <div className="flex gap-4 flex-col">
-            <BlurFade key={"description-title"} delay={0.25 + 0 * 0.05} inView>
-              <h1 className="text-6xl md:text-8xl text-left font-regular mb-6">
+          <div className="flex gap-4 flex-col pb-2">
+            <BlurFade key="description-title" delay={0.25 + 0 * 0.05} inView>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl text-left font-regular mb-6">
                 A Digital Collective.
               </h1>
             </BlurFade>

@@ -7,12 +7,12 @@ export default function Benefit() {
       <div className="flex flex-col gap-10">
         <div className="flex gap-4 flex-col items-start">
           <div className="flex gap-2 flex-col">
-            <div className="text-3xl md:text-5xl font-regular text-left mb-4">
+            <div className="text-3xl md:text-4xl lg:text-5xl font-regular text-left mb-4">
               <BlurFade key="benefit-title" delay={0.25 + 0 * 0.05} inView>
-                It&apos;s okay, we got your back.
+                We got your back.
               </BlurFade>
             </div>
-            <div className="text-md lg:text-lg text-left text-gray-400 font-light max-w-lg lg:max-w-3xl">
+            <div className="max-w-lg lg:max-w-3xl text-md lg:text-lg text-left text-gray-400 font-light">
               <BlurFade key="benefit-text-1" delay={0.25 + 1 * 0.05} inView>
                 We’re here to support you every step of the way, with the right
                 technology and strategies to tackle your challenges, streamline
@@ -49,7 +49,7 @@ export default function Benefit() {
                       25+ Certified Engineers and Professional
                     </BlurFade>
                   </div>
-                  <div className="max-w-sm lg:max-w-xl text-gray-200 font-light text-md [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)]">
+                  <div className="max-w-sm lg:max-w-xl text-gray-200 font-light text-sm lg:text-md [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)]">
                     <BlurFade
                       key="benefit-card-1-description"
                       delay={0.25 + 4 * 0.05}
@@ -91,7 +91,7 @@ export default function Benefit() {
                       Flexible Payment Term
                     </BlurFade>
                   </div>
-                  <div className="max-w-sm lg:max-w-xl text-gray-200 font-light text-md [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)]">
+                  <div className="max-w-sm lg:max-w-xl text-gray-200 font-light text-sm lg:text-md [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)]">
                     <BlurFade
                       key="benefit-card-3-description"
                       delay={0.25 + 4 * 0.05}
@@ -132,7 +132,7 @@ export default function Benefit() {
                       Free Consultation
                     </BlurFade>
                   </div>
-                  <div className="max-w-sm lg:max-w-xl text-gray-200 font-light text-md [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)]">
+                  <div className="max-w-sm lg:max-w-xl text-gray-200 font-light text-sm lg:text-md [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)]">
                     <BlurFade
                       key="benefit-card-3-description"
                       delay={0.25 + 5 * 0.05}
@@ -173,7 +173,7 @@ export default function Benefit() {
                       16+ Team Expertise
                     </BlurFade>
                   </div>
-                  <div className="max-w-sm lg:max-w-xl text-gray-200 font-light text-md [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)]">
+                  <div className="max-w-sm lg:max-w-xl text-gray-200 font-light text-sm lg:text-md [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)]">
                     <BlurFade
                       key="benefit-card-4-description"
                       delay={0.25 + 5 * 0.05}
