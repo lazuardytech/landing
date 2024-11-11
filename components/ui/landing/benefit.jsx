@@ -1,12 +1,6 @@
+import Image from "next/image";
 import BlurFade from "@/components/magicui/blur-fade";
-import {
-  CircleDollarSign,
-  Receipt,
-  Rocket,
-  ShieldCheck,
-  Speech,
-  User,
-} from "lucide-react";
+import { CircleDollarSign, Rocket, ShieldCheck, Speech } from "lucide-react";
 
 export default function Benefit() {
   return (
@@ -30,74 +24,168 @@ export default function Benefit() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <BlurFade
-            key={"benefit-card-1"}
+            key="benefit-card-1"
             delay={0.25 + 2 * 0.05}
             inView
-            className="lg:col-span-2"
+            className="col-span-1 lg:col-span-2 aspect-square lg:aspect-auto"
           >
-            <div className="bg-zinc-950 border border-zinc-800 h-full lg:col-span-2 p-6 aspect-square lg:aspect-auto flex justify-between flex-col">
-              <ShieldCheck className="w-8 h-8" />
-              <div className="flex flex-col">
-                <h3 className="text-2xl mb-4">
-                  25+ Certified Engineers and Professional
-                </h3>
-                <p className="max-w-xl text-gray-400 font-light text-md">
-                  Work with a team of certified experts committed to delivering
-                  innovative, high-quality solutions tailored to your business
-                  needs.
-                </p>
+            <div className="h-full bg-zinc-950 border border-zinc-800 relative">
+              <div className="absolute inset-0">
+                <Image
+                  alt="benefit-card-1-image"
+                  src="/images/landing/benefit-1.webp"
+                  className="object-cover"
+                  fill
+                />
+              </div>
+              <div className="h-full w-full flex flex-col justify-between relative z-10 p-6 bg-black/20">
+                <div></div>
+                <div className="flex flex-col">
+                  <div className="max-w-xl text-white font-regular text-xl mb-4 [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)]">
+                    <BlurFade
+                      key="benefit-card-1-title"
+                      delay={0.25 + 3 * 0.05}
+                      inView
+                    >
+                      25+ Certified Engineers and Professional
+                    </BlurFade>
+                  </div>
+                  <div className="max-w-xl text-gray-200 font-light text-md [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)]">
+                    <BlurFade
+                      key="benefit-card-1-description"
+                      delay={0.25 + 4 * 0.05}
+                      inView
+                    >
+                      Work with a team of certified experts committed to
+                      delivering innovative, high-quality solutions tailored to
+                      your business needs.
+                    </BlurFade>
+                  </div>
+                </div>
               </div>
             </div>
           </BlurFade>
           <BlurFade
-            key={"benefit-card-2"}
+            key="benefit-card-2"
+            delay={0.25 + 2 * 0.05}
+            inView
+            className="col-span-1 aspect-square"
+          >
+            <div className="h-full bg-zinc-950 border border-zinc-800 relative">
+              <div className="absolute inset-0">
+                <Image
+                  alt="benefit-card-2-image"
+                  src="/images/landing/benefit-2.webp"
+                  className="object-cover"
+                  fill
+                />
+              </div>
+              <div className="h-full w-full flex flex-col justify-between relative z-10 p-6 bg-black/20">
+                <div></div>
+                <div className="flex flex-col">
+                  <div className="max-w-xl text-white font-regular text-xl mb-4 [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)]">
+                    <BlurFade
+                      key="benefit-card-2-title"
+                      delay={0.25 + 3 * 0.05}
+                      inView
+                    >
+                      Flexible Payment Term
+                    </BlurFade>
+                  </div>
+                  <div className="max-w-xl text-gray-200 font-light text-md [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)]">
+                    <BlurFade
+                      key="benefit-card-3-description"
+                      delay={0.25 + 4 * 0.05}
+                      inView
+                    >
+                      Flexible payment plans to fit your budget, making top-tier
+                      tech solutions accessible.
+                    </BlurFade>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </BlurFade>
+          <BlurFade
+            key="benefit-card-3"
             delay={0.25 + 3 * 0.05}
             inView
-            className="aspect-square"
+            className="col-span-1 aspect-square"
           >
-            <div className="bg-zinc-950 border border-zinc-800 aspect-square p-6 flex justify-between flex-col">
-              <CircleDollarSign className="w-8 h-8" />
-              <div className="flex flex-col">
-                <h3 className="text-2xl mb-4">Flexible Payment Term</h3>
-                <p className="max-w-lg text-gray-400 font-light text-md">
-                  Flexible payment plans to fit your budget, making top-tier
-                  tech solutions accessible.
-                </p>
+            <div className="h-full bg-zinc-950 border border-zinc-800 relative">
+              <div className="absolute inset-0">
+                <Image
+                  alt="benefit-card-3-image"
+                  src="/images/landing/benefit-3.webp"
+                  className="object-cover"
+                  fill
+                />
+              </div>
+              <div className="h-full w-full flex flex-col justify-between relative z-10 p-6 bg-black/20">
+                <div></div>
+                <div className="flex flex-col">
+                  <div className="max-w-xl text-white font-regular text-xl mb-4 [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)]">
+                    <BlurFade
+                      key="benefit-card-3-title"
+                      delay={0.25 + 4 * 0.05}
+                      inView
+                    >
+                      Free Consultation
+                    </BlurFade>
+                  </div>
+                  <div className="max-w-xl text-gray-200 font-light text-md [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)]">
+                    <BlurFade
+                      key="benefit-card-3-description"
+                      delay={0.25 + 5 * 0.05}
+                      inView
+                    >
+                      Start with a free consultation to discuss your goals and
+                      how we can help you succeed.
+                    </BlurFade>
+                  </div>
+                </div>
               </div>
             </div>
           </BlurFade>
           <BlurFade
-            key={"benefit-card-3"}
-            delay={0.25 + 4 * 0.05}
+            key="benefit-card-4"
+            delay={0.25 + 3 * 0.05}
             inView
-            className="aspect-square"
+            className="col-span-1 lg:col-span-2 aspect-square lg:aspect-auto"
           >
-            <div className="bg-zinc-950 border border-zinc-800 aspect-square p-6 flex justify-between flex-col">
-              <Speech className="w-8 h-8" />
-              <div className="flex flex-col">
-                <h3 className="text-2xl mb-4">Free Consultation</h3>
-                <p className="max-w-lg text-gray-400 font-light text-md">
-                  Start with a free consultation to discuss your goals and how
-                  we can help you succeed.
-                </p>
+            <div className="h-full bg-zinc-950 border border-zinc-800 relative">
+              <div className="absolute inset-0">
+                <Image
+                  alt="benefit-card-4-image"
+                  src="/images/landing/benefit-4.webp"
+                  className="object-cover"
+                  fill
+                />
               </div>
-            </div>
-          </BlurFade>
-          <BlurFade
-            key={"benefit-card-4"}
-            delay={0.25 + 5 * 0.05}
-            inView
-            className="lg:col-span-2"
-          >
-            <div className="bg-zinc-950 border border-zinc-800 h-full lg:col-span-2 p-6 aspect-square lg:aspect-auto flex justify-between flex-col">
-              <Rocket className="w-8 h-8" />
-              <div className="flex flex-col">
-                <h3 className="text-2xl mb-4">16+ Team Expertise</h3>
-                <p className="max-w-xl text-gray-400 font-light text-md">
-                  Our team covers over 16 specialized fields, from software
-                  development to AI and cloud computing, ensuring comprehensive
-                  support for any challenge.
-                </p>
+              <div className="h-full w-full flex flex-col justify-between relative z-10 p-6 bg-black/20">
+                <div></div>
+                <div className="flex flex-col">
+                  <div className="max-w-xl text-white font-regular text-xl mb-4 [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)]">
+                    <BlurFade
+                      key="benefit-card-4-title"
+                      delay={0.25 + 4 * 0.05}
+                      inView
+                    >
+                      16+ Team Expertise
+                    </BlurFade>
+                  </div>
+                  <div className="max-w-xl text-gray-200 font-light text-md [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)]">
+                    <BlurFade
+                      key="benefit-card-4-description"
+                      delay={0.25 + 5 * 0.05}
+                      inView
+                    >
+                      Our team covers over 16 specialized fields, from software
+                      development to AI and cloud computing, ensuring
+                      comprehensive support for any challenge.
+                    </BlurFade>
+                  </div>
+                </div>
               </div>
             </div>
           </BlurFade>
