@@ -3,12 +3,13 @@
 import { useEffect } from "react";
 import { toast } from "sonner";
 import { Cookie } from "lucide-react";
-import { ZincBadge } from "@/components/ui/badge";
 import Link from "next/link";
+
+const COOKIE_KEY = "cookie-confirmation";
 
 export default function CookieConfirmation() {
   useEffect(() => {
-    if (localStorage.getItem("cookie-confirmation")) return;
+    if (localStorage.getItem(COOKIE_KEY)) return;
     setTimeout(() => {
       toast.dismiss();
       toast.custom(
@@ -27,7 +28,7 @@ export default function CookieConfirmation() {
                 className="text-xs text-white font-regular py-1 px-2 bg-zinc-800 hover:bg-zinc-700 transition-colors duration-500 border border-zinc-600 text-center"
                 onClick={() => {
                   toast.dismiss(t);
-                  localStorage.getItem("cookie-confirmation");
+                  localStorage.setItem(COOKIE_KEY, "true");
                 }}
               >
                 Accept

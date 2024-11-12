@@ -33,7 +33,7 @@ const GLOBE_CONFIG = {
 };
 
 export default function Globe({ className, config = GLOBE_CONFIG }) {
-  let phi = 0;
+  let phi = useRef(0);
   let width = 0;
   const canvasRef = useRef(null);
   const pointerInteracting = useRef(null);
@@ -57,12 +57,12 @@ export default function Globe({ className, config = GLOBE_CONFIG }) {
 
   const onRender = useCallback(
     (state) => {
-      if (!pointerInteracting.current) phi += 0.005;
-      state.phi = phi + r;
+      if (!pointerInteracting.current) phi.current += 0.005;
+      state.phi = phi.current + r;
       state.width = width * 2;
       state.height = width * 2;
     },
-    [r],
+    [r, width],
   );
 
   const onResize = () => {
@@ -84,7 +84,7 @@ export default function Globe({ className, config = GLOBE_CONFIG }) {
 
     setTimeout(() => (canvasRef.current.style.opacity = "1"));
     return () => globe.destroy();
-  }, []);
+  });
 
   return (
     <div
