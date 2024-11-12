@@ -88,7 +88,7 @@ export function HeaderDesktop({
           <div key={"header-desktop-nav-" + index} className="flex gap-5">
             <BlurFade
               key={"header-desktop-nav-label-" + index}
-              className={`text-end transition-colors font-medium hover:text-white pt-1.5 ${routes[pathname] === nav.link ? "text-white" : "text-gray-400"}`}
+              className={`text-end transition-colors font-medium hover:text-white pt-1.5 ${routes[pathname] === nav.link ? "text-white" : "text-neutral-500"}`}
               delay={0.25 + (index + 1) * 0.05}
               inView
             >

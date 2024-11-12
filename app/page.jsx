@@ -2,6 +2,7 @@ import Maintenance from "@/components/ui/maintenance";
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
 import Hero from "@/components/ui/landing/hero";
+import HeroGlobe from "@/components/ui/landing/hero-globe";
 import Cases from "@/components/ui/landing/cases";
 import Description from "@/components/ui/landing/description";
 import Problem from "@/components/ui/landing/problem";
@@ -21,7 +22,12 @@ export default function Page() {
     <>
       <Header />
       <div className="w-full">
-        <Hero />
+        <div className="block lg:hidden">
+          <Hero />
+        </div>
+        <div className="hidden lg:block">
+          <HeroGlobe />
+        </div>
         <Cases />
         <Description />
         <Problem />

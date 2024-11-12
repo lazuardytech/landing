@@ -4,17 +4,17 @@ import { Parallax } from "@/components/parallax";
 
 export default function Description() {
   return (
-    <div className="container pt-20 lg:pt-40 px-10 lg:px-16">
+    <div className="container pt-20 px-10 lg:px-16">
       <div className="grid grid-cols-1 gap-8 items-center md:grid-cols-2">
         <div className="flex gap-4 flex-col">
-          <div className="flex gap-4 flex-col pb-2">
+          <div className="flex gap-4 flex-col pb-6">
             <BlurFade key="description-title" delay={0.25 + 0 * 0.05} inView>
               <h1 className="text-5xl md:text-6xl lg:text-7xl text-left font-regular mb-6">
                 A Digital Collective.
               </h1>
             </BlurFade>
-            <BlurFade key={"description-text"} delay={0.25 + 1 * 0.05} inView>
-              <p className="text-lg font-light text-gray-400 max-w-md text-left">
+            <BlurFade key="description-text" delay={0.25 + 1 * 0.05} inView>
+              <p className="text-lg font-light text-gray-400 max-w-xl text-left">
                 Lazuardy is a team full of visionary engineers, researchers, and
                 professionals that work together to help business grow bigger
                 through bleeding edge technology.

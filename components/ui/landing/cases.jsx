@@ -59,7 +59,7 @@ export default function Cases() {
   }, [api, current]);
 
   return (
-    <div className="mb-16">
+    <div className="relative z-10 bg-black pt-16 pb-24 border-t border-zinc-800">
       <div className="container">
         <div className="w-full px-16 text-xl md:text-2xl font-light text-center">
           <BlurFade key={"cases-title"} delay={0.25 + 0 * 0.05} inView>
