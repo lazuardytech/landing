@@ -6,9 +6,16 @@ import { Button } from "@/components/ui/button";
 
 const maxArticles = 4;
 
-const maxArticleImageWidth = 500;
+const maxArticleImageWidth = 400;
 
 const articles = [
+  {
+    title: "We’re now legally registered on Indonesia 🎉",
+    description:
+      "Lazuardy, is now legally registered on the Republic of Indonesia, under name PT Inovasi Kolektif Digital.",
+    link: "https://lazuardytech.medium.com/were-now-registered-on-indonesia-f2d9b9cffdc1",
+    image: `https://miro.medium.com/v2/resize:fit:${maxArticleImageWidth}/format:webp/0*mArKQSbn5mGbHM-x`,
+  },
   {
     title: "Deploy Serverless Laravel with WebAssembly",
     description:
