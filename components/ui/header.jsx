@@ -69,9 +69,9 @@ export function HeaderDesktop({
 }) {
   return (
     <div className="grid grid-cols-4">
-      <div className="col-span-1">
+      <div className="col-span-1 pt-3">
         <Link href="/">
-          <div className="flex gap-1 justify-start pt-1.5">
+          <div className="flex gap-1 justify-start mt-0.5">
             <BlurFade key="header-title" delay={0.25 + 0 * 0.05} inView>
               <Logo className="text-xl" />
             </BlurFade>
@@ -83,7 +83,7 @@ export function HeaderDesktop({
           </div>
         </Link>
       </div>
-      <div className="hidden lg:flex col-span-2 justify-center text-center text-md pt-1 gap-6">
+      <div className="hidden lg:flex col-span-2 justify-center text-center text-md gap-6 pt-3">
         {navigations.map((nav, index) => (
           <div key={"header-desktop-nav-" + index} className="flex gap-5">
             <BlurFade
@@ -109,7 +109,7 @@ export function HeaderDesktop({
           </div>
         ))}
       </div>
-      <div className="hidden lg:flex col-span-1 justify-end pt-2">
+      <div className="hidden lg:flex col-span-1 justify-end pt-4">
         <BlurFade key="header-nav-5" delay={0.25 + 8 * 0.05} inView>
           <Link
             href={process.env.NEXT_PUBLIC_CONSULTATION_BOOKING_LINK}
