@@ -71,7 +71,7 @@ export function HeaderDesktop({
     <div className="grid grid-cols-4">
       <div className="col-span-1 pt-3">
         <Link href="/">
-          <div className="flex gap-1 justify-start mt-0.5">
+          <div className="flex gap-1 justify-start mt-1">
             <BlurFade key="header-title" delay={0.25 + 0 * 0.05} inView>
               <Logo className="text-xl" />
             </BlurFade>
@@ -119,12 +119,12 @@ export function HeaderDesktop({
           </Link>
         </BlurFade>
       </div>
-      <div className="flex lg:hidden col-span-3 justify-end">
+      <div className="flex lg:hidden col-span-3 justify-end pt-5">
         <BlurFade
           key="header-nav-mobile-5"
           delay={0.25 + 8 * 0.05}
           inView
-          className={`text-end font-medium pt-2`}
+          className={`text-end font-medium`}
         >
           <ChevronDown
             className={`transition-all transform ease-in-out hover:text-white hover:cursor-pointer w-6 h-6 ${menuExpanded ? "text-white rotate-180" : "text-gray-400 rotate-0"}`}
@@ -146,7 +146,7 @@ export function HeaderMobile({ menuExpanded, navigations }) {
       leaveFrom="transform max-h-[9999px]"
       leaveTo="transform max-h-0"
     >
-      <div className="grid grid-rows gap-6 pb-4">
+      <div className="grid grid-rows gap-8 pb-4">
         <div className="grid grid-cols-2 mt-6 gap-4">
           {navigations.map((nav, index) => (
             <div
@@ -159,7 +159,7 @@ export function HeaderMobile({ menuExpanded, navigations }) {
             </div>
           ))}
         </div>
-        <div className="flex gap-2">
+        <div className="flex justify-start gap-2">
           <div className="text-md font-light text-gray-400">
             Feeling urgent?
           </div>

@@ -168,7 +168,7 @@ export default function Footer() {
               </div>
             ))}
           </div>
-          <div className="flex lg:hidden mb-10 font-light text-sm text-gray-400">
+          <div className="flex lg:hidden mb-16 lg:mb-10 font-light text-sm text-gray-400">
             <BlurFade
               key="footer-mobile-copyright"
               className="text-center w-full"

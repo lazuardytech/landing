@@ -73,3 +73,21 @@ body {
 .case {
     padding: 100px !important;
 }
+
+#crisp-chatbox {
+    /* on mobile display */
+    @media (max-width: 768px) {
+        a {
+            margin-right: 1.6rem !important;
+            margin-bottom: 1.2rem !important;
+        }
+    }
+
+    /* on desktop display */
+    @media (min-width: 769px) {
+        a {
+            margin-right: 3.1rem !important;
+            margin-bottom: 1.2rem !important;
+        }
+    }
+}

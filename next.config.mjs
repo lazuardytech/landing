@@ -1,4 +1,7 @@
 const nextConfig = {
+  devIndicators: {
+    appIsrStatus: false,
+  },
   images: {
     remotePatterns: [
       {
