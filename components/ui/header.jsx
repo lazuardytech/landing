@@ -106,7 +106,7 @@ export function HeaderDesktop({
           <ZincBadge>Feeling Urgent?</ZincBadge>
         </Link>
       </div>
-      <div className="flex lg:hidden text-end font-medium col-span-3 justify-end pt-5">
+      <div className="flex lg:hidden text-end font-medium col-span-3 justify-end pt-1.5">
         <ChevronDown
           className={`transition-all transform ease-in-out hover:text-white hover:cursor-pointer w-6 h-6 ${menuExpanded ? "text-white rotate-180" : "text-gray-400 rotate-0"}`}
           onClick={() => setMenuExpanded(!menuExpanded)}
