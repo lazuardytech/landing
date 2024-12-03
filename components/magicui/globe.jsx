@@ -70,7 +70,7 @@ export default function Globe({ className, config = GLOBE_CONFIG }) {
 
   const onRender = useCallback(
     (state) => {
-      if (!pointerInteracting.current) phi.current += 0.005;
+      // if (!pointerInteracting.current) phi.current += 0.005;
       state.phi = phi.current + r;
       state.width = width * 2;
       state.height = width * 2;

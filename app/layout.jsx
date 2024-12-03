@@ -27,7 +27,8 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
-          <SmoothScrolling>{children}</SmoothScrolling>
+          {children}
+          {/* <SmoothScrolling>{children}</SmoothScrolling> */}
         </ThemeProvider>
         <Toaster position="bottom-left" />
         <Crisp />
