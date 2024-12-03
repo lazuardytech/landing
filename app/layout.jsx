@@ -7,8 +7,46 @@ import dynamic from "next/dynamic";
 import "./globals.css";
 
 export const metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL),
   title: "Lazuardy",
   description: "We help businesses grow bigger through technology.",
+  generator: "Next.js",
+  applicationName: "Lazuardy",
+  referrer: "origin-when-cross-origin",
+  creator: "Lazuardy",
+  publisher: "Lazuardy",
+  manifest: `${process.env.NEXT_PUBLIC_APP_URL}/manifest.json`,
+  category:
+    "technology, startup, business, agency, digital, collective, saas, software, hardware",
+  keywords: [
+    "lazuardy",
+    "byte",
+    "things",
+    "studio",
+    "ai",
+    "software",
+    "hardware",
+    "artificial intelligence",
+    "uiux",
+    "ui/ux",
+    "design",
+    "user interface",
+    "user experience",
+    "saas",
+  ],
+  authors: [{ name: "Lazuardy", url: process.env.NEXT_PUBLIC_APP_URL }],
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export const viewport = {
