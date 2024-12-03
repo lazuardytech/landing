@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import BlurFade from "@/components/magicui/blur-fade";
 import { MoveRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -50,23 +49,14 @@ export default function Article() {
   return (
     <div className="container mt-40 px-10 lg:px-16 flex flex-col gap-14">
       <div className="flex w-full flex-col sm:flex-row sm:justify-between sm:items-center gap-8">
-        <BlurFade
-          className="relative w-full h-full"
-          key="article-title"
-          delay={0.25 + 0 * 0.05}
-          inView
-        >
-          <div className="text-3xl md:text-4xl lg:text-5xl">
-            Our Latest Articles
-          </div>
-        </BlurFade>
-        <BlurFade key={"article-button-1"} delay={0.25 + 1 * 0.05} inView>
-          <Link href="https://blog.lazuardy.tech" target="_blank">
-            <Button className="gap-4">
-              View all articles <MoveRight className="w-4 h-4" />
-            </Button>
-          </Link>
-        </BlurFade>
+        <div className="relative w-full h-full text-3xl md:text-4xl lg:text-5xl">
+          Our Latest Articles
+        </div>
+        <Link href="https://blog.lazuardy.tech" target="_blank">
+          <Button className="gap-4">
+            View all articles <MoveRight className="w-4 h-4" />
+          </Button>
+        </Link>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {articles.slice(0, maxArticles).map((article, index) => (
@@ -76,43 +66,26 @@ export default function Article() {
               className="flex flex-col gap-2 hover:opacity-75 cursor-pointer transition-all duration-500"
             >
               <div className="flex flex-col gap-2 hover:opacity-75 cursor-pointer">
-                <div className="relative aspect-video mb-4">
-                  <BlurFade
-                    className="relative w-full h-full border border-zinc-800"
-                    key={"image-" + article.title}
-                    delay={0.25 + (index + 2) * 0.05}
-                    inView
-                  >
-                    <Image
-                      src={article.image}
-                      alt={article.title}
-                      className="object-cover w-full h-full"
-                      fill
-                    />
-                  </BlurFade>
+                <div className="relative w-full h-full border border-zinc-800 aspect-video mb-4">
+                  <Image
+                    src={article.image}
+                    alt={article.title}
+                    className="object-cover w-full h-full"
+                    fill
+                  />
                 </div>
-                <BlurFade
-                  className="relative w-full h-full"
-                  key={"title" + article.title}
-                  delay={0.25 + (index + 1) * 0.05}
-                  inView
-                >
+                <div className="relative w-full h-full">
                   <span className="text-lg sm:whitespace-pre-line">
                     {article.title.length <= 34
                       ? article.title + "\n\n"
                       : article.title}
                   </span>
-                </BlurFade>
-                <BlurFade
-                  className=" w-full h-full"
-                  key={"description" + article.title}
-                  delay={0.25 + (index + 1) * 0.05}
-                  inView
-                >
+                </div>
+                <div className="w-full h-full">
                   <span className="font-light text-gray-400 text-sm line-clamp-2 text-ellipsis">
                     {article.description}
                   </span>
-                </BlurFade>
+                </div>
               </div>
             </div>
           </Link>

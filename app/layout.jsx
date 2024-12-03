@@ -2,7 +2,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import Plus_Jakarta_Sans from "@/lib/fonts/plus-jakarta-sans";
-import SmoothScrolling from "@/components/smooth-scrolling";
+// import SmoothScrolling from "@/components/smooth-scrolling";
 import dynamic from "next/dynamic";
 import "./globals.css";
 
