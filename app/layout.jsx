@@ -1,8 +1,9 @@
+// import SmoothScrolling from "@/components/smooth-scrolling";
+import Plus_Jakarta_Sans from "@/lib/fonts/plus-jakarta-sans";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
-import Plus_Jakarta_Sans from "@/lib/fonts/plus-jakarta-sans";
-// import SmoothScrolling from "@/components/smooth-scrolling";
 import dynamic from "next/dynamic";
 import "./globals.css";
 
@@ -71,6 +72,7 @@ export default function RootLayout({ children }) {
         <Toaster position="bottom-left" />
         <Crisp />
         <Analytics />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
       </body>
     </html>
   );
