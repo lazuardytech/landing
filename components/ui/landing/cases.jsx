@@ -39,23 +39,23 @@ const items = cases.concat(cases).concat(cases);
 
 export default function Cases() {
   const [api, setApi] = useState();
-  // const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(0);
 
-  // useEffect(() => {
-  //   if (!api) {
-  //     return;
-  //   }
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
 
-  //   setTimeout(() => {
-  //     if (api.selectedScrollSnap() + 1 === api.scrollSnapList().length) {
-  //       setCurrent(0);
-  //       api.scrollTo(0);
-  //     } else {
-  //       api.scrollNext();
-  //       setCurrent(current + 1);
-  //     }
-  //   }, 10000);
-  // }, [api, current]);
+    setTimeout(() => {
+      if (api.selectedScrollSnap() + 1 === api.scrollSnapList().length) {
+        setCurrent(0);
+        api.scrollTo(0);
+      } else {
+        api.scrollNext();
+        setCurrent(current + 1);
+      }
+    }, 2000);
+  }, [api, current]);
 
   return (
     <div className="relative z-10 bg-black pt-16 pb-24 border-t border-zinc-800">

@@ -1,7 +1,7 @@
 "use client";
 
 import createGlobe from "cobe";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
 const GLOBE_CONFIG = {
@@ -46,37 +46,37 @@ const GLOBE_CONFIG = {
 };
 
 export default function Globe({ className, config = GLOBE_CONFIG }) {
-  // let phi = useRef(0);
+  let phi = useRef(0);
   let width = 0;
   const canvasRef = useRef(null);
-  // const pointerInteracting = useRef(null);
-  // const pointerInteractionMovement = useRef(0);
-  // const [r, setR] = useState(0);
+  const pointerInteracting = useRef(null);
+  const pointerInteractionMovement = useRef(0);
+  const [r, setR] = useState(0);
 
-  // const updatePointerInteraction = (value) => {
-  //   pointerInteracting.current = value;
-  //   if (canvasRef.current) {
-  //     canvasRef.current.style.cursor = value ? "grabbing" : "grab";
-  //   }
-  // };
+  const updatePointerInteraction = (value) => {
+    pointerInteracting.current = value;
+    if (canvasRef.current) {
+      canvasRef.current.style.cursor = value ? "grabbing" : "grab";
+    }
+  };
 
-  // const updateMovement = (clientX) => {
-  //   if (pointerInteracting.current !== null) {
-  //     const delta = clientX - pointerInteracting.current;
-  //     pointerInteractionMovement.current = delta;
-  //     setR(delta / 200);
-  //   }
-  // };
+  const updateMovement = (clientX) => {
+    if (pointerInteracting.current !== null) {
+      const delta = clientX - pointerInteracting.current;
+      pointerInteractionMovement.current = delta;
+      setR(delta / 200);
+    }
+  };
 
-  // const onRender = useCallback(
-  //   (state) => {
-  //     if (!pointerInteracting.current) phi.current += 0.005;
-  //     state.phi = phi.current + r;
-  //     state.width = width * 2;
-  //     state.height = width * 2;
-  //   },
-  //   [r, width],
-  // );
+  const onRender = useCallback(
+    (state) => {
+      if (!pointerInteracting.current) phi.current += 0.005;
+      state.phi = phi.current + r;
+      state.width = width * 2;
+      state.height = width * 2;
+    },
+    [r, width],
+  );
 
   const onResize = () => {
     if (canvasRef.current) {
@@ -92,7 +92,7 @@ export default function Globe({ className, config = GLOBE_CONFIG }) {
       ...config,
       width: width * 2,
       height: width * 2,
-      // onRender,
+      onRender,
     });
 
     setTimeout(() => (canvasRef.current.style.opacity = "1"));
@@ -111,17 +111,17 @@ export default function Globe({ className, config = GLOBE_CONFIG }) {
           "size-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]",
         )}
         ref={canvasRef}
-        // onPointerDown={(e) =>
-        //   updatePointerInteraction(
-        //     e.clientX - pointerInteractionMovement.current,
-        //   )
-        // }
-        // onPointerUp={() => updatePointerInteraction(null)}
-        // onPointerOut={() => updatePointerInteraction(null)}
-        // onMouseMove={(e) => updateMovement(e.clientX)}
-        // onTouchMove={(e) =>
-        //   e.touches[0] && updateMovement(e.touches[0].clientX)
-        // }
+        onPointerDown={(e) =>
+          updatePointerInteraction(
+            e.clientX - pointerInteractionMovement.current,
+          )
+        }
+        onPointerUp={() => updatePointerInteraction(null)}
+        onPointerOut={() => updatePointerInteraction(null)}
+        onMouseMove={(e) => updateMovement(e.clientX)}
+        onTouchMove={(e) =>
+          e.touches[0] && updateMovement(e.touches[0].clientX)
+        }
       />
     </div>
   );
