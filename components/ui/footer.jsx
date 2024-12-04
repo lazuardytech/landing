@@ -62,9 +62,9 @@ export default function Footer() {
                 <div className="text-white mb-2">
                   PT Inovasi Kolektif Digital
                 </div>
-                <div>Menara Suara Merdeka</div>
-                <div>Jl. Pandanaran No. 30, Semarang</div>
-                <div>Indonesia 50134</div>
+                <div>SIM Square,</div>
+                <div>Jl. KH. Ahmad Dahlan, Semarang,</div>
+                <div>Central Java, Indonesia 50134</div>
                 <div className="hidden lg:block mt-14">
                   © Lazuardy 2024. All rights reserved.
                 </div>

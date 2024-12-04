@@ -178,7 +178,7 @@ export default function Text() {
             <span className="font-semibold">Company Address</span>
           </div>
           <div className="mt-2">
-            Menara Suara Merdeka, Jl. Pandanaran No. 30, Semarang, Indonesia
+            SIM Square, Jl. KH. Ahmad Dahlan, Semarang, Central Java, Indonesia
             50134
           </div>
           <div className="mt-4">
