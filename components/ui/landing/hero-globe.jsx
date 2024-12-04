@@ -8,18 +8,18 @@ export default function HeroGlobe() {
   return (
     <>
       <div className="relative h-screen max-w-screen overflow-hidden">
-        <div className="absolute h-screen w-screen z-10">
+        <div className="absolute h-screen w-full z-10">
           <Image
             alt="globe"
-            className="absolute top-0 right-0 mt-6 -me-56"
+            className="absolute top-0 right-0 mt-4 -me-56"
             src={globe}
-            width={900}
-            height={900}
+            width={880}
+            height={880}
           />
         </div>
-        <div className="absolute h-screen w-screen z-20">
-          <div className="container px-10 lg:px-16">
-            <div className="flex min-h-screen pb-24 items-start justify-center flex-col">
+        <div className="absolute h-screen w-full z-20">
+          <div className="flex container px-14">
+            <div className="flex ps-1 min-h-screen pb-24 items-start justify-center flex-col">
               <div className="text-6xl max-w-3xl text-left font-regular mb-6">
                 <div className="pointer-events-none text-left text-white font-semibold leading-tight">
                   Empowering Businesses

@@ -1,4 +1,4 @@
-// import SmoothScrolling from "@/components/smooth-scrolling";
+import SmoothScrolling from "@/components/smooth-scrolling";
 import Plus_Jakarta_Sans from "@/lib/fonts/plus-jakarta-sans";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
@@ -66,8 +66,7 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
-          {children}
-          {/* <SmoothScrolling>{children}</SmoothScrolling> */}
+          <SmoothScrolling>{children}</SmoothScrolling>
         </ThemeProvider>
         <Toaster position="bottom-left" />
         <Crisp />
