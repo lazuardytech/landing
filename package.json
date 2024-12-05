@@ -35,6 +35,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-spring": "^9.7.4",
+    "rss-parser": "^3.13.0",
     "sass": "^1.82.0",
     "sonner": "^1.7.0",
     "tailwind-merge": "^2.5.5",
