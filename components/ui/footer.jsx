@@ -70,18 +70,22 @@ export default function Footer() {
                 </div>
               </div>
               <div className="flex flex-rows-1 lg:flex-rows-2 gap-4 text-sm max-w-lg text-left">
-                <Link
-                  href="/terms"
-                  className="transition-colors duration-500 font-light text-gray-200 text-sm hover:text-white"
-                >
-                  Terms of Service
-                </Link>
-                <Link
-                  href="/privacy"
-                  className="transition-colors duration-500 font-light text-gray-200 text-sm hover:text-white"
-                >
-                  Privacy Policy
-                </Link>
+                <div>
+                  <Link
+                    href="/terms"
+                    className="transition-colors duration-500 font-light text-gray-200 text-sm hover:text-white"
+                  >
+                    Terms of Service
+                  </Link>
+                </div>
+                <div>
+                  <Link
+                    href="/privacy"
+                    className="transition-colors duration-500 font-light text-gray-200 text-sm hover:text-white"
+                  >
+                    Privacy Policy
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
