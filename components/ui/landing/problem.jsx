@@ -17,7 +17,7 @@ export default function Problem() {
                 <Link
                   href="https://luisazhou.com/blog/businesses-that-fail/"
                   target="_blank"
-                  className="text-white hover:underline"
+                  className="text-white font-semibold hover:underline"
                 >
                   luisazhou.com
                 </Link>

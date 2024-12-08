@@ -42,7 +42,7 @@ const nextConfig = {
       },
       // apply cache headers for next.js static assets
       {
-        source: "/_next/static/:path*",
+        source: "/_next/:path*",
         headers: [
           {
             key: "Cache-Control",
