@@ -12,7 +12,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "miro.medium.com",
+        hostname: "*.medium.com",
         pathname: "/**",
       },
     ],

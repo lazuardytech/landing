@@ -52,7 +52,7 @@ ShinyBadge.displayName = "ShinyBadge";
 function ZincBadge({ children }) {
   return (
     <Badge
-      className="text-xs font-medium px-4 py-1 border dark:bg-zinc-900 dark:hover:bg-zinc-700 dark:border-zinc-800 transition-colors duration-500"
+      className="text-xs font-medium px-4 py-1 border dark:bg-neutral-900 dark:hover:bg-neutral-700 dark:border-zinc-800 transition-colors duration-500"
       variant="outline"
     >
       {children}

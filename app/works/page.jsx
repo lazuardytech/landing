@@ -32,7 +32,7 @@ function Title({ className }) {
   return (
     <div className={`flex flex-col w-full ${className}`}>
       <div className="w-full max-w-xl lg:max-w-4xl text-3xl lg:text-7xl font-bold">
-        <h1 className="leading-snug">We made good sh*ts.</h1>
+        <h1 className="leading-none">We made good sh*ts.</h1>
       </div>
       <div className="w-full flex gap-6 lg:justify-start items-start text-xl font-regular text-neutral-400 mt-8">
         <Link href="/works">

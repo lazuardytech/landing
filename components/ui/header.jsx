@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Logo from "@/components/ui/logo";
 import BlurFade from "@/components/ui/blur-fade";
+import AnimatedShinyText from "@/components/ui/animated-shiny-text";
 import { Transition } from "@headlessui/react";
 import { ZincBadge } from "@/components/ui/badge";
 import { ChevronDown } from "lucide-react";
@@ -18,6 +19,7 @@ export const routes = {
   "/studio": "/solutions",
   "/ai": "/solutions",
   "/works": "/works",
+  "/articles": "/articles",
   "/contact": "/contact",
 };
 
@@ -28,6 +30,14 @@ export const solutionRoutes = {
   "/studio": "Studio",
   "/ai": "AI",
 };
+
+function resolveRoute(pathname, link) {
+  if (link === "/") {
+    return link === pathname;
+  }
+
+  return pathname.includes(link);
+}
 
 export default function Header() {
   const pathname = usePathname();
@@ -81,7 +91,7 @@ export function HeaderDesktop({
           <div key={"header-desktop-nav-" + index} className="flex gap-5">
             <div
               key={"header-desktop-nav-label-" + index}
-              className={`text-end transition-colors font-medium hover:text-white pt-1.5 ${routes[pathname] === nav.link ? "text-white" : "text-gray-500"}`}
+              className={`text-end transition-colors font-regular hover:text-white pt-1.5 ${resolveRoute(pathname, nav.link) ? "text-white" : "text-neutral-500"}`}
             >
               <Link href={nav.link} target={nav.target ?? ""}>
                 {nav.label}
@@ -103,12 +113,14 @@ export function HeaderDesktop({
           href={process.env.NEXT_PUBLIC_CONSULTATION_BOOKING_LINK}
           target="_blank"
         >
-          <ZincBadge>Feeling Urgent?</ZincBadge>
+          <ZincBadge>
+            <AnimatedShinyText>Feeling Urgent?</AnimatedShinyText>
+          </ZincBadge>
         </Link>
       </div>
       <div className="flex lg:hidden text-end font-medium col-span-3 justify-end pt-1.5">
         <ChevronDown
-          className={`transition-all transform ease-in-out hover:text-white hover:cursor-pointer w-6 h-6 ${menuExpanded ? "text-white rotate-180" : "text-gray-400 rotate-0"}`}
+          className={`transition-all transform ease-in-out hover:text-white hover:cursor-pointer w-6 h-6 ${menuExpanded ? "text-white rotate-180" : "text-neutral-500 rotate-0"}`}
           onClick={() => setMenuExpanded(!menuExpanded)}
         />
       </div>
@@ -131,7 +143,7 @@ export function HeaderMobile({ menuExpanded, navigations }) {
           {navigations.map((nav, index) => (
             <div
               key={index}
-              className="col-span-1 text-start transition-colors text-gray-400 font-medium hover:text-white"
+              className="col-span-1 text-start transition-colors text-neutral-500 font-regular hover:text-white"
             >
               <Link href={nav.link} target={nav.target ?? ""}>
                 {nav.label}
@@ -140,7 +152,7 @@ export function HeaderMobile({ menuExpanded, navigations }) {
           ))}
         </div>
         <div className="flex justify-start gap-2">
-          <div className="text-md font-light text-gray-400">
+          <div className="text-md font-light text-neutral-500">
             Feeling urgent?
           </div>
           <div>
