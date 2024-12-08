@@ -15,6 +15,7 @@ export default function HeroGlobe() {
             src={globe}
             width={880}
             height={880}
+            loading="eager"
           />
         </div>
         <div className="absolute h-screen w-full z-20">
