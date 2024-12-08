@@ -91,7 +91,7 @@ export function HeaderDesktop({
           <div key={"header-desktop-nav-" + index} className="flex gap-5">
             <div
               key={"header-desktop-nav-label-" + index}
-              className={`text-end transition-colors font-regular hover:text-white pt-1.5 ${resolveRoute(pathname, nav.link) ? "text-white" : "text-neutral-500"}`}
+              className={`text-end transition-colors font-regular hover:text-white pt-1.5 ${resolveRoute(pathname, nav.link) ? "text-white" : "text-neutral-400"}`}
             >
               <Link href={nav.link} target={nav.target ?? ""}>
                 {nav.label}
@@ -120,7 +120,7 @@ export function HeaderDesktop({
       </div>
       <div className="flex lg:hidden text-end font-medium col-span-3 justify-end pt-1.5">
         <ChevronDown
-          className={`transition-all transform ease-in-out hover:text-white hover:cursor-pointer w-6 h-6 ${menuExpanded ? "text-white rotate-180" : "text-neutral-500 rotate-0"}`}
+          className={`transition-all transform ease-in-out hover:text-white hover:cursor-pointer w-6 h-6 ${menuExpanded ? "text-white rotate-180" : "text-neutral-400 rotate-0"}`}
           onClick={() => setMenuExpanded(!menuExpanded)}
         />
       </div>
@@ -143,7 +143,7 @@ export function HeaderMobile({ menuExpanded, navigations }) {
           {navigations.map((nav, index) => (
             <div
               key={index}
-              className="col-span-1 text-start transition-colors text-neutral-500 font-regular hover:text-white"
+              className="col-span-1 text-start transition-colors text-neutral-400 font-regular hover:text-white"
             >
               <Link href={nav.link} target={nav.target ?? ""}>
                 {nav.label}
@@ -152,7 +152,7 @@ export function HeaderMobile({ menuExpanded, navigations }) {
           ))}
         </div>
         <div className="flex justify-start gap-2">
-          <div className="text-md font-light text-neutral-500">
+          <div className="text-md font-light text-neutral-400">
             Feeling urgent?
           </div>
           <div>
