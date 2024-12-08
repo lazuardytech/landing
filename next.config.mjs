@@ -22,7 +22,7 @@ const nextConfig = {
       // apply cache headers for root static assets
       {
         source:
-          "/:file(\\.(txt|xml|json|ico|png|jpg|jpeg|svg|webp|webm|mp4|woff|woff2))$",
+          "/:file*.{txt,xml,json,ico,png,jpg,jpeg,svg,webp,webm,mp4,woff,woff2}",
         headers: [
           {
             key: "Cache-Control",
