@@ -1,9 +1,10 @@
 {
   "name": "lazuardy.tech",
+  "description": "The Lazuardy's Landing Page.",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
+    "dev": "NODE_OPTIONS='--no-warnings' next dev --turbo",
     "build": "NODE_OPTIONS='--no-warnings' next build",
     "start": "next start",
     "lint": "next lint"
