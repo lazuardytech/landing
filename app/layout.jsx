@@ -1,6 +1,7 @@
 import Plus_Jakarta_Sans from "@/lib/fonts/plus-jakarta-sans";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { CompanyData } from "@/lib/config";
@@ -72,8 +73,9 @@ export default function RootLayout({ children }) {
           {children}
         </ThemeProvider>
         <Toaster position="bottom-left" />
-        <Crisp />
         <Analytics mode="production" />
+        <SpeedInsights />
+        <Crisp />
       </body>
     </html>
   );
