@@ -33,7 +33,7 @@ function Title({ className }) {
       <div className="w-full max-w-xl lg:max-w-4xl text-3xl lg:text-7xl font-bold">
         <h1 className="leading-none">We made good sh*ts.</h1>
       </div>
-      <div className="w-full flex gap-6 lg:justify-start items-start text-xl font-regular text-neutral-400 mt-8">
+      <div className="w-full flex gap-6 lg:justify-start items-start text-md lg:text-lg font-regular text-neutral-400 mt-8">
         <Link href="/works">
           <span className="transition-colors duration-300 hover:text-white text-white">
             Featured
@@ -124,13 +124,13 @@ function Works({ className }) {
 function WIP({ className }) {
   return (
     <div
-      className={`w-full flex justify-center items-center gap-2 lg:gap-4 py-20 px-10 hover:cursor-not-allowed ${className}`}
+      className={`w-full flex justify-center items-center gap-2 lg:gap-4 py-20 hover:cursor-not-allowed ${className}`}
     >
       <h2 className="text-sm lg:text-2xl text-regular text-neutral-400 leading-snug">
         ✏️
       </h2>
       <h2 className="text-sm lg:text-lg text-light text-neutral-300 leading-snug">
-        documentation is still under progress...
+        documentation is under progress...
       </h2>
     </div>
   );

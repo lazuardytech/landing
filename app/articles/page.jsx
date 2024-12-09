@@ -31,18 +31,20 @@ function Title({ className }) {
       <div className="w-full max-w-xl lg:max-w-4xl text-3xl lg:text-7xl font-bold text-white">
         <h1 className="leading-none">Latest Articles.</h1>
       </div>
-      <div className="w-full max-w-xl lg:max-w-4xl text-md font-light text-gray-400 mt-6">
-        <p className="flex leading-relaxed">
-          We write everything we care about on
-          <Link
-            className="flex underline gap-1 ms-1 transition duration-300 hover:text-white"
-            href={socials[2].link}
-            target={socials[2].target}
-          >
-            Medium
-            <ExternalLink className="w-4 h-4 inline-block mt-1.5" />
-          </Link>
-        </p>
+      <div className="w-full max-w-xl lg:max-w-4xl text-sm lg:text-lg font-light text-gray-400 mt-6">
+        <div className="flex leading-relaxed">
+          <span>We write everything we care about on</span>
+          <span>
+            <Link
+              className="flex underline gap-1 ms-1 transition duration-300 hover:text-white"
+              href={socials[2].link}
+              target={socials[2].target}
+            >
+              Medium
+              <ExternalLink className="w-3 lg:w-4 h-3 lg:h-4 mt-1.5 lg:mt-2" />
+            </Link>
+          </span>
+        </div>
       </div>
     </div>
   );

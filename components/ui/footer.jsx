@@ -50,7 +50,7 @@ export default function Footer() {
           <div className="flex gap-8 flex-col items-start">
             <div className="flex gap-2 flex-col">
               <Logo className="w-full text-start text-xl" withTM="true" />
-              <div className="text-md md:text-md lg:text-lg flex font-light max-w-lg text-left">
+              <div className="text-sm md:text-md lg:text-lg flex font-light max-w-lg text-left">
                 <span className="pt-2">Helping your businesses </span>
                 <WordRotate
                   className="ms-1 text-black dark:text-white"
@@ -58,7 +58,7 @@ export default function Footer() {
                 />
               </div>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-4">
               <div className="flex flex-col text-sm text-left font-light text-gray-400">
                 <div className="text-white mb-2">{CompanyData.legalName}</div>
                 <div>

@@ -161,7 +161,7 @@ export function HeaderMobile({ menuExpanded, navigations }) {
             <Link
               href={process.env.NEXT_PUBLIC_CONSULTATION_BOOKING_LINK}
               target="_blank"
-              className="font-bold transform-colors duration-500 hover:text-white hover:underline"
+              className="font-regular transform-colors duration-500 hover:text-white hover:underline"
             >
               Let&apos;s talk.
             </Link>
