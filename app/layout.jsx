@@ -4,18 +4,19 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
+import { CompanyData } from "@/lib/config";
 import dynamic from "next/dynamic";
 import "./globals.css";
 
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL),
-  title: "Lazuardy",
-  description: "We help businesses grow bigger through technology.",
+  title: CompanyData.tradeName,
+  description: CompanyData.description,
   generator: "Next.js",
-  applicationName: "Lazuardy",
+  applicationName: CompanyData.tradeName,
   referrer: "origin-when-cross-origin",
-  creator: "Lazuardy",
-  publisher: "Lazuardy",
+  creator: CompanyData.tradeName,
+  publisher: CompanyData.tradeName,
   manifest: `${process.env.NEXT_PUBLIC_APP_URL}/manifest.json`,
   category:
     "technology, startup, business, agency, digital, collective, saas, software, hardware",
@@ -35,7 +36,9 @@ export const metadata = {
     "user experience",
     "saas",
   ],
-  authors: [{ name: "Lazuardy", url: process.env.NEXT_PUBLIC_APP_URL }],
+  authors: [
+    { name: CompanyData.tradeName, url: process.env.NEXT_PUBLIC_APP_URL },
+  ],
   formatDetection: {
     email: false,
     address: false,

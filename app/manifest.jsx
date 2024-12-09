@@ -1,7 +1,9 @@
+import { CompanyData } from "@/lib/config";
+
 export default function manifest() {
   return {
-    name: "Lazuardy",
-    short_name: "Lazuardy",
+    name: CompanyData.tradeName,
+    short_name: CompanyData.tradeName,
     description: "We help businesses grow bigger through technology.",
     start_url: "/",
     display: "standalone",

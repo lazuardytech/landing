@@ -1,4 +1,3 @@
-import ShineBorder from "@/components/ui/shine-border";
 import {
   AppWindow,
   Cloud,
@@ -13,6 +12,7 @@ import {
   SquareFunction,
   ScanEye,
 } from "lucide-react";
+import { CompanyData } from "@/lib/config";
 
 export default function Division() {
   return (
@@ -45,12 +45,10 @@ export default function Division() {
 
 export function Byte() {
   return (
-    // <ShineBorder color="#0D92F4" borderRadius={0} className="p-8">
-    // </ShineBorder>
     <div className="flex gap-8 flex-col border border-[#0D92F4]/60 p-8">
       <div className="flex gap-2 flex-col">
         <div className="text-xl lg:text-2xl text-left font-light mb-2">
-          Lazuardy Byte
+          {CompanyData.tradeName} Byte
         </div>
         <div className="text-md font-light text-gray-400 text-justify max-w-xl">
           We simplify tech with custom software, reliable cloud solutions, and
@@ -104,12 +102,10 @@ export function Byte() {
 
 export function Things() {
   return (
-    // <ShineBorder color="#F95454" borderRadius={0} className="p-8">
-    // </ShineBorder>
     <div className="flex gap-8 flex-col border border-[#F95454]/60 p-8">
       <div className="flex gap-2 flex-col">
         <div className="text-xl lg:text-2xl text-left font-light mb-2">
-          Lazuardy Things
+          {CompanyData.tradeName} Things
         </div>
         <div className="text-md font-light text-gray-400 text-justify">
           We brings smart tech to your world, with innovative hardware, IoT, and
@@ -161,12 +157,10 @@ export function Things() {
 
 export function Studio() {
   return (
-    // <ShineBorder color="#FFFFFF" borderRadius={0} className="p-8">
-    // </ShineBorder>
     <div className="flex gap-8 flex-col border border-[#FFFFFF]/40 p-8">
       <div className="flex gap-2 flex-col">
         <div className="text-xl lg:text-2xl text-left font-light mb-2">
-          Lazuardy Studio
+          {CompanyData.tradeName} Studio
         </div>
         <div className="text-md font-light text-gray-400 text-justify">
           We brings your brand to life with creative design, seamless UI/UX, and
@@ -216,12 +210,10 @@ export function Studio() {
 
 export function AI() {
   return (
-    // <ShineBorder color="#219B9D" borderRadius={0} className="p-8">
-    // </ShineBorder>
     <div className="flex gap-8 flex-col border border-[#219B9D]/60 p-8">
       <div className="flex gap-2 flex-col">
         <div className="text-xl lg:text-2xl text-left font-light mb-2">
-          Lazuardy AI
+          {CompanyData.tradeName} AI
         </div>
         <div className="text-md font-light text-gray-400 text-justify">
           We&apos;re here to make technology smarter for you, with advanced AI

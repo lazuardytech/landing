@@ -9,7 +9,9 @@ import { ZincBadge } from "@/components/ui/badge";
 import { ChevronDown } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { navigations } from "@/lib/state";
+import { navigations as rawNavigations } from "@/lib/state";
+
+const navigations = rawNavigations.filter((nav) => !nav.hiddenOnHeader);
 
 export const routes = {
   "/": "/",

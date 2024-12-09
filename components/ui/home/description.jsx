@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Parallax } from "@/components/parallax";
+import { CompanyData } from "@/lib/config";
 
 export default function Description() {
   return (
@@ -11,9 +12,9 @@ export default function Description() {
               A Digital Collective.
             </h1>
             <p className="text-lg font-light text-gray-400 max-w-xl text-left">
-              Lazuardy is a team full of visionary engineers, researchers, and
-              professionals that work together to help business grow bigger
-              through bleeding edge technology.
+              {CompanyData.tradeName} is a team full of visionary engineers,
+              researchers, and professionals that work together to help business
+              grow bigger through bleeding edge technology.
             </p>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Logo from "@/components/ui/logo";
 import WordRotate from "@/components/ui/word-rotate";
+import { CompanyData } from "@/lib/config";
 import { socials, navigations, solutions } from "@/lib/state";
 
 export const navigationItems = [
@@ -57,35 +58,42 @@ export default function Footer() {
                 />
               </div>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               <div className="flex flex-col text-sm text-left font-light text-gray-400">
-                <div className="text-white mb-2">
-                  PT Inovasi Kolektif Digital
+                <div className="text-white mb-2">{CompanyData.legalName}</div>
+                <div>
+                  <Link
+                    href={CompanyData.business.link}
+                    target={CompanyData.business.target}
+                    className="font-regular transition-color duration-300 hover:text-white"
+                  >
+                    {CompanyData.business.html}
+                  </Link>
                 </div>
-                <div>SIM Square,</div>
-                <div>Jl. KH. Ahmad Dahlan, Semarang,</div>
-                <div>Central Java, Indonesia 50134</div>
                 <div className="hidden lg:block mt-14">
-                  © Lazuardy 2024. All rights reserved.
+                  {CompanyData.copyright.label}
                 </div>
               </div>
-              <div className="flex flex-rows-1 lg:flex-rows-2 gap-4 text-sm max-w-lg text-left">
-                <div>
-                  <Link
-                    href="/terms"
-                    className="transition-colors duration-500 font-light text-gray-200 text-sm hover:text-white"
-                  >
-                    Terms of Service
-                  </Link>
+              <div className="flex flex-col text-sm text-left font-light text-gray-400">
+                <div className="flex flex-rows-1 lg:flex-rows-2 gap-4 text-sm text-left">
+                  <div>
+                    <Link
+                      href="/terms"
+                      className="transition-colors duration-500 font-regular text-gray-300 text-sm hover:text-white"
+                    >
+                      Terms of Service
+                    </Link>
+                  </div>
+                  <div>
+                    <Link
+                      href="/privacy"
+                      className="transition-colors duration-500 font-regular text-gray-300 text-sm hover:text-white"
+                    >
+                      Privacy Policy
+                    </Link>
+                  </div>
                 </div>
-                <div>
-                  <Link
-                    href="/privacy"
-                    className="transition-colors duration-500 font-light text-gray-200 text-sm hover:text-white"
-                  >
-                    Privacy Policy
-                  </Link>
-                </div>
+                <div className="mt-2">{CompanyData.copyright.html}</div>
               </div>
             </div>
           </div>
@@ -124,7 +132,7 @@ export default function Footer() {
             ))}
           </div>
           <div className="text-center w-full flex lg:hidden mb-16 lg:mb-10 font-light text-sm text-gray-400">
-            © Lazuardy 2024. All rights reserved.
+            {CompanyData.copyright.label}
           </div>
         </div>
       </div>
