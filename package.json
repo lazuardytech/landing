@@ -23,7 +23,7 @@
     "clsx": "^2.1.1",
     "crisp-sdk-web": "^1.0.25",
     "embla-carousel-react": "^8.5.1",
-    "framer-motion": "^11.13.1",
+    "framer-motion": "^11.13.3",
     "gsap": "^3.12.5",
     "isomorphic-dompurify": "^2.18.0",
     "lucide-react": "^0.454.0",

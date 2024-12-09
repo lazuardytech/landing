@@ -35,7 +35,7 @@ const nextConfig = {
     appIsrStatus: false,
   },
   images: {
-    minimumCacheTTL: 31536000, // cache for 1 month (31536000 seconds)
+    minimumCacheTTL: 31536000, // cache for 1 year (31536000 seconds)
     remotePatterns: [
       {
         protocol: "https",
@@ -58,7 +58,7 @@ const nextConfig = {
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=31536000, immutable", // immutable cache for 1 month (31536000 seconds)
+            value: "public, max-age=31536000, immutable", // immutable cache for 1 year (31536000 seconds)
           },
         ],
       },
@@ -68,7 +68,7 @@ const nextConfig = {
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=31536000, immutable", // immutable cache for 1 month (31536000 seconds)
+            value: "public, max-age=31536000, immutable", // immutable cache for 1 year (31536000 seconds)
           },
         ],
       },
@@ -78,7 +78,7 @@ const nextConfig = {
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=31536000, immutable", // immutable cache for 1 month (31536000 seconds)
+            value: "public, max-age=31536000, immutable", // immutable cache for 1 year (31536000 seconds)
           },
         ],
       },
@@ -88,7 +88,7 @@ const nextConfig = {
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=31536000, immutable", // immutable cache for 1 month (31536000 seconds)
+            value: "public, max-age=31536000, immutable", // immutable cache for 1 year (31536000 seconds)
           },
         ],
       },
