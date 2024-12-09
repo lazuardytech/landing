@@ -54,9 +54,5 @@
   "type": "module",
   "peerDependencies": {
     "typescript": "^5.6.3"
-  },
-  "browserslist": [
-    "defaults and fully supports es6-module",
-    "maintained node versions"
-  ]
+  }
 }
