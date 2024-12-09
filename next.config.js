@@ -84,7 +84,7 @@ const nextConfig = {
       },
       // apply cache headers for vercel insights static assets
       {
-        source: "/_vercel/insights/:path*",
+        source: "/_vercel/:path*",
         headers: [
           {
             key: "Cache-Control",
