@@ -70,13 +70,12 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           {children}
-          {/* <SmoothScrolling>{children}</SmoothScrolling> */}
         </ThemeProvider>
         <Toaster position="bottom-left" />
         <Crisp />
-        <Analytics />
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
+        <Analytics mode="production" />
       </body>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
     </html>
   );
 }
