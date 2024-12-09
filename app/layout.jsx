@@ -1,6 +1,5 @@
-// import SmoothScrolling from "@/components/smooth-scrolling";
 import Plus_Jakarta_Sans from "@/lib/fonts/plus-jakarta-sans";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
@@ -62,6 +61,7 @@ const Crisp = dynamic(() => import("@/components/crisp"));
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID} />
       <body className={`${Plus_Jakarta_Sans.className}`}>
         <ThemeProvider
           attribute="class"
@@ -75,7 +75,6 @@ export default function RootLayout({ children }) {
         <Crisp />
         <Analytics mode="production" />
       </body>
-      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
     </html>
   );
 }
