@@ -23,7 +23,7 @@ export default function Description() {
             <Parallax speed={1} className="self-end overflow-hidden">
               <Image
                 alt="description-image-1"
-                src="/images/landing/description-1.webp"
+                src="/images/home/description-1.webp"
                 width={0}
                 height={0}
                 sizes="100vw"
@@ -36,7 +36,7 @@ export default function Description() {
             <Parallax speed={-1} className="self-center">
               <Image
                 alt="description-image-3"
-                src="/images/landing/description-3.webp"
+                src="/images/home/description-3.webp"
                 width={0}
                 height={0}
                 sizes="100vw"
@@ -49,7 +49,7 @@ export default function Description() {
             <Parallax speed={0.1} className="self-center">
               <Image
                 alt="description-image-2"
-                src="/images/landing/description-2.webp"
+                src="/images/home/description-2.webp"
                 width={0}
                 height={0}
                 sizes="100vw"

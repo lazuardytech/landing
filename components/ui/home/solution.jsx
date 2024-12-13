@@ -11,7 +11,7 @@ export default function Solution() {
           <div className="row-span-1 aspect-square w-full h-full border border-zinc-800">
             <Image
               alt="solution-image-1"
-              src="/images/landing/solution-1.webp"
+              src="/images/home/solution-1.webp"
               width={0}
               height={0}
               sizes="100vw"
@@ -21,7 +21,7 @@ export default function Solution() {
           <div className="row-span-1 aspect-square w-full h-full border border-zinc-800">
             <Image
               alt="solution-image-2"
-              src="/images/landing/solution-2.webp"
+              src="/images/home/solution-2.webp"
               width={0}
               height={0}
               sizes="100vw"
@@ -31,7 +31,7 @@ export default function Solution() {
           <div className="row-span-1 aspect-square w-full h-full border border-zinc-800">
             <Image
               alt="solution-image-3"
-              src="/images/landing/solution-3.webp"
+              src="/images/home/solution-3.webp"
               width={0}
               height={0}
               sizes="100vw"
@@ -41,7 +41,7 @@ export default function Solution() {
           <div className="row-span-1 aspect-square w-full h-full border border-zinc-800">
             <Image
               alt="solution-image-4"
-              src="/images/landing/solution-4.webp"
+              src="/images/home/solution-4.webp"
               width={0}
               height={0}
               sizes="100vw"

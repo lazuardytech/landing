@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { RainbowButton } from "@/components/ui/button";
 import { PhoneCall } from "lucide-react";
-import globe from "@/public/images/landing/globe.webp";
+import globe from "@/public/images/home/globe.webp";
 
 export default function HeroGlobe() {
   return (

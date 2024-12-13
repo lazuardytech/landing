@@ -22,7 +22,7 @@ export default function Benefit() {
               <div className="absolute inset-0">
                 <Image
                   alt="benefit-card-1-image"
-                  src="/images/landing/benefit-1.webp"
+                  src="/images/home/benefit-1.webp"
                   className="object-cover"
                   fill
                 />
@@ -47,7 +47,7 @@ export default function Benefit() {
               <div className="absolute inset-0">
                 <Image
                   alt="benefit-card-2-image"
-                  src="/images/landing/benefit-2.webp"
+                  src="/images/home/benefit-2.webp"
                   className="object-cover"
                   fill
                 />
@@ -71,7 +71,7 @@ export default function Benefit() {
               <div className="absolute inset-0">
                 <Image
                   alt="benefit-card-3-image"
-                  src="/images/landing/benefit-3.webp"
+                  src="/images/home/benefit-3.webp"
                   className="object-cover"
                   fill
                 />
@@ -95,7 +95,7 @@ export default function Benefit() {
               <div className="absolute inset-0">
                 <Image
                   alt="benefit-card-4-image"
-                  src="/images/landing/benefit-4.webp"
+                  src="/images/home/benefit-4.webp"
                   className="object-cover"
                   fill
                 />

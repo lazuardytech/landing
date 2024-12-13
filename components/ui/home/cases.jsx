@@ -1,41 +1,16 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
+import { associates } from "@/lib/state";
 
-const cases = [
-  {
-    title: "Case 1",
-    image: "/images/landing/case-1.webp",
-  },
-  {
-    title: "Case 2",
-    image: "/images/landing/case-2.webp",
-  },
-  {
-    title: "Case 3",
-    image: "/images/landing/case-3.webp",
-  },
-  {
-    title: "Case 4",
-    image: "/images/landing/case-4.webp",
-  },
-  {
-    title: "Case 5",
-    image: "/images/landing/case-5.webp",
-  },
-  {
-    title: "Case 6",
-    image: "/images/landing/case-6.webp",
-  },
-];
-
-const items = cases.concat(cases).concat(cases);
+const items = associates.concat(associates).concat(associates);
 
 export default function Cases() {
   const [api, setApi] = useState();
@@ -70,7 +45,9 @@ export default function Cases() {
             <CarouselItem className="basis-1/4 lg:basis-1/6" key={index}>
               <div className="relative aspect-square flex items-center justify-center">
                 <div className="relative w-full h-full">
-                  <Image src={item.image} alt={item.title} fill />
+                  <Link href={item.link} target={item.target}>
+                    <Image src={item.logo} alt={item.name} fill />
+                  </Link>
                 </div>
               </div>
             </CarouselItem>
