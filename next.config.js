@@ -93,6 +93,16 @@ const nextConfig = {
           },
         ],
       },
+      // apply hsts headers for all routes
+      {
+        source: "/:path*",
+        headers: [
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=63072000; includeSubDomains; preload", // hsts settings
+          },
+        ],
+      },
     ];
   },
 };
