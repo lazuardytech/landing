@@ -32,21 +32,18 @@ function ArticleHeader({ className, data }) {
   const article = data.article;
   return (
     <>
-      <div
-        className={`text-md max-w-2xl mx-auto grid grid-cols-2 ${className}`}
-      >
+      <div className={`text-md max-w-2xl mx-auto flex ${className}`}>
         <div className="flex justify-start items-start">
           <Link
             href="/articles"
             className="transition-colors duration-300 text-neutral-400 hover:text-white font-regular"
           >
-            <div className="flex gap-2 ">
+            <div className="flex gap-2 w-full">
               <ChevronLeft className="w-5 h-5 mt-0.5" />
               <span>Back to Latest Articles</span>
             </div>
           </Link>
         </div>
-        <div className="flex justify-end items-start"></div>
       </div>
       <div className="text-4xl md:text-5xl text-white font-bold max-w-2xl mx-auto text-left mt-14">
         <h1 className="leading-none">{article.title}</h1>
@@ -100,7 +97,7 @@ function ArticleContent({ className, data }) {
   const article = data.article;
   return (
     <div
-      className={`content text-white font-light text-md lg:text-md max-w-2xl mx-auto text-justify ${className}`}
+      className={`content text-white font-light text-md lg:text-md max-w-2xl mx-auto text-left ${className}`}
       dangerouslySetInnerHTML={{ __html: article.content }}
     />
   );
@@ -109,27 +106,27 @@ function ArticleContent({ className, data }) {
 function ArticleFooter({ className, data }) {
   return (
     <>
-      <div className={`max-w-2xl mx-auto text-justify ${className}`}>
+      <div className={`max-w-2xl mx-auto text-left ${className}`}>
         <hr />
         <h1 className="text-white text-xl lg:text-2xl font-semibold mt-14">
           We like to write these kind of article.
         </h1>
-        <div className="flex text-gray-400 font-light text-sm lg:text-md mt-4">
-          Please consider following to our publication on
+        <div className="flex flex-row text-gray-400 font-light text-sm lg:text-md mt-4">
+          Follow us on
           <Link
-            className="flex underline gap-1 ms-1 transition duration-300 hover:text-white"
+            className="underline gap-1 mx-1 transition duration-300 hover:text-white"
             href={socials[2].link}
             target={socials[2].target}
           >
             Medium
-            <ExternalLink className="w-4 h-4 inline-block mt-1" />
           </Link>
+          to get the latest updates.
         </div>
         <p className="text-gray-400 font-light text-sm lg:text-md mt-2">
           We also active on these social media platforms,
         </p>
       </div>
-      <div className="flex gap-4 text-gray-400 font-light text-xs lg:text-md max-w-2xl mx-auto text-justify mt-4">
+      <div className="flex gap-4 text-gray-400 font-light text-xs lg:text-md max-w-2xl mx-auto text-left mt-4">
         {socials.map((social, index) => (
           <Link
             key={index}
