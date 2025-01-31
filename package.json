@@ -19,6 +19,7 @@
     "@radix-ui/react-tooltip": "^1.1.7",
     "@vercel/analytics": "^1.4.1",
     "@vercel/speed-insights": "^1.1.0",
+    "babel-plugin-react-compiler": "^19.0.0-beta-27714ef-20250124",
     "cheerio": "^1.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -35,9 +36,10 @@
     "react-spring": "^9.7.5",
     "reading-time": "^1.5.0",
     "rss-parser": "^3.13.0",
-    "sonner": "^1.7.3",
+    "sonner": "^1.7.4",
     "tailwind-merge": "^2.6.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "vanilla-cookieconsent": "3.0.1"
   },
   "devDependencies": {
     "@types/bun": "latest",

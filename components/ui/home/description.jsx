@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Parallax } from "@/components/parallax";
+import { Parallax } from "@/components/ui/parallax";
 import { CompanyData } from "@/lib/config";
 
 export default function Description() {
