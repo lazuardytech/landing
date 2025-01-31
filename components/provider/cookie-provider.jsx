@@ -6,6 +6,8 @@ import "./cookie-provider.css";
 
 export default function CookieProvider() {
   useEffect(() => {
+    if (!document) return;
+    document.documentElement.classList.add("cc--darkmode");
     CookieConsent.run({
       mode: "opt-in", // Users must opt-in to non-essential cookies
       revision: 1,
@@ -92,8 +94,8 @@ export default function CookieProvider() {
               acceptNecessaryBtn: "Reject All",
               showPreferencesBtn: "Manage Preferences",
               footer: `
-                  <a href="/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-                  <a href="/legal/terms-and-conditions" target="_blank" rel="noopener noreferrer">Terms and Conditions</a>
+                  <a href="/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                  <a href="/terms" target="_blank" rel="noopener noreferrer">Terms and Conditions</a>
               `,
             },
             preferencesModal: {
@@ -149,7 +151,7 @@ export default function CookieProvider() {
                 {
                   title: "More information",
                   description:
-                    'For any questions regarding our cookie policy and your choices, please <a href="/sales">contact us</a>.',
+                    'For any questions regarding our cookie policy and your choices, please <a href="/contact">contact us</a>.',
                 },
               ],
             },
