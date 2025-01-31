@@ -1,5 +1,6 @@
 import animate from "tailwindcss-animate";
 
+/** @type {import('tailwindcss').Config} */
 const config = {
   darkMode: ["class"],
   content: [
@@ -8,7 +9,6 @@ const config = {
     "./app/**/*.{js,jsx}",
     "./src/**/*.{js,jsx}",
   ],
-  prefix: "",
   theme: {
     container: {
       center: "true",
