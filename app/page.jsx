@@ -1,18 +1,17 @@
-import Maintenance from "@/components/ui/maintenance";
-import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
-import Hero from "@/components/ui/home/hero";
-import HeroGlobe from "@/components/ui/home/hero-globe";
+import Header from "@/components/ui/header";
+import Article from "@/components/ui/home/article";
+import Benefit from "@/components/ui/home/benefit";
 import Cases from "@/components/ui/home/cases";
 import Description from "@/components/ui/home/description";
-import Problem from "@/components/ui/home/problem";
-import Benefit from "@/components/ui/home/benefit";
 import Division from "@/components/ui/home/division";
-import Timeline from "@/components/ui/home/timeline";
-import Solution from "@/components/ui/home/solution";
 import FAQ from "@/components/ui/home/faq";
-import Article from "@/components/ui/home/article";
-import CookieConfirmation from "@/components/ui/cookie-confirmation";
+import Hero from "@/components/ui/home/hero";
+import HeroGlobe from "@/components/ui/home/hero-globe";
+import Problem from "@/components/ui/home/problem";
+import Solution from "@/components/ui/home/solution";
+import Timeline from "@/components/ui/home/timeline";
+import Maintenance from "@/components/ui/maintenance";
 import { isMaintenanceMode } from "@/lib/config";
 
 export default function Page() {
@@ -39,7 +38,6 @@ export default function Page() {
         <FAQ />
       </div>
       <Footer />
-      <CookieConfirmation />
     </>
   );
 }
