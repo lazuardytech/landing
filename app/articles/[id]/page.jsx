@@ -4,7 +4,7 @@ import Maintenance from "@/components/ui/maintenance";
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
 import { Badge } from "@/components/ui/badge";
-import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { isMaintenanceMode } from "@/lib/config";
 import { fetchMediumRss } from "@/lib/services/rss-service";
 import { socials } from "@/lib/state";
