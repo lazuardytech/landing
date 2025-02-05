@@ -11,7 +11,7 @@ export default function Mission() {
   return (
     <div className="flex flex-col w-full relative">
       <LayoutLineHeader title="Our Mission" />
-      <LayoutLine className="z-20">
+      <LayoutLine>
         <div className="grid grid-cols-1 md:grid-cols-2 w-full">
           <div className="flex flex-col w-full p-8 pb-4 md:pb-8 border-r border-neutral-400 border-opacity-90 md:transition-colors md:duration-200 md:hover:bg-neutral-300">
             <Paragraph className="text-sm">

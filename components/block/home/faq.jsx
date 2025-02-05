@@ -30,7 +30,7 @@ export default function Faq() {
   return (
     <div className="flex flex-col w-full relative">
       <LayoutLineHeader title="Frequently asked questions" />
-      <LayoutLine className="z-20">
+      <LayoutLine>
         <FaqItems faqs={faqs} />
       </LayoutLine>
       <HorizontalBorder />

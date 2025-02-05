@@ -57,32 +57,32 @@ const workDivisions = [
 
 export default function CareerFilter() {
   return (
-    <LayoutLine className="z-20">
-      <HorizontalBorder className="mt-16 md:mt-20" />
+    <LayoutLine>
+      <HorizontalBorder className="mt-12 md:mt-20 opacity-0 md:opacity-100" />
       <div className="grid grid-cols-1 md:grid-cols-3 md:gap-8 md:px-8 w-full">
         <div className="flex flex-col w-full">
           <div className="flex flex-col w-full justify-center items-center">
-            <div className="flex flex-col w-full md:border-l md:border-r border-neutral-400 border-opacity-90 group py-8">
+            <div className="flex flex-col w-full md:border-l md:border-r border-neutral-400 border-opacity-90 group md:py-8">
               <Combobox label="work location" items={workLocations} />
             </div>
           </div>
         </div>
         <div className="flex flex-col w-full">
           <div className="flex flex-col w-full justify-center items-center">
-            <div className="flex flex-col w-full md:border-l md:border-r border-neutral-400 border-opacity-90 group py-8">
+            <div className="flex flex-col w-full md:border-l md:border-r border-neutral-400 border-opacity-90 group pt-4 md:pt-0 md:py-8">
               <Combobox label="work type" items={workTypes} />
             </div>
           </div>
         </div>
         <div className="flex flex-col w-full">
           <div className="flex flex-col w-full justify-center items-center">
-            <div className="flex flex-col w-full md:border-l md:border-r border-neutral-400 border-opacity-90 group py-8">
+            <div className="flex flex-col w-full md:border-l md:border-r border-neutral-400 border-opacity-90 group pt-4 md:pt-0 md:py-8">
               <Combobox label="work division" items={workDivisions} />
             </div>
           </div>
         </div>
       </div>
-      <HorizontalBorder />
+      <HorizontalBorder className="opacity-0 md:opacity-100" />
     </LayoutLine>
   );
 }

@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function ArticleItems({ data }) {
   return (
     <div className="flex flex-col w-full">
-      <LayoutLine className="z-20">
+      <LayoutLine>
         <div className="grid grid-cols-1 md:grid-cols-2 w-full">
           {data.items.map((article, index) => (
             <ArticleItem
@@ -28,11 +28,11 @@ export default function ArticleItems({ data }) {
 export function ArticleItem({ index, image, title, description }) {
   return (
     <div className="flex flex-col w-full">
-      <HorizontalBorder className="mt-16 md:mt-20" />
+      <HorizontalBorder className="mt-12 md:mt-20" />
       <div
-        className={`flex flex-col w-full justify-center items-center ${index <= 0 || index % 2 === 0 ? "md:items-end pr-6" : "md:items-start pl-6"}`}
+        className={`flex flex-col w-full justify-center items-center ${index <= 0 || index % 2 === 0 ? "md:items-end md:pr-6" : "md:items-start md:pl-6"}`}
       >
-        <div className="flex flex-col w-5/6 md:border-l md:border-r border-neutral-400 border-opacity-90 group hover:cursor-click">
+        <div className="flex flex-col w-full md:w-5/6 md:border-l md:border-r border-neutral-400 border-opacity-90 group hover:cursor-click">
           <Link key={index} href={`/article/${index}`}>
             <div className="flex w-full aspect-video">
               <Image

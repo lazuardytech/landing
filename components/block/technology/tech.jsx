@@ -8,7 +8,7 @@ import Doto from "@/lib/fonts/doto";
 export default function Tech() {
   return (
     <div className="flex flex-col w-full">
-      <LayoutLine className="z-20">
+      <LayoutLine>
         <div className="grid grid-cols-1 md:grid-cols-2 w-full">
           <TechItems
             className="border-r border-neutral-400 border-opacity-90"
@@ -226,7 +226,7 @@ export function TechItems({ className, title, description, items }) {
     <div className={`flex flex-col w-full ${className}`}>
       <div className="flex flex-col w-full pt-16 md:pt-20 md:transition-colors md:duration-200 md:hover:bg-neutral-300">
         <Title className="text-lg px-8">{title}</Title>
-        <Paragraph className="text-xs md:text-sm text-justify pt-4 pb-6 px-8">
+        <Paragraph className="text-sm text-justify pt-4 pb-6 px-8">
           {description}
         </Paragraph>
       </div>

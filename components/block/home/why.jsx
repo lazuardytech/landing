@@ -11,7 +11,7 @@ export default function Why() {
   return (
     <div className="flex flex-col w-full relative">
       <LayoutLineHeader title="Why Lazuardy?" />
-      <LayoutLine className="z-20">
+      <LayoutLine>
         <div className="grid grid-cols-1 md:grid-cols-2 w-full">
           <div className="grid grid-cols-2 w-full border-r border-neutral-400 border-opacity-90">
             <div className="flex w-full justify-center items-center border-r border-b border-neutral-400 border-opacity-90 md:transition-colors md:duration-200 md:hover:bg-neutral-300">

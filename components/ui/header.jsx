@@ -100,8 +100,9 @@ export const MobileMenuPanel = forwardRef(function (
           size="default"
           variant="link"
           className={`font-black text-lg lowercase ${Doto.className} ${pathname === "/" && "underline"}`}
+          asChild
         >
-          Home
+          <Link href="/">Home</Link>
         </Button>
         {navigations.map((navigation, index) => (
           <Button

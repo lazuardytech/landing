@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <LayoutLine className="pt-[14vh] md:pt-[22vh] px-8 relative">
+    <LayoutLine className="pt-[12vh] md:pt-[22vh] px-8 relative">
       <div className="absolute top-40 right-8 flex flex-col opacity-50">
         <AnimatedBox character="/" randomCharacter="*" />
       </div>
@@ -21,8 +21,8 @@ export default function Hero() {
         </div>
         <div className="flex flex-col w-full justify-end"></div>
       </div>
-      <div className="flex flex-col w-full mt-8 md:mt-10">
-        <div className="w-full flex space-x-4 justify-start">
+      <div className="flex flex-col w-full mt-4 md:mt-10">
+        <div className="flex md:space-x-4 w-full justify-start">
           <Button size="lg" variant="default" asChild>
             <Link
               href={process.env.NEXT_PUBLIC_CONSULTATION_BOOKING_LINK}
@@ -33,7 +33,12 @@ export default function Hero() {
             </Link>
           </Button>
           <Button size="lg" variant="link" asChild>
-            <Link href="/contact">Any question about our tech?</Link>
+            <Link href="/contact">
+              <span className="hidden md:flex">
+                Any question about our tech?
+              </span>
+              <span className="flex md:hidden">Contact us</span>
+            </Link>
           </Button>
         </div>
       </div>

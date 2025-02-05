@@ -317,7 +317,7 @@ export default function Solution() {
         <HorizontalBorder className="hidden md:flex w-full" />
       </div>
 
-      <LayoutLine className="z-20">
+      <LayoutLine>
         <div className="grid grid-cols-1 md:grid-cols-2 w-full">
           <div className="flex flex-col w-full border-r border-b md:border-b-0 border-neutral-400 border-opacity-90">
             <div
@@ -376,7 +376,7 @@ export default function Solution() {
       </LayoutLine>
       <HorizontalBorder />
 
-      <LayoutLine className="z-20">
+      <LayoutLine>
         <div className="grid grid-cols-1 md:grid-cols-2 w-full">
           <div className="flex flex-col w-full justify-center items-center p-8 md:transition-colors md:duration-200 md:hover:bg-neutral-300 border-r border-neutral-400 border-opacity-90">
             <Paragraph className="text-sm">
@@ -429,7 +429,7 @@ export default function Solution() {
       </LayoutLine>
       <HorizontalBorder />
 
-      <LayoutLine className="z-20">
+      <LayoutLine>
         <div className="grid grid-cols-1 md:grid-cols-2 w-full">
           <div className="flex flex-col w-full border-r border-b md:border-b-0 border-neutral-400 border-opacity-90">
             <div
@@ -489,7 +489,7 @@ export default function Solution() {
       </LayoutLine>
       <HorizontalBorder />
 
-      <LayoutLine className="z-20">
+      <LayoutLine>
         <div className="grid grid-cols-1 md:grid-cols-2 w-full">
           <div className="flex flex-col w-full justify-center items-center p-8 md:transition-colors md:duration-200 md:hover:bg-neutral-300 border-r border-neutral-400 border-opacity-90">
             <Paragraph className="text-sm">

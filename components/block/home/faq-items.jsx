@@ -25,7 +25,7 @@ export default function FaqItems({ faqs }) {
           onClick={() => toggleAnswer(index)}
         >
           <div className="flex justify-between items-center cursor-pointer">
-            <h3 className="w-full font-light text-md text-black text-left leading-snug">
+            <h3 className="w-full font-light text-sm md:text-md text-black text-left leading-snug">
               {faq.question}
             </h3>
             <span
@@ -54,7 +54,7 @@ export default function FaqItems({ faqs }) {
         onClick={() => toggleAnswer(10)}
       >
         <div className="flex justify-between items-center cursor-pointer">
-          <h3 className="w-full font-light text-md text-black text-left leading-snug">
+          <h3 className="w-full font-light text-sm md:text-md text-black text-left leading-snug">
             I want to ask other questions that are not listed here.
           </h3>
           <span id="faq-plus-10" className={`text-4xl ml-2 ${Doto.className}`}>

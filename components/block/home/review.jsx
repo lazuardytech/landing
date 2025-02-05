@@ -14,7 +14,7 @@ export default function Review() {
   return (
     <div className="flex flex-col w-full relative">
       <LayoutLineHeader title="Notable mentions" />
-      <LayoutLine className="z-20">
+      <LayoutLine>
         <div className="grid grid-cols-1 md:grid-cols-3 w-full">
           <div className="flex flex-col relative w-full p-8 border-r border-b md:border-b-0 border-neutral-400 border-opacity-90">
             <Title className="text-lg">Ezra Lazuardy</Title>

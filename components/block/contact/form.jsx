@@ -65,14 +65,14 @@ export default function Form() {
 
   return (
     <LayoutLine className="md:pt-2">
-      <HorizontalBorder className="mt-16" />
+      <HorizontalBorder className="mt-12 md:mt-16" />
       <div className="flex justify-center items-center w-full">
         <LayoutLine className="md:max-w-xl min-h-[50vh] py-8">
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="flex flex-col w-full space-y-8"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="grid grid-cols-2">
               <div className="flex flex-col justify-center border-t border-b border-r border-neutral-400 border-opacity-90">
                 <Select
                   className="w-full h-full md:text-sm"
@@ -113,7 +113,7 @@ export default function Form() {
                 )}
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="grid grid-cols-2">
               <div className="flex flex-col justify-center border-t border-b border-r border-neutral-400 border-opacity-90">
                 <Input
                   id="first_name"
@@ -145,12 +145,12 @@ export default function Form() {
                 )}
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="grid grid-cols-2">
               <div className="flex flex-col justify-center border-t border-b border-r border-neutral-400 border-opacity-90">
                 <Input
                   id="email"
                   type="email"
-                  placeholder="Email Address *"
+                  placeholder="Email *"
                   className="px-8 py-6"
                   {...register("email", {
                     required: "Email address is required",
@@ -167,7 +167,7 @@ export default function Form() {
                   id="phone"
                   type="tel"
                   defaultCountry="ID"
-                  placeholder="Phone Number"
+                  placeholder="Phone"
                   className="px-8"
                   value={phone}
                   onChange={(value) => {
@@ -196,7 +196,7 @@ export default function Form() {
               )}
             </div>
             <div className="flex flex-col justify-center items-center border-t border-b border-neutral-400 border-opacity-90">
-              <div className="flex justify-center items-center min-h-[11vh] min-w-[20vw] pt-2 pb-0.5 px-2 border-l border-r border-neutral-400 border-opacity-90">
+              <div className="flex justify-center items-center min-h-[11vh] min-w-[20vw] pt-2 pb-0.5 px-3 md:px-2 border-l border-r border-neutral-400 border-opacity-90">
                 <Turnstile
                   siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
                   onSuccess={setTurnstileToken}
@@ -241,7 +241,7 @@ export default function Form() {
                 )}
               </Button>
               <HorizontalBorder />
-              <p className="w-full md:max-w-sm font-light text-neutral-600 text-center text-xs leading-snug mt-6">
+              <p className="w-full md:max-w-sm font-light text-neutral-600 text-center text-xs leading-snug px-8 md:px-0 mt-6">
                 Your information is safe with us. As an alternative to this
                 form, you can also reach us at{" "}
                 <Link
