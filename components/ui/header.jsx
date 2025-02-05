@@ -1,173 +1,126 @@
 "use client";
 
-import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import HorizontalBorder from "@/components/ui/horizontal-border";
+import LayoutLine from "@/components/ui/layout-line";
 import Logo from "@/components/ui/logo";
-import BlurFade from "@/components/ui/blur-fade";
-import AnimatedShinyText from "@/components/ui/animated-shiny-text";
-import { Transition } from "@headlessui/react";
-import { ZincBadge } from "@/components/ui/badge";
-import { ChevronDown } from "lucide-react";
+import Doto from "@/lib/fonts/doto";
+import { navigations } from "@/lib/state";
+import { Menu, X } from "lucide-react";
+import Link from "next/link";
+import { forwardRef, useRef, useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
-import { navigations as rawNavigations } from "@/lib/state";
-
-const navigations = rawNavigations.filter((nav) => !nav.hiddenOnHeader);
-
-export const routes = {
-  "/": "/",
-  "/solutions": "/solutions",
-  "/byte": "/solutions",
-  "/things": "/solutions",
-  "/studio": "/solutions",
-  "/ai": "/solutions",
-  "/works": "/works",
-  "/articles": "/articles",
-  "/contact": "/contact",
-};
-
-export const solutionRoutes = {
-  "/": "",
-  "/byte": "Byte",
-  "/things": "Things",
-  "/studio": "Studio",
-  "/ai": "AI",
-};
-
-function resolveRoute(pathname, link) {
-  if (link === "/") {
-    return link === pathname;
-  }
-
-  return pathname.includes(link);
-}
 
 export default function Header() {
   const pathname = usePathname();
-  const [menuExpanded, setMenuExpanded] = useState(false);
+  const mobileMenuPanel = useRef(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+      document.body.style.touchAction = "none";
+    } else {
+      document.body.style.overflow = "";
+      document.body.style.touchAction = "";
+    }
+  }, [isMobileMenuOpen]);
 
   return (
-    <div className="select-none sticky top-0 right-0 z-50 w-full bg-black/30 backdrop-filter backdrop-blur bg-opacity-30 text-white border-b border-zinc-800">
-      <div className="container px-10 lg:px-16 py-4 grid grid-rows">
-        <HeaderDesktop
-          pathname={pathname}
-          menuExpanded={menuExpanded}
-          setMenuExpanded={setMenuExpanded}
-          navigations={navigations}
-        />
-        <HeaderMobile menuExpanded={menuExpanded} navigations={navigations} />
-      </div>
-    </div>
-  );
-}
-
-export function HeaderNavigationDivider() {
-  return (
-    <span className="select-none pointer-events-none hover:cursor-default text-end text-zinc-600 font-2xl">
-      /
-    </span>
-  );
-}
-
-export function HeaderDesktop({
-  pathname,
-  menuExpanded,
-  setMenuExpanded,
-  navigations,
-}) {
-  return (
-    <div className="grid grid-cols-4">
-      <div className="col-span-1 pt-1">
-        <Link href="/">
-          <div className="flex gap-1 justify-start">
-            <Logo className="text-xl pb-2" />
-            <BlurFade key="header-subtitle" delay={1.5} inView>
-              <div className="font-regular text-xl mt-1.5">
-                {solutionRoutes[pathname] || ""}
-              </div>
-            </BlurFade>
-          </div>
-        </Link>
-      </div>
-      <div className="hidden lg:flex col-span-2 justify-center text-center text-md gap-6 pb-2">
-        {navigations.map((nav, index) => (
-          <div key={"header-desktop-nav-" + index} className="flex gap-5">
-            <div
-              key={"header-desktop-nav-label-" + index}
-              className={`text-end transition-colors font-regular hover:text-white pt-1.5 ${resolveRoute(pathname, nav.link) ? "text-white" : "text-neutral-400"}`}
-            >
-              <Link href={nav.link} target={nav.target ?? ""}>
-                {nav.label}
+    <>
+      <div id="header" className="fixed top-0 left-0 z-50 w-full">
+        <div className="flex flex-col items-center justify-center w-full">
+          <LayoutLine className="px-8 md:pt-6" />
+          <HorizontalBorder />
+          <div className="grid grid-cols-2 w-full md:max-w-screen-lg select-none backdrop-filter backdrop-blur-lg bg-neutral-200/40 text-black border border-t-0 border-b-0 border-neutral-400 border-opacity-90">
+            <div className="flex w-full">
+              <Link
+                href="/"
+                className="flex w-auto justify-center items-center px-8 border-r border-neutral-400 border-opacity-90 bg-[#171717]"
+              >
+                <Logo className="font-medium text-sm md:text-md text-white" />
               </Link>
             </div>
-            {index === navigations.length - 1 ? null : (
-              <div
-                key={"header-desktop-nav-divider-" + index}
-                className="pt-1.5"
+            <div className="hidden md:flex w-full py-4 px-8 space-x-8 justify-end">
+              {navigations.map((navigation, index) => (
+                <Button
+                  key={index}
+                  size="default"
+                  variant="link"
+                  className={`px-0 font-black text-sm lowercase ${Doto.className} ${pathname === navigation.link && "underline"}`}
+                  asChild
+                >
+                  <Link
+                    href={navigation.link}
+                    target={navigation.target}
+                    rel={navigation.rel}
+                  >
+                    {navigation.name}
+                  </Link>
+                </Button>
+              ))}
+            </div>
+            <div className="flex md:hidden w-full py-3 md:py-4 px-8 space-x-8 justify-end">
+              <Button
+                size="default"
+                variant="link"
+                className={`text-lg font-black px-0 lowercase ${Doto.className}`}
+                onClick={toggleMobileMenu}
               >
-                <HeaderNavigationDivider />
-              </div>
-            )}
+                {isMobileMenuOpen ? <X /> : <Menu />}
+                {isMobileMenuOpen ? "Close" : "Menu"}
+              </Button>
+            </div>
           </div>
+          <HorizontalBorder />
+        </div>
+      </div>
+      {isMobileMenuOpen && (
+        <MobileMenuPanel ref={mobileMenuPanel} pathname={pathname} />
+      )}
+    </>
+  );
+}
+
+export const MobileMenuPanel = forwardRef(function (
+  { className, pathname },
+  ref,
+) {
+  return (
+    <div
+      ref={ref}
+      className={`fixed top-0 left-0 flex justify-center items-center z-40 w-full h-screen select-none backdrop-filter backdrop-blur-lg bg-neutral-200/40 ${className}`}
+    >
+      <div className="flex flex-col w-full space-y-8 justify-center items-center">
+        <Button
+          size="default"
+          variant="link"
+          className={`font-black text-lg lowercase ${Doto.className} ${pathname === "/" && "underline"}`}
+        >
+          Home
+        </Button>
+        {navigations.map((navigation, index) => (
+          <Button
+            key={index}
+            size="default"
+            variant="link"
+            className={`font-black text-lg lowercase ${Doto.className} ${pathname === navigation.link && "underline"}`}
+            asChild
+          >
+            <Link
+              href={navigation.link}
+              target={navigation.target}
+              rel={navigation.rel}
+            >
+              {navigation.name}
+            </Link>
+          </Button>
         ))}
       </div>
-      <div className="hidden lg:flex col-span-1 justify-end pt-1">
-        <Link
-          href={process.env.NEXT_PUBLIC_CONSULTATION_BOOKING_LINK}
-          target="_blank"
-        >
-          <ZincBadge>
-            <AnimatedShinyText>Feeling Urgent?</AnimatedShinyText>
-          </ZincBadge>
-        </Link>
-      </div>
-      <div className="flex lg:hidden text-end font-medium col-span-3 justify-end pt-1.5">
-        <ChevronDown
-          className={`transition-all transform ease-in-out hover:text-white hover:cursor-pointer w-6 h-6 ${menuExpanded ? "text-white rotate-180" : "text-neutral-400 rotate-0"}`}
-          onClick={() => setMenuExpanded(!menuExpanded)}
-        />
-      </div>
     </div>
   );
-}
-
-export function HeaderMobile({ menuExpanded, navigations }) {
-  return (
-    <Transition
-      show={menuExpanded}
-      className="transition-all duration-500 overflow-hidden grid lg:hidden"
-      enterFrom="transform max-h-0"
-      enterTo="transform max-h-[9999px]"
-      leaveFrom="transform max-h-[9999px]"
-      leaveTo="transform max-h-0"
-    >
-      <div className="grid grid-rows gap-8 pb-4">
-        <div className="grid grid-cols-2 mt-6 gap-4">
-          {navigations.map((nav, index) => (
-            <div
-              key={index}
-              className="col-span-1 text-start transition-colors text-neutral-400 font-regular hover:text-white"
-            >
-              <Link href={nav.link} target={nav.target ?? ""}>
-                {nav.label}
-              </Link>
-            </div>
-          ))}
-        </div>
-        <div className="flex justify-start gap-2">
-          <div className="text-md font-light text-neutral-400">
-            Feeling urgent?
-          </div>
-          <div>
-            <Link
-              href={process.env.NEXT_PUBLIC_CONSULTATION_BOOKING_LINK}
-              target="_blank"
-              className="font-regular transform-colors duration-500 hover:text-white hover:underline"
-            >
-              Let&apos;s talk.
-            </Link>
-          </div>
-        </div>
-      </div>
-    </Transition>
-  );
-}
+});

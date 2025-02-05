@@ -6,10 +6,8 @@ import "./cookie-provider.css";
 
 export default function CookieProvider() {
   useEffect(() => {
-    if (!document) return;
-    document.documentElement.classList.add("cc--darkmode");
     CookieConsent.run({
-      mode: "opt-in", // Users must opt-in to non-essential cookies
+      mode: "opt-in",
       revision: 1,
 
       guiOptions: {
@@ -28,17 +26,17 @@ export default function CookieProvider() {
 
       categories: {
         necessary: {
-          enabled: true, // Necessary cookies are enabled by default
-          readOnly: true, // This category cannot be disabled
+          enabled: true,
+          readOnly: true,
         },
         analytics: {
           autoClear: {
             cookies: [
               {
-                name: /^_ga/, // Match all cookies starting with '_ga'
+                name: /^_ga/,
               },
               {
-                name: "_gid", // Exact cookie name
+                name: "_gid",
               },
             ],
           },
@@ -46,7 +44,6 @@ export default function CookieProvider() {
             ga: {
               label: "Google Analytics",
               onAccept: () => {
-                // Enable Google Analytics tracking
                 if (typeof window !== "undefined" && window.gtag) {
                   window.gtag("consent", "update", {
                     ad_storage: "granted",
@@ -55,7 +52,6 @@ export default function CookieProvider() {
                 }
               },
               onReject: () => {
-                // Disable Google Analytics tracking
                 if (typeof window !== "undefined" && window.gtag) {
                   window.gtag("consent", "update", {
                     ad_storage: "denied",
@@ -94,8 +90,8 @@ export default function CookieProvider() {
               acceptNecessaryBtn: "Reject All",
               showPreferencesBtn: "Manage Preferences",
               footer: `
-                  <a href="/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-                  <a href="/terms" target="_blank" rel="noopener noreferrer">Terms and Conditions</a>
+                  <a href="/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                  <a href="/legal/terms-and-conditions" target="_blank" rel="noopener noreferrer">Terms and Conditions</a>
               `,
             },
             preferencesModal: {
@@ -151,7 +147,7 @@ export default function CookieProvider() {
                 {
                   title: "More information",
                   description:
-                    'For any questions regarding our cookie policy and your choices, please <a href="/contact">contact us</a>.',
+                    'For any questions regarding our cookie policy and your choices, please <a href="/sales">contact us</a>.',
                 },
               ],
             },

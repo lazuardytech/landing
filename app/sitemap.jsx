@@ -7,16 +7,22 @@ export default function sitemap() {
       priority: 1,
     },
     {
-      url: `${process.env.NEXT_PUBLIC_APP_URL}/solutions`,
+      url: `${process.env.NEXT_PUBLIC_APP_URL}/technology`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.9,
+      priority: 0.7,
     },
     {
-      url: `${process.env.NEXT_PUBLIC_APP_URL}/works`,
+      url: `${process.env.NEXT_PUBLIC_APP_URL}/article`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.7,
+    },
+    {
+      url: `${process.env.NEXT_PUBLIC_APP_URL}/career`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
     {
       url: `${process.env.NEXT_PUBLIC_APP_URL}/contact`,
@@ -25,16 +31,22 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
-      url: `${process.env.NEXT_PUBLIC_APP_URL}/terms`,
+      url: `${process.env.NEXT_PUBLIC_APP_URL}/legal/privacy-policy`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.5,
+      priority: 0.3,
     },
     {
-      url: `${process.env.NEXT_PUBLIC_APP_URL}/privacy`,
+      url: `${process.env.NEXT_PUBLIC_APP_URL}/legal/terms-of-service`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.5,
+      priority: 0.3,
+    },
+    {
+      url: `https://partnership.lazuardy.tech`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.2,
     },
   ];
 }

@@ -4,11 +4,11 @@ export default function manifest() {
   return {
     name: CompanyData.tradeName,
     short_name: CompanyData.tradeName,
-    description: "We help businesses grow bigger through technology.",
+    description: CompanyData.description,
     start_url: "/",
     display: "standalone",
-    background_color: "#000000",
-    theme_color: "#000000",
+    background_color: "#E3E3E3",
+    theme_color: "#E3E3E3",
     icons: [
       {
         src: "/web-app-manifest-192x192.png",

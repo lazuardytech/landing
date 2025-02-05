@@ -1,141 +1,180 @@
-import Link from "next/link";
-import Logo from "@/components/ui/logo";
-import WordRotate from "@/components/ui/word-rotate";
+"use client";
+
+import { Button } from "@/components/ui/button";
+import HorizontalBorder from "@/components/ui/horizontal-border";
+import LayoutLine from "@/components/ui/layout-line";
+import Title from "@/components/ui/title";
 import { CompanyData } from "@/lib/config";
-import { socials, navigations, solutions } from "@/lib/state";
-
-export const navigationItems = [
-  {
-    label: "Connect.",
-    items: socials,
-  },
-  {
-    label: "Navigate.",
-    items: navigations,
-  },
-  {
-    label: "Solutions.",
-    items: solutions,
-  },
-];
-
-export const phrases = [
-  "grow bigger.",
-  "outstands other.",
-  "shine brighter.",
-  "be better.",
-  "succeed faster.",
-  "thrive stronger.",
-  "achieve more.",
-  "reach higher.",
-  "stand out.",
-  "innovate boldly.",
-  "perform better.",
-  "connect deeper.",
-  "expand wider.",
-  "excel further.",
-  "progress smarter.",
-  "evolve faster.",
-  "transform successfully.",
-  "lead confidently.",
-  "build trust.",
-  "adapt easier.",
-];
+import Doto from "@/lib/fonts/doto";
+import { navigations, socials } from "@/lib/state";
+import { ArrowUpRight, LinkIcon } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const header = document.getElementById("header");
+
+    if (!header) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            header.style.transition = "transform 0.4s ease-in-out";
+            header.style.transform = "translateY(-200%)";
+          } else {
+            header.style.transition = "transform 0.4s ease-in-out";
+            header.style.transform = "translateY(0)";
+          }
+        });
+      },
+      { threshold: 0.1 },
+    );
+
+    const target = document.getElementById("copyright-text");
+    if (target) {
+      observer.observe(target);
+    }
+
+    return () => {
+      if (target) {
+        observer.unobserve(target);
+      }
+    };
+  }, []);
+
   return (
-    <div className="w-full bg-foreground text-background border-t border-zinc-800 bg-black">
-      <div className="container py-10 px-10 lg:px-16">
-        <div className="grid lg:grid-cols-2 gap-10">
-          <div className="flex gap-8 flex-col items-start">
-            <div className="flex gap-2 flex-col">
-              <Logo className="w-full text-start text-xl" withTM="true" />
-              <div className="text-sm md:text-md lg:text-lg flex font-light max-w-lg text-left">
-                <span className="pt-2">Helping your businesses </span>
-                <WordRotate
-                  className="ms-1 text-black dark:text-white"
-                  words={phrases}
-                />
+    <div className="flex flex-col w-full">
+      <LayoutLine>
+        <div className="grid grid-cols-2 md:grid-cols-6 w-full">
+          <div className="flex flex-col w-full h-full col-span-4 border-r border-neutral-400 border-opacity-90">
+            <div className="hidden md:grid grid-cols-2 w-full h-full border-b border-neutral-400 border-opacity-90">
+              <div className="flex flex-col w-full p-8 justify-center items-center border-r border-neutral-400 border-opacity-90 md:transition-colors md:duration-200 md:hover:bg-neutral-300">
+                <p
+                  className={`w-full font-bold text-xs md:text-sm text-black text-left leading-snug ${Doto.className}`}
+                >
+                  {CompanyData.copyright.html}
+                </p>
+              </div>
+              <div className="flex flex-col relative w-full p-8 justify-center items-center md:transition-colors md:duration-200 md:hover:bg-neutral-300">
+                <p
+                  className={`w-full font-bold text-xs md:text-sm text-black text-left leading-snug ${Doto.className}`}
+                >
+                  {CompanyData.address.html}
+                </p>
+                <Link
+                  href="https://maps.app.goo.gl/9p28RqNKNQJ3reYL8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex absolute top-0 left-0 z-20 w-full h-full transition-opacity duration-200 opacity-0 hover:opacity-100"
+                >
+                  <ArrowUpRight
+                    className="absolute top-0 right-0 text-black w-10 h-10 m-1 opacity-60"
+                    strokeWidth={0.8}
+                  />
+                </Link>
               </div>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-4">
-              <div className="flex flex-col text-sm text-left font-light text-gray-400">
-                <div className="text-white mb-2">{CompanyData.legalName}</div>
-                <div>
-                  <Link
-                    href={CompanyData.business.link}
-                    target={CompanyData.business.target}
-                    className="font-regular transition-color duration-300 hover:text-white"
-                  >
-                    {CompanyData.business.html}
-                  </Link>
-                </div>
-                <div className="hidden lg:block mt-14">
-                  {CompanyData.copyright.label}
-                </div>
-              </div>
-              <div className="flex flex-col text-sm text-left font-light text-gray-400">
-                <div className="flex flex-rows-1 lg:flex-rows-2 gap-4 text-sm text-left">
-                  <div>
-                    <Link
-                      href="/terms"
-                      className="transition-colors duration-500 font-regular text-gray-300 text-sm hover:text-white"
-                    >
-                      Terms of Service
-                    </Link>
-                  </div>
-                  <div>
-                    <Link
-                      href="/privacy"
-                      className="transition-colors duration-500 font-regular text-gray-300 text-sm hover:text-white"
-                    >
-                      Privacy Policy
-                    </Link>
-                  </div>
-                </div>
-                <div className="mt-2">{CompanyData.copyright.html}</div>
-              </div>
-            </div>
-          </div>
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 items-start">
-            {navigationItems.map((item, index) => (
+            <div className="grid grid-cols-3 w-full">
               <div
-                key={index}
-                className="flex text-base gap-1 flex-col items-start"
+                id="copyright-text"
+                className="flex flex-col w-full p-8 justify-center items-center col-span-2 border-r border-neutral-400 border-opacity-90 md:transition-colors md:duration-200 md:hover:bg-neutral-300"
               >
-                <div className="flex flex-col gap-2">
-                  {item.link ? (
-                    <Link
-                      href={item.link}
-                      className="flex justify-between items-center"
-                    >
-                      <span className="text-lg">{item.label}</span>
-                    </Link>
-                  ) : (
-                    <div className="text-lg">{item.label}</div>
-                  )}
-                  {item.items &&
-                    item.items.map((subItem, index) => (
-                      <Link
-                        key={index}
-                        href={subItem.link}
-                        target={subItem.target ?? ""}
-                        className="flex justify-between items-center"
-                      >
-                        <span className="transition-colors duration-500 font-light text-gray-400 text-sm hover:text-white">
-                          {subItem.label}
-                        </span>
-                      </Link>
-                    ))}
-                </div>
+                <Title className="text-xs md:text-sm">
+                  <span className="flex md:hidden">
+                    {CompanyData.copyright.label} {CompanyData.legalName}.
+                  </span>
+                  <span className="hidden md:flex">
+                    {CompanyData.copyright.label}
+                    <br />
+                    {CompanyData.legalName}.
+                  </span>
+                </Title>
               </div>
-            ))}
+              <div className="flex flex-col w-full p-8 md:transition-colors md:duration-200 md:hover:bg-neutral-300">
+                <Button
+                  size="sm"
+                  variant="link"
+                  className="justify-center px-0"
+                  asChild
+                >
+                  <Link
+                    href="/legal/privacy-policy"
+                    className="text-center lowercase"
+                  >
+                    privacy policy
+                  </Link>
+                </Button>
+                <Button
+                  size="sm"
+                  variant="link"
+                  className="justify-center px-0"
+                  asChild
+                >
+                  <Link
+                    href="/legal/terms-of-service"
+                    className="text-center lowercase"
+                  >
+                    terms of service
+                  </Link>
+                </Button>
+              </div>
+            </div>
           </div>
-          <div className="text-center w-full flex lg:hidden mb-16 lg:mb-10 font-light text-sm text-gray-400">
-            {CompanyData.copyright.label}
+          <div className="flex flex-col w-full p-8 border-r border-t md:border-t-0 border-neutral-400 border-opacity-90 md:transition-colors md:duration-200 md:hover:bg-neutral-300">
+            <Title className="text-xl">Connect</Title>
+            <div className="flex flex-col w-full mt-4">
+              {socials.map((social, index) => (
+                <Button
+                  key={index}
+                  size="sm"
+                  variant="link"
+                  className="text-left justify-start px-0"
+                  asChild
+                >
+                  <Link
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-left lowercase"
+                  >
+                    {social.name}
+                  </Link>
+                </Button>
+              ))}
+            </div>
+          </div>
+          <div className="flex flex-col w-full p-8 md:transition-colors md:duration-200 md:hover:bg-neutral-300 border-t md:border-t-0 border-neutral-400 border-opacity-90">
+            <Title className="text-xl">Navigate</Title>
+            <div className="flex flex-col w-full mt-4">
+              {navigations.map((navigation, index) => (
+                <Button
+                  key={index}
+                  size="sm"
+                  variant="link"
+                  className="text-left justify-start px-0"
+                  asChild
+                >
+                  <Link
+                    href={navigation.link}
+                    target={navigation.target}
+                    rel={navigation.rel}
+                    className={`text-left lowercase ${pathname === navigation.link && "underline"}`}
+                  >
+                    {navigation.name}
+                  </Link>
+                </Button>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      </LayoutLine>
+      <HorizontalBorder />
+      <LayoutLine className="px-8 md:pb-8" />
     </div>
   );
 }

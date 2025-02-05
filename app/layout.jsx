@@ -1,10 +1,8 @@
 import ComponentProvider from "@/components/provider/component-provider";
-import CookieProvider from "@/components/provider/cookie-provider";
 import GoogleProvider from "@/components/provider/google-provider";
-import ThemeProvider from "@/components/provider/theme-provider";
 import VercelProvider from "@/components/provider/vercel-provider";
 import { CompanyData } from "@/lib/config";
-import Plus_Jakarta_Sans from "@/lib/fonts/plus-jakarta-sans";
+import Poppins from "@/lib/fonts/poppins";
 import dynamic from "next/dynamic";
 import "./globals.css";
 
@@ -58,23 +56,15 @@ export const metadata = {
 };
 
 export const viewport = {
-  themeColor: [{ color: "#000000" }],
+  themeColor: [{ color: "#E3E3E3" }],
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${Plus_Jakarta_Sans.className}`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+    <html lang="en">
+      <body className={`bg-main ${Poppins.className}`}>
+        {children}
         <ComponentProvider />
-        <CookieProvider />
         <CrispProvider />
         <VercelProvider />
       </body>

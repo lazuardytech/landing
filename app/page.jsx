@@ -1,43 +1,27 @@
+import Customer from "@/components/block/home/customer";
+import Faq from "@/components/block/home/faq";
+import Hero from "@/components/block/home/hero";
+import Keypoint from "@/components/block/home/keypoint";
+import Mission from "@/components/block/home/mission";
+import Review from "@/components/block/home/review";
+import Solution from "@/components/block/home/solution";
+import Why from "@/components/block/home/why";
 import Footer from "@/components/ui/footer";
 import Header from "@/components/ui/header";
-import Article from "@/components/ui/home/article";
-import Benefit from "@/components/ui/home/benefit";
-import Cases from "@/components/ui/home/cases";
-import Description from "@/components/ui/home/description";
-import Division from "@/components/ui/home/division";
-import FAQ from "@/components/ui/home/faq";
-import Hero from "@/components/ui/home/hero";
-import HeroGlobe from "@/components/ui/home/hero-globe";
-import Problem from "@/components/ui/home/problem";
-import Solution from "@/components/ui/home/solution";
-import Timeline from "@/components/ui/home/timeline";
-import Maintenance from "@/components/ui/maintenance";
-import { isMaintenanceMode } from "@/lib/config";
 
-export default function Page() {
-  if (isMaintenanceMode()) return <Maintenance />;
-
+export default function Home() {
   return (
-    <>
+    <div className="relative w-full h-full">
       <Header />
-      <div className="w-full">
-        <div className="block lg:hidden">
-          <Hero />
-        </div>
-        <div className="hidden lg:block">
-          <HeroGlobe />
-        </div>
-        <Cases />
-        <Description />
-        <Problem />
-        <Benefit />
-        <Division />
-        <Timeline />
-        <Solution />
-        <Article />
-        <FAQ />
-      </div>
+      <Hero />
+      <Customer />
+      <Mission />
+      <Why />
+      <Solution />
+      <Review />
+      <Faq />
+      <Keypoint />
       <Footer />
-    </>
+    </div>
   );
 }
