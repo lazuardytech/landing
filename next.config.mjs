@@ -2,7 +2,6 @@
 const nextConfig = {
   experimental: {
     reactCompiler: true,
-    useLightningcss: true,
     optimizePackageImports: [
       "@formspark/use-formspark",
       "@hookform/resolvers",
