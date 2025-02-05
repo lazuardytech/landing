@@ -88,7 +88,7 @@ export default function Form() {
                     defaultValue="Individual"
                     {...register("type", { required: "Type is required" })}
                   >
-                    <SelectTrigger className="px-8 transition-colors duration-200 hover:text-white hover:bg-primary/90">
+                    <SelectTrigger className="px-4 md:px-8 transition-colors duration-200 hover:text-white hover:bg-primary/90">
                       <SelectValue placeholder="What are you?" />
                     </SelectTrigger>
                     <SelectContent className="bg-primary text-primary-foreground hover:bg-primary">
@@ -111,7 +111,7 @@ export default function Form() {
                   <Input
                     id="title"
                     placeholder="Title"
-                    className="px-8 py-6"
+                    className="px-4 md:px-8 py-6"
                     {...register("title")}
                   />
                   {errors.title && (
@@ -126,7 +126,7 @@ export default function Form() {
                   <Input
                     id="first_name"
                     placeholder="First Name *"
-                    className="px-8 py-6"
+                    className="px-4 md:px-8 py-6"
                     {...register("first_name", {
                       required: "First name is required",
                     })}
@@ -141,7 +141,7 @@ export default function Form() {
                   <Input
                     id="last_name"
                     placeholder="Last Name *"
-                    className="px-8 py-6"
+                    className="px-4 md:px-8 py-6"
                     {...register("last_name", {
                       required: "Last name is required",
                     })}
@@ -159,7 +159,7 @@ export default function Form() {
                     id="email"
                     type="email"
                     placeholder="Email *"
-                    className="px-8 py-6"
+                    className="px-4 md:px-8 py-6"
                     {...register("email", {
                       required: "Email address is required",
                     })}
@@ -176,7 +176,7 @@ export default function Form() {
                     type="tel"
                     defaultCountry="ID"
                     placeholder="Phone"
-                    className="px-8"
+                    className="px-4 md:px-8"
                     value={phone}
                     onChange={(value) => {
                       setPhone(value);
@@ -194,7 +194,7 @@ export default function Form() {
                 <Textarea
                   id="message"
                   placeholder="The message or question you want to ask *"
-                  className="px-8 py-6"
+                  className="px-4 md:px-8 py-6"
                   {...register("message", { required: "Message is required" })}
                 />
                 {errors.message && (
