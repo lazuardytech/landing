@@ -26,7 +26,7 @@ export default function Hero() {
             <Button size="lg" variant="link" className="px-0" asChild>
               <Link href={CompanyData.email.link}>
                 <Mail />
-                <span className="ml-0.5">Email</span>
+                <span className="ml-0.5">Email us</span>
               </Link>
             </Button>
             <Button size="lg" variant="default" asChild>
@@ -45,7 +45,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
               >
                 <Whatsapp />
-                <span className="ml-0">WhatsApp</span>
+                <span className="ml-0">Chat us</span>
               </Link>
             </Button>
           </div>
