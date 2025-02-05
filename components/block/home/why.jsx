@@ -6,6 +6,7 @@ import { NumberTicker } from "@/components/ui/number-ticker";
 import Paragraph from "@/components/ui/paragraph";
 import Doto from "@/lib/fonts/doto";
 import { CreditCard, Rocket, Speech, Users } from "lucide-react";
+import Link from "next/link";
 
 export default function Why() {
   return (
@@ -49,8 +50,14 @@ export default function Why() {
               18.4% business tend to fail at the first year.
             </Paragraph>
             <Paragraph className="text-sm mt-0">
-              <Button size="default" variant="link" className="px-0">
-                luisazhou.com
+              <Button size="default" variant="link" className="px-0" asChild>
+                <Link
+                  href="https://luisazhou.com/blog/businesses-that-fail"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  luisazhou.com
+                </Link>
               </Button>
             </Paragraph>
             <Paragraph className="text-sm mt-4">

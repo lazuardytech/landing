@@ -69,14 +69,14 @@ export default function CareerFilter() {
         </div>
         <div className="flex flex-col w-full">
           <div className="flex flex-col w-full justify-center items-center">
-            <div className="flex flex-col w-full md:border-l md:border-r border-neutral-400 border-opacity-90 group pt-4 md:pt-0 md:py-8">
+            <div className="flex flex-col w-full md:border-l md:border-r border-neutral-400 border-opacity-90 group pt-4 md:py-8">
               <Combobox label="work type" items={workTypes} />
             </div>
           </div>
         </div>
         <div className="flex flex-col w-full">
           <div className="flex flex-col w-full justify-center items-center">
-            <div className="flex flex-col w-full md:border-l md:border-r border-neutral-400 border-opacity-90 group pt-4 md:pt-0 md:py-8">
+            <div className="flex flex-col w-full md:border-l md:border-r border-neutral-400 border-opacity-90 group pt-4 md:py-8">
               <Combobox label="work division" items={workDivisions} />
             </div>
           </div>
