@@ -21,7 +21,7 @@ export default function Review() {
             <p className="w-full font-regular text-sm text-neutral-600 text-justify leading-snug mt-2">
               Founder of Lazuardy
             </p>
-            <Title className="text-2xl mt-4 md:mt-8">"</Title>
+            <Title className="text-2xl mt-4 md:mt-8">&quot;</Title>
             <Paragraph className="text-sm">
               Lazuardy was built with a mission to help any business, by any
               scale, to perform better than before.
@@ -48,10 +48,11 @@ export default function Review() {
             <p className="w-full font-regular text-sm text-neutral-600 text-justify leading-snug mt-2">
               Founder of Omah Tani
             </p>
-            <Title className="text-2xl mt-4 md:mt-8">"</Title>
+            <Title className="text-2xl mt-4 md:mt-8">&quot;</Title>
             <Paragraph className="text-sm">
-              I know they're good because they really know what they're doing.
-              And the good thing is, it's their passion.
+              I know they&apos;re good because they really know what
+              they&apos;re doing. And the good thing is, it&apos;s their
+              passion.
             </Paragraph>
             <Image
               src={handoko}
@@ -75,7 +76,7 @@ export default function Review() {
             <p className="w-full font-regular text-sm text-neutral-600 text-justify leading-snug mt-2">
               Professional Designer
             </p>
-            <Title className="text-2xl mt-4 md:mt-8">"</Title>
+            <Title className="text-2xl mt-4 md:mt-8">&quot;</Title>
             <Paragraph className="text-sm">
               I never met a team that can deliver the project so perfectly
               before. Simple concept, with elegant closing.

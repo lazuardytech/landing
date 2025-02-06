@@ -5,10 +5,10 @@ export default function manifest() {
     name: CompanyData.tradeName,
     short_name: CompanyData.tradeName,
     description: CompanyData.description,
+    theme_color: CompanyData.themeColor,
+    background_color: CompanyData.themeColor,
     start_url: "/",
     display: "standalone",
-    background_color: "#E3E3E3",
-    theme_color: "#E3E3E3",
     icons: [
       {
         src: "/web-app-manifest-192x192.png",

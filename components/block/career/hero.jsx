@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full mt-6 relative">
         <div className="flex w-full col-span-2">
           <Title className="text-3xl md:text-5xl text-left">
-            We're seeking different perspective.
+            We&apos;re seeking different perspective.
           </Title>
         </div>
         <div className="flex flex-col w-full justify-end"></div>

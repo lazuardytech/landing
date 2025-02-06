@@ -11,11 +11,11 @@ import Title from "@/components/ui/title";
 import { customers as customerItems } from "@/lib/state";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 const customers = customerItems.concat(customerItems).concat(customerItems);
 
-export default function Hero() {
+export default function Customer() {
   return (
     <div className="flex flex-col w-full">
       <LayoutLine className="pt-14 md:pt-24 pb-4 px-8">
@@ -35,12 +35,12 @@ export default function Hero() {
 export function CustomerItems() {
   const [api, setApi] = useState();
   const [current, setCurrent] = useState(0);
-  let timer1;
+  const timerRef = useRef(null);
 
   useEffect(() => {
     if (!api) return;
 
-    timer1 = setTimeout(() => {
+    timerRef.current = setTimeout(() => {
       if (api.selectedScrollSnap() + 1 === api.scrollSnapList().length) {
         setCurrent(0);
         api.scrollTo(0);
@@ -50,7 +50,7 @@ export function CustomerItems() {
       }
     }, 2000);
 
-    return () => clearTimeout(timer1);
+    return () => clearTimeout(timerRef.current);
   }, [api, current]);
 
   return (

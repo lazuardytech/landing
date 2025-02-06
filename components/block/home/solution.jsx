@@ -563,6 +563,7 @@ export const SolutionDivisionLogo = forwardRef(function ({ src, alt }, ref) {
     />
   );
 });
+SolutionDivisionLogo.displayName = "SolutionDivisionLogo";
 
 export function SolutionServiceItem({ Icon, label, className }) {
   return (

@@ -25,7 +25,7 @@ export default function AnimatedBox({
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [charactersArray, originalIndex, character]);
+  }, [charactersArray, originalIndex, character, randomCharacter]);
 
   return (
     <div className="hidden md:flex flex-col w-full">

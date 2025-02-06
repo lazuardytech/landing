@@ -70,7 +70,7 @@ export default function Form() {
     <>
       <Script
         src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
       />
       <LayoutLine className="md:pt-2">
         <HorizontalBorder className="mt-12 md:mt-16" />

@@ -21,8 +21,8 @@ export default function Disclaimer() {
               teeth can get rotten if you use too much sugar.
             </Paragraph>
             <Paragraph className="text-sm text-justify mt-4">
-              You wouldn't get a rotten teeth do you? Then let us research and
-              define what the best technology for your needs.
+              You wouldn&apos;t get a rotten teeth do you? Then let us research
+              and define what the best technology for your needs.
             </Paragraph>
             <Paragraph className="text-sm text-justify mt-4">
               If you have any specific technology request for your project, just

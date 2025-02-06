@@ -61,9 +61,9 @@ export default function Why() {
               </Button>
             </Paragraph>
             <Paragraph className="text-sm mt-4">
-              We know you're tired to grow your business. Thus, let us handle
-              the hard work for you, so you don't have to. You can focus on what
-              you do best for the next step.
+              We know you&apos;re tired to grow your business. Thus, let us
+              handle the hard work for you, so you don&apos;t have to. You can
+              focus on what you do best for the next step.
             </Paragraph>
             <WhyBenefit
               Icon={Users}

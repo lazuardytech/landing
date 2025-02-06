@@ -2,10 +2,10 @@
     "name": "Lazuardy",
     "short_name": "Lazuardy",
     "description": "We help businesses grow bigger through modern technology.",
+    "background_color": "#e3e3e3",
+    "theme_color": "#e3e3e3",
     "start_url": "/",
     "display": "standalone",
-    "background_color": "#E3E3E3",
-    "theme_color": "#E3E3E3",
     "icons": [
         {
             "src": "/web-app-manifest-192x192.png",

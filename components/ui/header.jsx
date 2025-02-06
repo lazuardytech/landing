@@ -125,3 +125,4 @@ export const MobileMenuPanel = forwardRef(function (
     </div>
   );
 });
+MobileMenuPanel.displayName = "MobileMenuPanel";
