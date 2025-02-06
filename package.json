@@ -53,6 +53,7 @@
     "tailwindcss": "^3.4.17"
   },
   "trustedDependencies": [
+    "@biomejs/biome",
     "@vercel/speed-insights",
     "sharp"
   ]
