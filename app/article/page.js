@@ -3,19 +3,27 @@ import Hero from "@/components/block/article/hero";
 import Keypoint from "@/components/block/home/keypoint";
 import Footer from "@/components/ui/footer";
 import Header from "@/components/ui/header";
-import LayoutLine from "@/components/ui/layout-line";
-import { CACHED_ARTICLES } from "@/lib/services/rss-service";
+import { fetchMediumRss } from "@/lib/services/rss-service";
+import { cache } from "react";
 
-const articles = CACHED_ARTICLES;
+export const revalidate = 86400;
 
-export default function Article() {
-  return (
-    <div className="relative w-full h-full">
-      <Header />
-      <Hero />
-      <ArticleItems data={articles} />
-      <Keypoint titleCenter={true} />
-      <Footer />
-    </div>
-  );
+export const dynamicParams = false;
+
+export const getArticles = cache(async () => {
+	return await fetchMediumRss();
+});
+
+export default async function Article() {
+	const articles = await getArticles();
+
+	return (
+		<div className="relative w-full h-full">
+			<Header />
+			<Hero />
+			<ArticleItems articles={articles} />
+			<Keypoint titleCenter={true} />
+			<Footer />
+		</div>
+	);
 }

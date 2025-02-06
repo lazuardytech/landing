@@ -8,15 +8,15 @@ import Header from "@/components/ui/header";
 import LayoutLine from "@/components/ui/layout-line";
 
 export default function Technology() {
-  return (
-    <div className="relative w-full h-full">
-      <Header />
-      <Hero />
-      <Rnd />
-      <Tech />
-      <Disclaimer />
-      <Keypoint titleCenter={true} />
-      <Footer />
-    </div>
-  );
+	return (
+		<div className="relative w-full h-full">
+			<Header />
+			<Hero />
+			<Rnd />
+			<Tech />
+			<Disclaimer />
+			<Keypoint titleCenter={true} />
+			<Footer />
+		</div>
+	);
 }

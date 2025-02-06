@@ -17,12 +17,12 @@ import { CompanyData } from "@/lib/config";
 import { useFormspark } from "@formspark/use-formspark";
 import { Turnstile } from "@marsidev/react-turnstile";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import Script from "next/script";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import PhoneInput from "react-phone-number-input";
 import { toast } from "sonner";
-import { usePathname } from "next/navigation";
-import Script from "next/script";
 
 export default function Form() {
   const pathname = usePathname();
@@ -61,7 +61,6 @@ export default function Form() {
       setPhone("");
       reset();
     } catch (error) {
-      console.log(error);
       toast.error("Failed to submit the message.");
     }
   };

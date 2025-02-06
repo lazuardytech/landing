@@ -10,18 +10,18 @@ import Footer from "@/components/ui/footer";
 import Header from "@/components/ui/header";
 
 export default function Home() {
-  return (
-    <div className="relative w-full h-full">
-      <Header />
-      <Hero />
-      <Customer />
-      <Mission />
-      <Why />
-      <Solution />
-      <Review />
-      <Faq />
-      <Keypoint />
-      <Footer />
-    </div>
-  );
+	return (
+		<div className="relative w-full h-full">
+			<Header />
+			<Hero />
+			<Customer />
+			<Mission />
+			<Why />
+			<Solution />
+			<Review />
+			<Faq />
+			<Keypoint />
+			<Footer />
+		</div>
+	);
 }

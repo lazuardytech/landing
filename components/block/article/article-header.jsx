@@ -1,10 +1,28 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import LayoutLine from "@/components/ui/layout-line";
 import Title from "@/components/ui/title";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { ArrowLeft, Share } from "lucide-react";
 import Link from "next/link";
+import { toast } from "sonner";
 
 export default function ArticleHeader({ article }) {
+  async function handleCopyLink() {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      toast.success("Article link have been copied to clipboard.");
+    } catch (error) {
+      toast.error("Failed to copy the article link.");
+    }
+  }
+
   return (
     <LayoutLine className="pt-[12vh] md:pt-[18vh] pb-16 px-8">
       <div className="flex flex-col justify-center items-center w-full">
@@ -26,10 +44,23 @@ export default function ArticleHeader({ article }) {
           </div>
           <div className="flex flex-col w-full justify-center items-end">
             <div className="flex">
-              <Button size="default" variant="link" disabled>
-                <Share />
-                Share
-              </Button>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button
+                      size="default"
+                      variant="link"
+                      onClick={async () => await handleCopyLink()}
+                    >
+                      <Share />
+                      Share
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Copy article link</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             </div>
           </div>
         </div>
@@ -43,7 +74,7 @@ export default function ArticleHeader({ article }) {
         </p>
         <div className="flex space-x-4 mt-8">
           <span className="flex md:max-w-2xl font-light text-sm text-black text-center leading-snug">
-            {article.getFormattedDate()}
+            {article.formattedDate}
           </span>
           <span className="flex md:max-w-2xl font-light text-sm text-black text-center leading-snug">
             &bull;

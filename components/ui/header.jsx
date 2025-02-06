@@ -8,8 +8,8 @@ import Doto from "@/lib/fonts/doto";
 import { navigations } from "@/lib/state";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
-import { forwardRef, useRef, useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { forwardRef, useEffect, useRef, useState } from "react";
 
 export default function Header() {
   const pathname = usePathname();
@@ -51,7 +51,7 @@ export default function Header() {
                   key={index}
                   size="default"
                   variant="link"
-                  className={`px-0 font-black text-sm lowercase ${Doto.className} ${pathname === navigation.link && "underline"}`}
+                  className={`px-0 font-black text-sm lowercase ${Doto.className} ${pathname === navigation.link || (navigation.link === "/article" && pathname.startsWith("/article")) ? "underline" : ""}`}
                   asChild
                 >
                   <Link
@@ -86,43 +86,38 @@ export default function Header() {
   );
 }
 
-export const MobileMenuPanel = forwardRef(function (
-  { className, pathname },
-  ref,
-) {
-  return (
-    <div
-      ref={ref}
-      className={`fixed top-0 left-0 flex justify-center items-center z-40 w-full h-screen select-none backdrop-filter backdrop-blur-lg bg-neutral-200/40 ${className}`}
-    >
-      <div className="flex flex-col w-full space-y-8 justify-center items-center">
+export const MobileMenuPanel = forwardRef(({ className, pathname }, ref) => (
+  <div
+    ref={ref}
+    className={`fixed top-0 left-0 flex justify-center items-center z-40 w-full h-screen select-none backdrop-filter backdrop-blur-lg bg-neutral-200/40 ${className}`}
+  >
+    <div className="flex flex-col w-full space-y-8 justify-center items-center">
+      <Button
+        size="default"
+        variant="link"
+        className={`font-black text-lg lowercase ${Doto.className} ${pathname === "/" && "underline"}`}
+        asChild
+      >
+        <Link href="/">Home</Link>
+      </Button>
+      {navigations.map((navigation, index) => (
         <Button
+          key={index}
           size="default"
           variant="link"
-          className={`font-black text-lg lowercase ${Doto.className} ${pathname === "/" && "underline"}`}
+          className={`font-black text-lg lowercase ${Doto.className} ${pathname === navigation.link || (navigation.link === "/article" && pathname.startsWith("/article") && "underline")}`}
           asChild
         >
-          <Link href="/">Home</Link>
-        </Button>
-        {navigations.map((navigation, index) => (
-          <Button
-            key={index}
-            size="default"
-            variant="link"
-            className={`font-black text-lg lowercase ${Doto.className} ${pathname === navigation.link && "underline"}`}
-            asChild
+          <Link
+            href={navigation.link}
+            target={navigation.target}
+            rel={navigation.rel}
           >
-            <Link
-              href={navigation.link}
-              target={navigation.target}
-              rel={navigation.rel}
-            >
-              {navigation.name}
-            </Link>
-          </Button>
-        ))}
-      </div>
+            {navigation.name}
+          </Link>
+        </Button>
+      ))}
     </div>
-  );
-});
+  </div>
+));
 MobileMenuPanel.displayName = "MobileMenuPanel";

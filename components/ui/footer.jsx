@@ -163,7 +163,7 @@ export default function Footer() {
                     href={navigation.link}
                     target={navigation.target}
                     rel={navigation.rel}
-                    className={`text-left lowercase ${pathname === navigation.link && "underline"}`}
+                    className={`text-left lowercase ${pathname === navigation.link || (navigation.link === "/article" && pathname.startsWith("/article") && "underline")}`}
                   >
                     {navigation.name}
                   </Link>

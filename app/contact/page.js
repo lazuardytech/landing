@@ -5,13 +5,13 @@ import Footer from "@/components/ui/footer";
 import Header from "@/components/ui/header";
 
 export default function Contact() {
-  return (
-    <div className="relative w-full h-full">
-      <Header />
-      <Hero />
-      <Form />
-      <Keypoint titleCenter />
-      <Footer />
-    </div>
-  );
+	return (
+		<div className="relative w-full h-full">
+			<Header />
+			<Hero />
+			<Form />
+			<Keypoint titleCenter />
+			<Footer />
+		</div>
+	);
 }

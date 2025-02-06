@@ -5,15 +5,16 @@ import Title from "@/components/ui/title";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function ArticleItems({ data }) {
+export default function ArticleItems({ articles }) {
   return (
     <div className="flex flex-col w-full">
       <LayoutLine>
         <div className="grid grid-cols-1 md:grid-cols-2 w-full">
-          {data.items.map((article, index) => (
+          {articles.map((article, index) => (
             <ArticleItem
               key={index}
               index={index}
+              id={article.id}
               image={article.coverImageUrl}
               title={article.title}
               description={article.description}
@@ -25,7 +26,7 @@ export default function ArticleItems({ data }) {
   );
 }
 
-export function ArticleItem({ index, image, title, description }) {
+export function ArticleItem({ index, id, image, title, description }) {
   return (
     <div className="flex flex-col w-full">
       <HorizontalBorder className="mt-12 md:mt-20" />
@@ -33,7 +34,7 @@ export function ArticleItem({ index, image, title, description }) {
         className={`flex flex-col w-full justify-center items-center ${index <= 0 || index % 2 === 0 ? "md:items-end md:pr-6" : "md:items-start md:pl-6"}`}
       >
         <div className="flex flex-col w-full md:w-5/6 md:border-l md:border-r border-neutral-400 border-opacity-90 group hover:cursor-click">
-          <Link key={index} href={`/article/${index}`}>
+          <Link key={index} href={`/article/${id}`}>
             <div className="flex w-full aspect-video">
               <Image
                 src={image}
