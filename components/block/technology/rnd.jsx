@@ -6,7 +6,7 @@ import Title from "@/components/ui/title";
 export default function Rnd() {
 	return (
 		<div className="flex flex-col w-full">
-			<LayoutLine className="pt-12 md:pt-8" />
+			<LayoutLine className="pt-8" />
 			<HorizontalBorder />
 			<LayoutLine>
 				<div className="grid grid-cols-1 md:grid-cols-3 w-full">
