@@ -16,7 +16,7 @@ export default function Timeline() {
       <LayoutLineHeader title="How We Work" />
       <LayoutLine>
         <div className="grid grid-cols-1 md:grid-cols-4 w-full">
-          <div className="flex flex-col relative w-full p-8 border-r border-b md:border-b-0 border-neutral-400 border-opacity-90">
+          <div className="flex flex-col relative w-full p-8 border-r border-b md:border-b-0 border-neutral-400 border-opacity-90 md:transition-colors md:duration-200 md:hover:bg-neutral-300">
             <Title className="text-2xl">1. Consult</Title>
             <Paragraph className="text-sm mt-4 md:mt-6">
               We listen and analyze all of your needs, specs, and requirements.
