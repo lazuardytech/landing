@@ -1,6 +1,7 @@
 import Customer from "@/components/block/home/customer";
 import Faq from "@/components/block/home/faq";
 import Hero from "@/components/block/home/hero";
+import Highlight from "@/components/block/home/highlight";
 import Keypoint from "@/components/block/home/keypoint";
 import Mission from "@/components/block/home/mission";
 import Review from "@/components/block/home/review";
@@ -16,6 +17,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Customer />
+      <Highlight />
       <Review />
       <Mission />
       <Why />
