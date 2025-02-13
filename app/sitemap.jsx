@@ -7,6 +7,12 @@ export default function sitemap() {
 			priority: 1,
 		},
 		{
+			url: `${process.env.NEXT_PUBLIC_APP_URL}/ai`,
+			lastModified: new Date(),
+			changeFrequency: "monthly",
+			priority: 0.8,
+		},
+		{
 			url: `${process.env.NEXT_PUBLIC_APP_URL}/technology`,
 			lastModified: new Date(),
 			changeFrequency: "monthly",
