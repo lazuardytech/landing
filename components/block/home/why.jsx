@@ -15,28 +15,28 @@ export default function Why() {
 			<LayoutLine>
 				<div className="grid grid-cols-1 md:grid-cols-2 w-full">
 					<div className="grid grid-cols-2 w-full border-r border-neutral-400 border-opacity-90">
-						<div className="flex w-full justify-center items-center border-r border-b border-neutral-400 border-opacity-90 md:transition-colors md:duration-200 md:hover:bg-neutral-400">
+						<div className="flex w-full justify-center items-center border-r border-b border-neutral-400 border-opacity-90">
 							<WhyKeypoint
 								count={25}
 								countSuffix="+"
 								label="Certified Engineers and Professionals"
 							/>
 						</div>
-						<div className="flex w-full justify-center items-center border-b border-neutral-400 border-opacity-90 md:transition-colors md:duration-200 md:hover:bg-neutral-400">
+						<div className="flex w-full justify-center items-center border-b border-neutral-400 border-opacity-90">
 							<WhyKeypoint
 								count={16}
 								countSuffix="+"
 								label="Entrepreneur, Organization, and Corporate Clients"
 							/>
 						</div>
-						<div className="flex w-full justify-center items-center border-r border-b md:border-b-0 border-neutral-400 border-opacity-90 md:transition-colors md:duration-200 md:hover:bg-neutral-400">
+						<div className="flex w-full justify-center items-center border-r border-b md:border-b-0 border-neutral-400 border-opacity-90">
 							<WhyKeypoint
 								count={60}
 								countSuffix="%"
 								label="Higher cost efficiency on business operational"
 							/>
 						</div>
-						<div className="flex w-full justify-center items-center border-b md:border-b-0 border-neutral-400 border-opacity-90 md:transition-colors md:duration-200 md:hover:bg-neutral-400">
+						<div className="flex w-full justify-center items-center border-b md:border-b-0 border-neutral-400 border-opacity-90">
 							<WhyKeypoint
 								count={20}
 								countSuffix="+"
@@ -44,7 +44,7 @@ export default function Why() {
 							/>
 						</div>
 					</div>
-					<div className="flex flex-col w-full p-8 md:transition-colors md:duration-200 md:hover:bg-neutral-400">
+					<div className="flex flex-col w-full p-8">
 						<Paragraph className="text-sm">
 							Statistic says, 90% of startups that exist are failing, while
 							18.4% business tend to fail at the first year.

@@ -20,7 +20,7 @@ export default function FaqItems({ faqs }) {
 		<div className="flex flex-col w-full">
 			{faqs.map((faq, index) => (
 				<div
-					key={index}
+					key={`faq-${faq.question}`}
 					className="border-b border-neutral-400 border-opacity-90 p-8 transition-colors duration-200 hover:bg-neutral-300 hover:cursor-pointer"
 					onClick={() => toggleAnswer(index)}
 				>
@@ -29,20 +29,20 @@ export default function FaqItems({ faqs }) {
 							{faq.question}
 						</h3>
 						<span
-							id={`faq-plus-${index}`}
+							id={`faq-plus-${faq.question}`}
 							className={`select-none text-4xl ml-4 ${Doto.className}`}
 						>
 							+
 						</span>
 						<span
-							id={`faq-minus-${index}`}
+							id={`faq-minus-${faq.question}`}
 							className={`select-none text-4xl ml-4 hidden ${Doto.className}`}
 						>
 							-
 						</span>
 					</div>
 					<p
-						id={`faq-answer-${index}`}
+						id={`faq-answer-${faq.question}`}
 						className="w-full md:max-w-screen-sm font-light text-sm text-neutral-600 text-left leading-snug mt-5 hidden"
 					>
 						{faq.answer}

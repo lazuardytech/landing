@@ -224,7 +224,7 @@ export default function Tech() {
 export function TechItems({ className, title, description, items }) {
 	return (
 		<div className={`flex flex-col w-full ${className}`}>
-			<div className="flex flex-col w-full pt-16 md:pt-20 md:transition-colors md:duration-200 md:hover:bg-neutral-400">
+			<div className="flex flex-col w-full pt-16 md:pt-20">
 				<Title className="text-lg px-8">{title}</Title>
 				<Paragraph className="text-sm text-justify pt-4 pb-6 px-8">
 					{description}
@@ -233,8 +233,8 @@ export function TechItems({ className, title, description, items }) {
 			<HorizontalBorder />
 			<div className="relative py-4 flex h-auto w-full flex-col items-center justify-center overflow-hidden">
 				<Marquee pauseOnHover className="[--duration:30s]">
-					{items.map((label, index) => (
-						<TechItem key={index} label={label} />
+					{items.map((label) => (
+						<TechItem key={label} label={label} />
 					))}
 				</Marquee>
 			</div>

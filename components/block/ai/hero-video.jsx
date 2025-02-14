@@ -41,6 +41,12 @@ export default function HeroVideo() {
 				<link
 					rel="preload"
 					as="video"
+					href={`/videos/cover/${VIDEO_FILENAME}.webm`}
+					type="video/webm"
+				/>
+				<link
+					rel="preload"
+					as="video"
 					href={`/videos/cover/${VIDEO_FILENAME}.mp4`}
 					type="video/mp4"
 				/>
@@ -56,6 +62,10 @@ export default function HeroVideo() {
 						muted
 						playsInline
 					>
+						<source
+							src={`/videos/cover/${VIDEO_FILENAME}.webm`}
+							type="video/webm"
+						/>
 						<source
 							src={`/videos/cover/${VIDEO_FILENAME}.mp4`}
 							type="video/mp4"

@@ -58,7 +58,7 @@ const workDivisions = [
 export default function CareerFilter() {
 	return (
 		<>
-			<LayoutLine className="pt-8"></LayoutLine>
+			<LayoutLine className="pt-8" />
 			<HorizontalBorder className="opacity-0 md:opacity-100" />
 			<LayoutLine>
 				<div className="grid grid-cols-1 md:grid-cols-3 md:gap-8 md:px-8 w-full">

@@ -19,7 +19,7 @@ export default function Hero() {
 						Our swiss-army knife to cut any problem you have.
 					</Title>
 				</div>
-				<div className="flex flex-col w-full justify-end"></div>
+				<div className="flex flex-col w-full justify-end" />
 			</div>
 			<div className="flex flex-col w-full mt-4 md:mt-10">
 				<div className="flex w-full space-x-2 justify-start">

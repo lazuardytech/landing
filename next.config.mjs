@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    reactCompiler: false,
+    reactCompiler: true,
     optimizePackageImports: [
       "@formspark/use-formspark",
       "@hookform/resolvers",

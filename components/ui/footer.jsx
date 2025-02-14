@@ -53,14 +53,14 @@ export default function Footer() {
 				<div className="grid grid-cols-2 md:grid-cols-6 w-full">
 					<div className="flex flex-col w-full h-full col-span-4 border-r border-neutral-400 border-opacity-90">
 						<div className="hidden md:grid grid-cols-2 w-full h-full border-b border-neutral-400 border-opacity-90">
-							<div className="flex flex-col w-full p-8 justify-center items-center border-r border-neutral-400 border-opacity-90 md:transition-colors md:duration-200 md:hover:bg-neutral-400">
+							<div className="flex flex-col w-full p-8 justify-center items-center border-r border-neutral-400 border-opacity-90">
 								<p
 									className={`w-full font-bold text-xs md:text-sm text-black text-left leading-snug ${Doto.className}`}
 								>
 									{CompanyData.copyright.html}
 								</p>
 							</div>
-							<div className="flex flex-col relative w-full p-8 justify-center items-center md:transition-colors md:duration-200 md:hover:bg-neutral-400">
+							<div className="flex flex-col relative w-full p-8 justify-center items-center md:transition-colors md:duration-200 md:hover:bg-neutral-300">
 								<p
 									className={`w-full font-bold text-xs md:text-sm text-black text-left leading-snug ${Doto.className}`}
 								>
@@ -82,7 +82,7 @@ export default function Footer() {
 						<div className="grid grid-cols-3 w-full">
 							<div
 								id="copyright-text"
-								className="flex flex-col w-full p-8 justify-center items-center col-span-2 border-r border-neutral-400 border-opacity-90 md:transition-colors md:duration-200 md:hover:bg-neutral-400"
+								className="flex flex-col w-full p-8 justify-center items-center col-span-2 border-r border-neutral-400 border-opacity-90"
 							>
 								<Title className="text-xs md:text-sm">
 									<span className="flex md:hidden">
@@ -95,7 +95,7 @@ export default function Footer() {
 									</span>
 								</Title>
 							</div>
-							<div className="flex flex-col w-full p-8 md:transition-colors md:duration-200 md:hover:bg-neutral-400">
+							<div className="flex flex-col w-full p-8">
 								<Button
 									size="sm"
 									variant="link"
@@ -125,12 +125,12 @@ export default function Footer() {
 							</div>
 						</div>
 					</div>
-					<div className="flex flex-col w-full p-8 border-r border-t md:border-t-0 border-neutral-400 border-opacity-90 md:transition-colors md:duration-200 md:hover:bg-neutral-400">
+					<div className="flex flex-col w-full p-8 border-r border-t md:border-t-0 border-neutral-400 border-opacity-90">
 						<Title className="text-xl">Connect</Title>
 						<div className="flex flex-col w-full mt-4">
-							{socials.map((social, index) => (
+							{socials.map((social) => (
 								<Button
-									key={index}
+									key={social.name}
 									size="sm"
 									variant="link"
 									className="text-left justify-start px-0"
@@ -148,12 +148,12 @@ export default function Footer() {
 							))}
 						</div>
 					</div>
-					<div className="flex flex-col w-full p-8 md:transition-colors md:duration-200 md:hover:bg-neutral-400 border-t md:border-t-0 border-neutral-400 border-opacity-90">
+					<div className="flex flex-col w-full p-8 border-t md:border-t-0 border-neutral-400 border-opacity-90">
 						<Title className="text-xl">Navigate</Title>
 						<div className="flex flex-col w-full mt-4">
 							{navigations.map((navigation, index) => (
 								<Button
-									key={index}
+									key={navigation.name}
 									size="sm"
 									variant="link"
 									className="text-left justify-start px-0"

@@ -12,8 +12,8 @@ export default function Disclaimer() {
 			<LayoutLineHeader title="A wise man said," className="text-center" />
 			<LayoutLine>
 				<div className="grid grid-cols-1 md:grid-cols-5 w-full">
-					<div className="hidden md:flex flex-col w-full border-r border-neutral-400 border-opacity-90"></div>
-					<div className="flex flex-col w-full border-r border-neutral-400 border-opacity-90 md:col-span-3 p-8 md:transition-colors md:duration-200 md:hover:bg-neutral-400">
+					<div className="hidden md:flex flex-col w-full border-r border-neutral-400 border-opacity-90" />
+					<div className="flex flex-col w-full border-r border-neutral-400 border-opacity-90 md:col-span-3 p-8">
 						<Title className="text-lg">Simpler is better</Title>
 						<Paragraph className="text-sm text-justify mt-4">
 							While we support many of it, not all technologies above are
@@ -43,7 +43,7 @@ export default function Disclaimer() {
 							</Button>
 						</div>
 					</div>
-					<div className="hidden md:flex flex-col w-full"></div>
+					<div className="hidden md:flex flex-col w-full" />
 				</div>
 			</LayoutLine>
 			<HorizontalBorder />

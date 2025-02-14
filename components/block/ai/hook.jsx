@@ -46,10 +46,10 @@ export default function Hook() {
 			<HorizontalBorder />
 			<LayoutLine>
 				<div className="grid grid-cols-1 md:grid-cols-4 w-full">
-					{features.map((feature, index) => (
+					{features.map((feature) => (
 						<div
-							key={index}
-							className={`flex flex-col relative w-full p-8 border-r border-neutral-400 border-opacity-90 md:transition-colors md:duration-200 md:hover:bg-neutral-400 ${index === features.length - 1 ? "md:border-r-0" : "border-b md:border-b-0"}`}
+							key={feature.title}
+							className={`flex flex-col relative w-full p-8 border-r border-neutral-400 border-opacity-90 ${index === features.length - 1 ? "md:border-r-0" : "border-b md:border-b-0"}`}
 						>
 							<Title className="text-md md:text-lg text-center md:text-start">
 								{feature.title}

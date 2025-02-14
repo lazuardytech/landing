@@ -48,7 +48,7 @@ export default function Header() {
 						<div className="hidden md:flex w-full py-4 px-8 space-x-8 justify-end">
 							{navigations.map((navigation, index) => (
 								<Button
-									key={index}
+									key={navigation.name}
 									size="default"
 									variant="link"
 									className={`px-0 font-black text-black text-sm lowercase ${Doto.className} ${pathname === navigation.link || (navigation.link === "/article" && pathname.startsWith("/article")) ? "underline" : ""}`}
@@ -102,7 +102,7 @@ export const MobileMenuPanel = forwardRef(({ className, pathname }, ref) => (
 			</Button>
 			{navigations.map((navigation, index) => (
 				<Button
-					key={index}
+					key={navigation.name}
 					size="default"
 					variant="link"
 					className={`font-black text-black text-lg lowercase ${Doto.className} ${pathname === navigation.link || (navigation.link === "/article" && pathname.startsWith("/article")) ? "underline" : ""}`}

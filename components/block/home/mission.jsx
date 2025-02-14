@@ -13,7 +13,7 @@ export default function Mission() {
 			<LayoutLineHeader title="Our Mission" />
 			<LayoutLine>
 				<div className="grid grid-cols-1 md:grid-cols-2 w-full">
-					<div className="flex flex-col w-full p-8 pb-4 md:pb-8 border-r border-neutral-400 border-opacity-90 md:transition-colors md:duration-200 md:hover:bg-neutral-400">
+					<div className="flex flex-col w-full p-8 pb-4 md:pb-8 border-r border-neutral-400 border-opacity-90">
 						<Paragraph className="text-sm">
 							Lazuardy is a team full of visionary engineers, researchers, and
 							professionals that work together to help business grow bigger

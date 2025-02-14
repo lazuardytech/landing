@@ -11,7 +11,7 @@ export default function ArticleText({ content }) {
 			link.setAttribute("rel", "noopener noreferrer");
 			link.setAttribute("target", "_blank");
 		});
-	}, [content]);
+	}, []);
 
 	return (
 		<>

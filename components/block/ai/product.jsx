@@ -87,10 +87,10 @@ export default function Product() {
 			<HorizontalBorder />
 			<LayoutLine>
 				<div className="grid grid-cols-2 md:grid-cols-5 w-full">
-					{products.map((product, index) => (
+					{products.map((product) => (
 						<div
-							key={index}
-							className={`flex flex-col relative w-full p-8 md:p-6 md:pr-8 md:transition-colors md:duration-200 md:hover:bg-neutral-400 border-b border-neutral-400 border-opacity-90 ${(index + 1) % 2 === 1 || index === 0 ? "border-r" : ""} ${index <= 3 ? "border-b" : ""} ${(index + 1) % 5 === 0 ? "" : "md:border-r"} ${index + 1 > products.length - 5 ? "md:border-b-0" : ""} ${index <= 4 || index === products.length - 1 ? "" : "hidden md:flex"} ${(index + 1) % 5 === 0 ? "md:border-r-0" : ""}`}
+							key={product.title}
+							className={`flex flex-col relative w-full p-8 md:p-6 md:pr-8 border-b border-neutral-400 border-opacity-90 ${(index + 1) % 2 === 1 || index === 0 ? "border-r" : ""} ${index <= 3 ? "border-b" : ""} ${(index + 1) % 5 === 0 ? "" : "md:border-r"} ${index + 1 > products.length - 5 ? "md:border-b-0" : ""} ${index <= 4 || index === products.length - 1 ? "" : "hidden md:flex"} ${(index + 1) % 5 === 0 ? "md:border-r-0" : ""}`}
 						>
 							<Title className="text-lg">{product.title}</Title>
 						</div>

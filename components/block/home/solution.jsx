@@ -330,7 +330,7 @@ export default function Solution() {
 							/>
 						</div>
 					</div>
-					<div className="flex flex-col w-full justify-center items-center p-8 md:transition-colors md:duration-200 md:hover:bg-neutral-400">
+					<div className="flex flex-col w-full justify-center items-center p-8">
 						<Paragraph className="text-sm">
 							At <span className="font-semibold">Lazuardy Byte</span>, we create
 							custom software and cloud solutions that help businesses work
@@ -372,7 +372,7 @@ export default function Solution() {
 
 			<LayoutLine>
 				<div className="grid grid-cols-1 md:grid-cols-2 w-full">
-					<div className="flex flex-col w-full justify-center items-center p-8 md:transition-colors md:duration-200 md:hover:bg-neutral-400 border-r border-neutral-400 border-opacity-90">
+					<div className="flex flex-col w-full justify-center items-center p-8 border-r border-neutral-400 border-opacity-90">
 						<Paragraph className="text-sm">
 							At <span className="font-semibold">Lazuardy Things</span>, we
 							develop internet of things, robotics, and hardware solutions to
@@ -430,7 +430,7 @@ export default function Solution() {
 							/>
 						</div>
 					</div>
-					<div className="flex flex-col w-full p-8 justify-center items-center md:transition-colors md:duration-200 md:hover:bg-neutral-400">
+					<div className="flex flex-col w-full p-8 justify-center items-center">
 						<Paragraph className="text-sm">
 							At <span className="font-semibold">Lazuardy Studio</span>, we
 							craft UI/UX designs, brand identities, and digital experiences
@@ -473,7 +473,7 @@ export default function Solution() {
 
 			<LayoutLine>
 				<div className="grid grid-cols-1 md:grid-cols-2 w-full">
-					<div className="flex flex-col w-full justify-center items-center p-8 md:transition-colors md:duration-200 md:hover:bg-neutral-400 border-r border-neutral-400 border-opacity-90">
+					<div className="flex flex-col w-full justify-center items-center p-8 border-r border-neutral-400 border-opacity-90">
 						<Paragraph className="text-sm">
 							At <span className="font-semibold">Lazuardy AI</span>, we
 							integrate AI, machine learning, and automation to make businesses
@@ -562,9 +562,9 @@ export function SolutionServiceGallery({ logo, images }) {
 							"translateX(0px) translateY(0px) translateZ(-50px) rotateX(0deg) rotateY(-20deg) rotateZ(10deg) scale(1.5)",
 					}}
 				>
-					{images.map((data, idx) => (
+					{images.map((data) => (
 						<Image
-							key={idx}
+							key={data.name}
 							src={data.img}
 							alt={data.name}
 							width={400}

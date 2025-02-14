@@ -50,7 +50,7 @@ export default function Keypoint({ titleCenter = false }) {
 			/>
 			<LayoutLine>
 				<div className="grid grid-cols-2 md:grid-cols-4 w-full">
-					<div className="flex flex-col w-full p-8 justify-center items-center border-r border-b md:border-b-0 border-neutral-400 border-opacity-90 md:transition-colors md:duration-200 md:hover:bg-neutral-400">
+					<div className="flex flex-col w-full p-8 justify-center items-center border-r border-b md:border-b-0 border-neutral-400 border-opacity-90">
 						<Title className="flex text-xl">
 							<span className="hidden md:flex mr-2">To</span>Automate
 						</Title>
@@ -58,7 +58,7 @@ export default function Keypoint({ titleCenter = false }) {
 							Automate repetitive tasks and streamline your workflows.
 						</Paragraph>
 					</div>
-					<div className="flex flex-col w-full p-8 justify-center items-center border-r border-b md:border-b-0 border-neutral-400 border-opacity-90 md:transition-colors md:duration-200 md:hover:bg-neutral-400">
+					<div className="flex flex-col w-full p-8 justify-center items-center border-r border-b md:border-b-0 border-neutral-400 border-opacity-90">
 						<Title className="flex text-xl">
 							<span className="hidden md:flex mr-2">To</span>Optimize
 						</Title>
@@ -66,7 +66,7 @@ export default function Keypoint({ titleCenter = false }) {
 							Enhance efficiency by refining processes and technology.
 						</Paragraph>
 					</div>
-					<div className="flex flex-col w-full p-8 justify-center items-center border-r border-neutral-400 border-opacity-90 md:transition-colors md:duration-200 md:hover:bg-neutral-400">
+					<div className="flex flex-col w-full p-8 justify-center items-center border-r border-neutral-400 border-opacity-90">
 						<Title className="flex text-xl">
 							<span className="hidden md:flex mr-2">To</span>Modernize
 						</Title>
@@ -74,7 +74,7 @@ export default function Keypoint({ titleCenter = false }) {
 							Upgrade your systems with the latest and modern technology.
 						</Paragraph>
 					</div>
-					<div className="relative flex flex-col w-full p-8 justify-center items-center md:transition-colors md:duration-200 md:hover:bg-neutral-400">
+					<div className="relative flex flex-col w-full p-8 justify-center items-center">
 						<Paragraph className="hidden md:flex text-xs">
 							We offer a free and no-commitment consultation.
 						</Paragraph>
@@ -104,13 +104,13 @@ export default function Keypoint({ titleCenter = false }) {
 			<LayoutLine>
 				<div className="relative py-8 flex h-auto w-full flex-col items-center justify-center overflow-hidden">
 					<Marquee pauseOnHover className="[--duration:20s]">
-						{productFirstRow.map((label, index) => (
-							<ProductItem key={index} label={label} />
+						{productFirstRow.map((label) => (
+							<ProductItem key={label} label={label} />
 						))}
 					</Marquee>
 					<Marquee reverse pauseOnHover className="[--duration:20s]">
-						{productSecondRow.map((label, index) => (
-							<ProductItem key={index} label={label} />
+						{productSecondRow.map((label) => (
+							<ProductItem key={label} label={label} />
 						))}
 					</Marquee>
 				</div>

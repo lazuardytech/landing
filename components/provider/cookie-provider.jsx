@@ -104,7 +104,8 @@ export default function CookieProvider() {
 							sections: [
 								{
 									title: "Your Privacy Choices",
-									description: `You can manage your preferences regarding the processing of your personal information. You can change your choices at any time by reopening this panel. To deny consent for specific processing activities, toggle the switches or use the “Reject all” button.`,
+									description:
+										'You can manage your preferences regarding the processing of your personal information. You can change your choices at any time by reopening this panel. To deny consent for specific processing activities, toggle the switches or use the "Reject all" button.',
 								},
 								{
 									title: "Strictly Necessary",

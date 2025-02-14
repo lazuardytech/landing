@@ -226,7 +226,7 @@ export default function Tetris() {
 			}, 2000);
 			return () => clearTimeout(timeout);
 		}
-	}, [gameOver]);
+	});
 
 	const displayGrid = grid.map((row) => row.slice());
 	if (activePiece && activeCells) {

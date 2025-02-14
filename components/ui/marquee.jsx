@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn, generateRandomKey } from "@/lib/utils";
 
 export function Marquee({
 	className,
@@ -23,9 +23,9 @@ export function Marquee({
 		>
 			{Array(repeat)
 				.fill(0)
-				.map((_, i) => (
+				.map((_) => (
 					<div
-						key={i}
+						key={generateRandomKey()}
 						className={cn("flex shrink-0 justify-around [gap:var(--gap)]", {
 							"animate-marquee flex-row": !vertical,
 							"animate-marquee-vertical flex-col": vertical,

@@ -22,11 +22,15 @@ export default function Hero() {
 						<br />
 						If only you don&apos;t feel like to type, let&apos;s book a call.
 					</p>
-					<div className="grid grid-cols-3 space-x-2 mt-8">
+					<div className="grid grid-cols-2 space-x-2 mt-8">
 						<Button size="lg" variant="link" asChild>
-							<Link href={CompanyData.email.link}>
-								<Mail />
-								<span className="ml-0.5">Email us</span>
+							<Link
+								href={CompanyData.phone.link}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Whatsapp />
+								<span className="ml-0">Chat us</span>
 							</Link>
 						</Button>
 						<Button size="lg" variant="default" asChild>
@@ -36,16 +40,6 @@ export default function Hero() {
 								rel="noopener noreferrer"
 							>
 								Talk to Us
-							</Link>
-						</Button>
-						<Button size="lg" variant="link" asChild>
-							<Link
-								href={CompanyData.phone.link}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<Whatsapp />
-								<span className="ml-0">Chat us</span>
 							</Link>
 						</Button>
 					</div>
