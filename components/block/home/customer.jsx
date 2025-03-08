@@ -56,8 +56,11 @@ export function CustomerItems() {
 	return (
 		<Carousel setApi={setApi} className="select-none hover:cursor-pointer">
 			<CarouselContent>
-				{customers.map((item) => (
-					<CarouselItem key={item.name} className="basis-1/4 lg:basis-1/6">
+				{customers.map((item, index) => (
+					<CarouselItem
+						key={`${item.name}-${index}`}
+						className="basis-1/4 lg:basis-1/6"
+					>
 						<div className="relative aspect-square flex items-center justify-center">
 							<div className="relative w-full h-full">
 								<Link

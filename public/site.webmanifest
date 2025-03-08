@@ -1,23 +1,23 @@
 {
-    "name": "Lazuardy",
-    "short_name": "Lazuardy",
-    "description": "We help businesses grow bigger through modern technology.",
-    "background_color": "#e3e3e3",
-    "theme_color": "#e3e3e3",
-    "start_url": "/",
-    "display": "standalone",
-    "icons": [
-        {
-            "src": "/web-app-manifest-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png",
-            "purpose": "maskable"
-        },
-        {
-            "src": "/web-app-manifest-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "maskable"
-        }
-    ]
+	"name": "Lazuardy",
+	"short_name": "Lazuardy",
+	"description": "We help businesses grow bigger through modern technology.",
+	"background_color": "#e3e3e3",
+	"theme_color": "#e3e3e3",
+	"start_url": "/",
+	"display": "standalone",
+	"icons": [
+		{
+			"src": "/web-app-manifest-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "maskable"
+		},
+		{
+			"src": "/web-app-manifest-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "maskable"
+		}
+	]
 }

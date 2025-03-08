@@ -1,0 +1,7 @@
+Contact: mailto:contact@lazuardy.tech
+Encryption: https://lazuardy.tech/pgp-key.txt
+Acknowledgments: https://lazuardy.tech/contact
+Policy: https://lazuardy.tech/legal/privacy-policy
+Preferred-Languages: en, es
+Hiring: https://lazuardy.tech/career
+Expires: 2024-12-31T23:59:59.000Z
