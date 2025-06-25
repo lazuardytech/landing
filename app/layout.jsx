@@ -91,6 +91,7 @@ export default function RootLayout({ children }) {
           <Image
             height="1"
             width="1"
+            alt="Meta Pixel"
             style={{ display: "none" }}
             src="https://www.facebook.com/tr?id=736566302266723&ev=PageView&noscript=1"
           />
