@@ -10,22 +10,25 @@ import Timeline from "@/components/block/home/timeline";
 import Why from "@/components/block/home/why";
 import Footer from "@/components/ui/footer";
 import Header from "@/components/ui/header";
+import { metadata as Metadata } from "@/app/layout";
+
+export const metadata = Metadata;
 
 export default function Home() {
-	return (
-		<div className="relative w-full h-full">
-			<Header />
-			<Hero />
-			<Customer />
-			<Highlight />
-			<Review />
-			<Mission />
-			<Why />
-			<Solution />
-			<Timeline />
-			<Faq />
-			<Keypoint />
-			<Footer />
-		</div>
-	);
+  return (
+    <div className="relative w-full h-full">
+      <Header />
+      <Hero />
+      <Customer />
+      <Highlight />
+      <Review />
+      <Mission />
+      <Why />
+      <Solution />
+      <Timeline />
+      <Faq />
+      <Keypoint />
+      <Footer />
+    </div>
+  );
 }
