@@ -9,64 +9,64 @@ import dynamic from "next/dynamic";
 import "./globals.css";
 
 const CrispProvider = dynamic(
-  () => import("@/components/provider/crisp-provider"),
+	() => import("@/components/provider/crisp-provider"),
 );
 
 export const metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL),
-  title: CompanyData.tradeName,
-  description: CompanyData.description,
-  generator: "Next.js",
-  applicationName: CompanyData.tradeName,
-  referrer: "strict-origin-when-cross-origin",
-  creator: CompanyData.tradeName,
-  publisher: CompanyData.tradeName,
-  manifest: `${process.env.NEXT_PUBLIC_APP_URL}/manifest.json`,
-  category:
-    "technology, startup, business, agency, digital, collective, saas, software, hardware",
-  keywords: [
-    "lazuardy",
-    "byte",
-    "things",
-    "studio",
-    "ai",
-    "software",
-    "hardware",
-    "artificial intelligence",
-    "uiux",
-    "ui/ux",
-    "design",
-    "user interface",
-    "user experience",
-    "saas",
-  ],
-  authors: [
-    { name: CompanyData.tradeName, url: process.env.NEXT_PUBLIC_APP_URL },
-  ],
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  alternates: {
-    canonical: "/",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
+	metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL),
+	title: CompanyData.tradeName,
+	description: CompanyData.description,
+	generator: "Next.js",
+	applicationName: CompanyData.tradeName,
+	referrer: "strict-origin-when-cross-origin",
+	creator: CompanyData.tradeName,
+	publisher: CompanyData.tradeName,
+	manifest: `${process.env.NEXT_PUBLIC_APP_URL}/manifest.json`,
+	category:
+		"technology, startup, business, agency, digital, collective, saas, software, hardware",
+	keywords: [
+		"lazuardy",
+		"byte",
+		"things",
+		"studio",
+		"ai",
+		"software",
+		"hardware",
+		"artificial intelligence",
+		"uiux",
+		"ui/ux",
+		"design",
+		"user interface",
+		"user experience",
+		"saas",
+	],
+	authors: [
+		{ name: CompanyData.tradeName, url: process.env.NEXT_PUBLIC_APP_URL },
+	],
+	formatDetection: {
+		email: false,
+		address: false,
+		telephone: false,
+	},
+	alternates: {
+		canonical: "/",
+	},
+	robots: {
+		index: true,
+		follow: true,
+	},
 };
 
 export const viewport = {
-  themeColor: [{ color: CompanyData.themeColor }],
+	themeColor: [{ color: CompanyData.themeColor }],
 };
 
 export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <head>
-        <Script id="meta-pixel" strategy="afterInteractive">
-          {`
+	return (
+		<html lang="en">
+			<head>
+				<Script id="meta-pixel" strategy="afterInteractive">
+					{`
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
             n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -78,26 +78,26 @@ export default function RootLayout({ children }) {
             fbq('init', '736566302266723');
             fbq('track', 'PageView');
           `}
-        </Script>
-      </head>
-      <body
-        className={`bg-main transition-colors duration-1000 ${Poppins.className}`}
-      >
-        {children}
-        <ComponentProvider />
-        <CrispProvider />
-        <VercelProvider />
-        <noscript>
-          <Image
-            height="1"
-            width="1"
-            alt="Meta Pixel"
-            style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=736566302266723&ev=PageView&noscript=1"
-          />
-        </noscript>
-      </body>
-      <GoogleProvider />
-    </html>
-  );
+				</Script>
+			</head>
+			<body
+				className={`bg-main transition-colors duration-1000 ${Poppins.className}`}
+			>
+				{children}
+				<ComponentProvider />
+				<CrispProvider />
+				<VercelProvider />
+				<noscript>
+					<Image
+						height="1"
+						width="1"
+						alt="Meta Pixel"
+						style={{ display: "none" }}
+						src="https://www.facebook.com/tr?id=736566302266723&ev=PageView&noscript=1"
+					/>
+				</noscript>
+			</body>
+			<GoogleProvider />
+		</html>
+	);
 }

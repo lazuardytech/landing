@@ -25,7 +25,7 @@ export default async function InquirySuccess({ params }) {
 					<Link href="/inquiry">Send Another Inquiry</Link>
 				</Button>
 				<Button variant="default" size="default" asChild>
-					<Link href="/">Send Another Inquiry</Link>
+					<Link href="/">Back to Home</Link>
 				</Button>
 			</div>
 		</div>
