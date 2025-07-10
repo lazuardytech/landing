@@ -13,8 +13,8 @@ import Link from "next/link";
 const reviews = [
 	{
 		image: ezra,
-		name: "Ezra Lazuardy",
-		role: "Founder of Lazuardy Tech",
+		name: "Ezra Wijaya",
+		role: "Founder of LT",
 		content:
 			"Lazuardy Tech was built with a mission to help any business, by any scale, to perform better than before.",
 		link: "https://www.linkedin.com/in/ezralazuardy",
