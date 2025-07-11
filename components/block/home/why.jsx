@@ -11,7 +11,7 @@ import Link from "next/link";
 export default function Why() {
 	return (
 		<div className="flex flex-col w-full relative">
-			<LayoutLineHeader title="Why Lazuardy Tech?" />
+			<LayoutLineHeader title="Why They Trust Us?" />
 			<LayoutLine>
 				<div className="grid grid-cols-1 md:grid-cols-2 w-full">
 					<div className="grid grid-cols-2 w-full border-r border-neutral-400 border-opacity-90">
@@ -116,7 +116,7 @@ export function WhyBenefit({ Icon, label, className }) {
 	return (
 		<div className={`flex w-full space-x-4 ${className}`}>
 			<Icon className="w-5 h-5" strokeWidth={1.6} />
-			<p className="w-full font-regular text-sm text-black text-justify leading-snug pt-0.5">
+			<p className="w-full font-regular text-sm text-black text-justify leading-snug">
 				{label}
 			</p>
 		</div>

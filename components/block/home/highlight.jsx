@@ -21,10 +21,9 @@ export default function Highlight() {
 							longer a luxury, it&apos;s a necessity.
 						</Paragraph>
 						<Paragraph className="text-sm text-justify mt-4">
-							Don’t get left behind. Leverage AI to optimize operations, enhance
-							customer experience, and drive smarter decisions. Let’s join us to
-							build the future together and start integrating AI into your
-							business today! 🚀
+							Don’t get left behind. Leverage AI to optimize operations,
+							let&apos;s join us to build the future together and start
+							integrating AI into your business today! 🚀
 						</Paragraph>
 						<div className="flex justify-end space-x-4 mt-10">
 							<Button size="default" variant="link" asChild>

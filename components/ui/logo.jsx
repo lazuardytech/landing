@@ -1,17 +1,17 @@
-import Plus_Jakarta_Sans from "@/lib/fonts/plus-jakarta-sans";
-import Doto from "@/lib/fonts/doto";
+import Image from "next/image";
+import lazuardyTech from "@/public/images/logo/lazuardy-tech.svg";
+import { CompanyData } from "@/lib/config";
 
 export default function Logo(props) {
-  const { className, withTM } = props;
-  return (
-    <div className={`${Plus_Jakarta_Sans.className}`}>
-      <span className={`${className} text-lg`}>
-        Lazuardy
-        <span className={`${Doto.className} font-medium text-[1.04rem] ms-1`}>
-          Tech
-        </span>
-      </span>
-      {withTM && <span className="ms-1 absolute">™</span>}
-    </div>
-  );
+	const { className, withTM } = props;
+	return (
+		<Image
+			src={lazuardyTech}
+			draggable={false}
+			alt={CompanyData.tradeName}
+			width={400}
+			height={200}
+			className={`flex min-w-28 w-28 h-auto select-none ${className}`}
+		/>
+	);
 }

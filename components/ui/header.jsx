@@ -40,13 +40,13 @@ export default function Header() {
 						<div className="flex w-full">
 							<Link
 								href="/"
-								className="flex w-auto justify-center items-center px-8 border-r border-neutral-400 border-opacity-90 bg-[#171717]"
+								className="flex w-auto justify-center items-center px-[1.9rem] border-r border-neutral-400 border-opacity-90 bg-[#171717]"
 							>
 								<Logo className="font-medium text-sm md:text-md text-white" />
 							</Link>
 						</div>
 						<div className="hidden md:flex w-full py-4 px-8 space-x-8 justify-end">
-							{navigations.map((navigation, index) => (
+							{navigations.map((navigation, _) => (
 								<Button
 									key={navigation.name}
 									size="default"

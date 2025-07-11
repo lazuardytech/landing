@@ -14,7 +14,7 @@ const reviews = [
 	{
 		image: ezra,
 		name: "Ezra Wijaya",
-		role: "Founder of LT",
+		role: "Founder of Lazuardy Group",
 		content:
 			"Lazuardy Tech was built with a mission to help any business, by any scale, to perform better than before.",
 		link: "https://www.linkedin.com/in/ezralazuardy",
@@ -49,7 +49,7 @@ export default function Review() {
 							className={`flex flex-col relative w-full p-8 ${index < reviews.length - 1 ? "border-r border-b md:border-b-0 border-neutral-400 border-opacity-90" : ""}`}
 						>
 							<Title className="text-lg">{review.name}</Title>
-							<p className="w-full font-regular text-sm text-neutral-600 text-justify leading-snug mt-2">
+							<p className="w-full font-regular text-xs text-neutral-600 text-justify leading-snug mt-2">
 								{review.role}
 							</p>
 							<Title className="text-2xl mt-4 md:mt-8">&quot;</Title>

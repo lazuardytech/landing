@@ -7,7 +7,7 @@ const faqs = [
 	{
 		question: "What services do you offer?",
 		answer:
-			"We provide custom software development, cloud solutions, hardware engineering, AI integration, and ongoing tech support tailored to help businesses grow. Please contact us to know more what and how we can help you.",
+			"We provide custom software engineering, hardware engineering, cyber security, cloud solutions, AI integration, and ongoing tech support tailored to help businesses grow. Please contact us to know more what and how we can help you.",
 	},
 	{
 		question: "How does the consultation process work?",
