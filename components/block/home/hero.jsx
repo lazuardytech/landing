@@ -28,8 +28,8 @@ export default function Hero() {
 				</div>
 				<div className="w-full flex justify-end mt-8 md:mt-0">
 					<Paragraph className="text-sm">
-						We're the most respected tech firm in Central Java that gets your
-						challenges and uses the best tech in industries to help you.
+						We&apos;re the most respected tech firm in Central Java that gets
+						your challenges and uses the best tech in industries to help you.
 					</Paragraph>
 				</div>
 			</div>
