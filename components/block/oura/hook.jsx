@@ -3,30 +3,30 @@ import LayoutLine from "@/components/ui/layout-line";
 import Paragraph from "@/components/ui/paragraph";
 import Title from "@/components/ui/title";
 
-export default function Hook() {
-	const features = [
-		{
-			title: "Identify Security Weaknesses",
-			description:
-				"Simulate real attacks to uncover system flaws before hackers do via VAPT.",
-		},
-		{
-			title: "Ensure Full Compliance",
-			description:
-				"Audit to check if your system meets security standards and policies.",
-		},
-		{
-			title: "Uncover What Happened",
-			description:
-				"Investigate breaches and trace digital evidence with precision.",
-		},
-		{
-			title: "Detect Threats 24/7",
-			description:
-				"Our SOC monitor, detect, and respond to threats in real-time.",
-		},
-	];
+const features = [
+	{
+		title: "Identify Security Weaknesses",
+		description:
+			"Simulate real attacks to uncover system flaws before hackers do via VAPT.",
+	},
+	{
+		title: "Ensure Full Compliance",
+		description:
+			"Audit to check if your system meets security standards and policies.",
+	},
+	{
+		title: "Uncover What Happened",
+		description:
+			"Investigate breaches and trace digital evidence with precision.",
+	},
+	{
+		title: "Detect Threats 24/7",
+		description:
+			"Our SOC monitor, detect, and respond to threats in real-time.",
+	},
+];
 
+export default function Hook() {
 	return (
 		<div className="flex flex-col w-full relative">
 			<LayoutLine>

@@ -1,6 +1,7 @@
 import CTA from "@/components/block/oura/cta";
 import Hero from "@/components/block/oura/hero";
 import Hook from "@/components/block/oura/hook";
+import Certification from "@/components/block/oura/certification";
 import LEXA from "@/components/block/oura/lexa";
 import Product from "@/components/block/oura/product";
 import Keypoint from "@/components/block/home/keypoint";
@@ -13,6 +14,7 @@ export default function Home() {
 			<Header />
 			<Hero />
 			<Hook />
+			<Certification />
 			{/* <LEXA /> */}
 			{/* <Product /> */}
 			{/* <CTA /> */}
