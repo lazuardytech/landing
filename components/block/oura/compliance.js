@@ -39,7 +39,7 @@ export default function Compliance() {
 							</span>
 						</div>
 						<div className="absolute left-0 bottom-0 flex flex-col justify-center items-start px-8 py-7">
-							<Title className="text-2xl md:text-4xl text-start w-full">
+							<Title className="text-xl md:text-4xl text-start w-full">
 								Stay Compliance.
 								<br />
 								Stay Safe.

@@ -52,10 +52,18 @@ export default function CTAVideo() {
 				/>
 			</Head>
 			<div className="flex items-center justify-center aspect-video">
-				<div className="relative w-full h-full">
+				<div className="relative w-full h-full overflow-hidden">
 					<video
 						ref={video}
 						className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 aspect-video"
+						style={{
+							objectPosition: "center center",
+							// Zoom the video by cropping (not scaling)
+							// For example, show the center 50% of the video
+							width: "150%",
+							height: "150%",
+							top: "-25%",
+						}}
 						preload="auto"
 						autoPlay
 						loop

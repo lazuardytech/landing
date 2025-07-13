@@ -58,12 +58,12 @@ export function CertificationItems() {
 						className="basis-1/4 lg:basis-1/6"
 					>
 						<div className="relative aspect-square flex items-center justify-center">
-							<div className="relative flex items-center w-16 h-full mb-2">
+							<div className="relative flex items-center w-12 md:w-16 h-full md:mb-2">
 								<Link
 									href={item.link}
 									target="_blank"
 									rel="noopener noreferrer"
-									className="transition-all duration-300 hover:scale-125 md:filter md:grayscale md:hover:filter-none"
+									className="transition-all duration-300 md:hover:scale-125 md:filter md:grayscale md:hover:filter-none"
 								>
 									<Image
 										src={item.logo}

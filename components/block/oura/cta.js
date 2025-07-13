@@ -13,10 +13,10 @@ export default function CTA() {
 		<div id="ai-cta" className="flex flex-col w-full relative">
 			<LayoutLine className="relative bg-black">
 				<div className="w-full flex flex-col justify-center items-center aspect-video z-10 px-8">
-					<Title className="text-lg md:text-3xl text-center w-full text-white md:max-w-2xl mt-4 md:mt-2">
+					<Title className="text-lg md:text-3xl text-center w-full text-white md:max-w-2xl mt-3">
 						You&apos;re Either Prepared or Exposed.
 					</Title>
-					<div className="flex flex-col w-full mt-28 md:mt-48 justify-center items-center">
+					<div className="flex flex-col w-full mt-20 md:mt-48 justify-center items-center">
 						<div className="w-full flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0 justify-center items-center mt-0 md:mt-6">
 							<Button
 								size="default"
