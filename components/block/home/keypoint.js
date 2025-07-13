@@ -79,7 +79,12 @@ export default function Keypoint({ titleCenter = false }) {
 						<Paragraph className="hidden md:flex text-xs">
 							We offer a free and no-commitment consultation.
 						</Paragraph>
-						<Button size="sm" variant="default" className="w-full mt-4" asChild>
+						<Button
+							size="sm"
+							variant="default"
+							className="w-full mt-4 btn-main"
+							asChild
+						>
 							<Link href="/inquiry">Start a Project</Link>
 						</Button>
 						<Button size="sm" variant="link" className="w-full mt-2" asChild>

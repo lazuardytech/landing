@@ -1,23 +1,25 @@
 import CTA from "@/components/block/oura/cta";
 import Hero from "@/components/block/oura/hero";
-import Hook from "@/components/block/oura/hook";
+import Service from "@/components/block/oura/service";
 import Certification from "@/components/block/oura/certification";
-import LEXA from "@/components/block/oura/lexa";
-import Product from "@/components/block/oura/product";
+import Highlight from "@/components/block/oura/highlight";
+import Compliance from "@/components/block/oura/compliance";
+import Sector from "@/components/block/oura/sector";
 import Keypoint from "@/components/block/home/keypoint";
 import Footer from "@/components/ui/footer";
 import Header from "@/components/ui/header";
 
 export default function Home() {
 	return (
-		<div className="relative w-full h-full">
+		<div className="relative h-full max-w-screen overflow-x-hidden">
 			<Header />
 			<Hero />
-			<Hook />
+			<Service />
 			<Certification />
-			{/* <LEXA /> */}
-			{/* <Product /> */}
-			{/* <CTA /> */}
+			<Highlight />
+			<Sector />
+			<Compliance />
+			<CTA />
 			<Keypoint titleCenter />
 			<Footer />
 		</div>

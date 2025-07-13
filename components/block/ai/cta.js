@@ -27,36 +27,36 @@ export default function CTA() {
 						textPrimaryElements.forEach((el) => {
 							el.classList.remove(
 								"transition-colors",
-								"duration-1000",
+								"duration-500",
 								"text-primary",
 							);
 							el.classList.add(
 								"transition-colors",
-								"duration-1000",
+								"duration-500",
 								"text-white",
 							);
 						});
 						textTitleElements.forEach((el) => {
 							el.classList.remove(
 								"transition-colors",
-								"duration-1000",
+								"duration-500",
 								"text-black",
 							);
 							el.classList.add(
 								"transition-colors",
-								"duration-1000",
+								"duration-500",
 								"text-white",
 							);
 						});
 						textParagraphElements.forEach((el) => {
 							el.classList.remove(
 								"transition-colors",
-								"duration-1000",
+								"duration-500",
 								"text-neutral-600",
 							);
 							el.classList.add(
 								"transition-colors",
-								"duration-1000",
+								"duration-500",
 								"text-neutral-300",
 							);
 						});
@@ -68,12 +68,12 @@ export default function CTA() {
 						textPrimaryElements.forEach((el) => {
 							el.classList.remove(
 								"transition-colors",
-								"duration-1000",
+								"duration-500",
 								"text-white",
 							);
 							el.classList.add(
 								"transition-colors",
-								"duration-1000",
+								"duration-500",
 								"text-primary",
 							);
 						});
@@ -92,12 +92,12 @@ export default function CTA() {
 						textParagraphElements.forEach((el) => {
 							el.classList.remove(
 								"transition-colors",
-								"duration-1000",
+								"duration-500",
 								"text-neutral-300",
 							);
 							el.classList.add(
 								"transition-colors",
-								"duration-1000",
+								"duration-500",
 								"text-neutral-600",
 							);
 						});

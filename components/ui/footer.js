@@ -60,7 +60,7 @@ export default function Footer() {
 									{CompanyData.copyright.html}
 								</p>
 							</div>
-							<div className="flex flex-col relative w-full p-8 justify-center items-center md:transition-colors md:duration-200 md:hover:bg-neutral-300">
+							<div className="flex flex-col relative w-full p-8 justify-center items-center md:transition-colors md:duration-200 md:hover:bg-neutral-400">
 								<p
 									className={`w-full font-bold text-xs md:text-sm text-black text-left leading-snug ${Doto.className}`}
 								>
@@ -70,7 +70,7 @@ export default function Footer() {
 									href="https://maps.app.goo.gl/9p28RqNKNQJ3reYL8"
 									target="_blank"
 									rel="noopener noreferrer"
-									className="flex absolute top-0 left-0 z-20 w-full h-full transition-opacity duration-200 opacity-0 hover:opacity-100"
+									className="hover-arrow-link flex absolute top-0 left-0 z-20 w-full h-full transition-opacity duration-200 opacity-0 hover:opacity-100"
 								>
 									<ArrowUpRight
 										className="absolute top-0 right-0 text-black w-10 h-10 m-1 opacity-60"
@@ -167,7 +167,7 @@ export default function Footer() {
 				</div>
 			</LayoutLine>
 			<HorizontalBorder />
-			<LayoutLine className="px-8 md:pb-8" />
+			<LayoutLine className="px-8 md:pb-14" />
 		</div>
 	);
 }

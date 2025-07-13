@@ -16,6 +16,7 @@ export default function Hero() {
 		const elements = document.querySelectorAll(".bg-main");
 		const neutralElements = document.querySelectorAll(".bg-neutral-200\\/40");
 		const borderElements = document.querySelectorAll(".border-neutral-400");
+		const buttonMainElements = document.querySelectorAll(".btn-main");
 		const textPrimaryElements = document.querySelectorAll(".text-primary");
 		const textTitleElements = document.querySelectorAll(".text-black");
 		const textParagraphElements =
@@ -32,25 +33,35 @@ export default function Hero() {
 			el.classList.remove("border-neutral-400");
 			el.classList.add("border-neutral-500");
 		});
+		buttonMainElements.forEach((el) => {
+			el.classList.remove(
+				"transition-colors",
+				"duration-300",
+				"bg-zinc-700",
+				"hover:bg-zinc-800",
+			);
+			el.classList.add(
+				"transition-colors",
+				"duration-300",
+				"bg-zinc-700",
+				"hover:bg-zinc-800",
+			);
+		});
 		textPrimaryElements.forEach((el) => {
-			el.classList.remove("transition-colors", "duration-1000", "text-primary");
-			el.classList.add("transition-colors", "duration-1000", "text-white");
+			el.classList.remove("transition-colors", "duration-500", "text-primary");
+			el.classList.add("transition-colors", "duration-500", "text-white");
 		});
 		textTitleElements.forEach((el) => {
-			el.classList.remove("transition-colors", "duration-1000", "text-black");
-			el.classList.add("transition-colors", "duration-1000", "text-white");
+			el.classList.remove("transition-colors", "duration-500", "text-black");
+			el.classList.add("transition-colors", "duration-500", "text-white");
 		});
 		textParagraphElements.forEach((el) => {
 			el.classList.remove(
 				"transition-colors",
-				"duration-1000",
+				"duration-500",
 				"text-neutral-600",
 			);
-			el.classList.add(
-				"transition-colors",
-				"duration-1000",
-				"text-neutral-300",
-			);
+			el.classList.add("transition-colors", "duration-500", "text-neutral-300");
 		});
 
 		return () => {
@@ -66,9 +77,12 @@ export default function Hero() {
 				el.classList.remove("border-neutral-500");
 				el.classList.add("border-neutral-400");
 			});
+			buttonMainElements.forEach((el) => {
+				el.classList.remove("bg-zinc-700", "hover:bg-zinc-800");
+			});
 			textPrimaryElements.forEach((el) => {
-				el.classList.remove("transition-colors", "duration-1000", "text-white");
-				el.classList.add("transition-colors", "duration-1000", "text-primary");
+				el.classList.remove("transition-colors", "duration-500", "text-white");
+				el.classList.add("transition-colors", "duration-500", "text-primary");
 			});
 			textTitleElements.forEach((el) => {
 				el.classList.remove("transition-colors", "duration-500", "text-white");
@@ -77,12 +91,12 @@ export default function Hero() {
 			textParagraphElements.forEach((el) => {
 				el.classList.remove(
 					"transition-colors",
-					"duration-1000",
+					"duration-500",
 					"text-neutral-300",
 				);
 				el.classList.add(
 					"transition-colors",
-					"duration-1000",
+					"duration-500",
 					"text-neutral-600",
 				);
 			});
@@ -91,7 +105,7 @@ export default function Hero() {
 
 	return (
 		<div className="flex flex-col w-full relative">
-			<LayoutLine className="pt-[11vh] md:pt-[17vh] pb-12">
+			<LayoutLine className="pt-[11vh] md:pt-[17vh] pb-10 md:pb-12">
 				<div className="w-full flex flex-col justify-center items-center px-8">
 					<motion.div
 						initial={{ opacity: 0 }}
@@ -108,7 +122,7 @@ export default function Hero() {
 							className="text-white"
 						/>
 					</motion.div>
-					<Title className="text-3xl md:text-5xl text-center w-full mt-8">
+					<Title className="text-4xl md:text-5xl text-center w-full mt-8">
 						Protect what matters the most
 					</Title>
 					<div className="flex flex-col w-full mt-6 justify-center items-center">
@@ -129,8 +143,8 @@ export default function Hero() {
 									Talk to Us
 								</Link>
 							</Button>
-							<Button size="lg" variant="default" asChild>
-								<Link href="/inquiry">Protect Now with Oura</Link>
+							<Button size="lg" variant="default" className="btn-main" asChild>
+								<Link href="/inquiry">Protect Now</Link>
 							</Button>
 						</div>
 					</div>
@@ -138,13 +152,13 @@ export default function Hero() {
 			</LayoutLine>
 			<HorizontalBorder />
 			<LayoutLine>
-				<div className="w-full flex justify-center pb-1">
+				<div className="w-full flex justify-center">
 					<div className="flex w-full h-full aspect-video">
 						<HeroVideo />
 					</div>
 				</div>
 			</LayoutLine>
-			<HorizontalBorder className="z-50" />
+			<HorizontalBorder className="z-40" />
 		</div>
 	);
 }

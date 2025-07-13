@@ -55,7 +55,7 @@ export default function LEXAVideo() {
 				<div className="relative w-full h-full">
 					<video
 						ref={video}
-						className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 aspect-[9/16]"
+						className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 aspect-[9/16]"
 						preload="auto"
 						autoPlay
 						loop

@@ -3,9 +3,9 @@
 import Head from "next/head";
 import { useEffect, useRef } from "react";
 
-const VIDEO_FILENAME = "oura-hero";
+const VIDEO_FILENAME = "lexa";
 
-export default function HeroVideo() {
+export default function LEXAVideo() {
 	const video = useRef(null);
 
 	useEffect(() => {
@@ -47,15 +47,15 @@ export default function HeroVideo() {
 				<link
 					rel="preload"
 					as="video"
-					href={`/videos/cover/${VIDEO_FILENAME}.mp4`}
+					href={`/videos/promotion/${VIDEO_FILENAME}.mp4`}
 					type="video/mp4"
 				/>
 			</Head>
-			<div className="flex items-center justify-center aspect-video">
+			<div className="flex items-center justify-center aspect-[9/16]">
 				<div className="relative w-full h-full">
 					<video
 						ref={video}
-						className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 aspect-video"
+						className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 aspect-[9/16]"
 						preload="auto"
 						autoPlay
 						loop
@@ -67,7 +67,7 @@ export default function HeroVideo() {
 							type="video/webm"
 						/>
 						<source
-							src={`/videos/cover/${VIDEO_FILENAME}.mp4`}
+							src={`/videos/promotion/${VIDEO_FILENAME}.mp4`}
 							type="video/mp4"
 						/>
 						Your browser does not support the video tag.

@@ -404,7 +404,7 @@ export default function Solution() {
 								<Link href="/inquiry">Start Project with Oura</Link>
 							</Button>
 							<Button size="default" variant="link" asChild>
-								<Link href="/contact">Learn More</Link>
+								<Link href="/oura">Learn More</Link>
 							</Button>
 						</div>
 					</div>

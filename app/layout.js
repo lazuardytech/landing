@@ -81,7 +81,7 @@ export default function RootLayout({ children }) {
 				</Script>
 			</head>
 			<body
-				className={`bg-main transition-colors duration-1000 ${Poppins.className}`}
+				className={`bg-main transition-colors duration-500 ${Poppins.className}`}
 			>
 				{children}
 				<ComponentProvider />
