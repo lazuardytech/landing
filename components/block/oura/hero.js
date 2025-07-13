@@ -122,7 +122,7 @@ export default function Hero() {
 							className="text-white"
 						/>
 					</motion.div>
-					<Title className="text-4xl md:text-5xl text-center w-full mt-8">
+					<Title className="text-4xl md:text-5xl text-center w-full mt-6 md:mt-8">
 						Protect what matters the most
 					</Title>
 					<div className="flex flex-col w-full mt-6 justify-center items-center">
