@@ -15,8 +15,8 @@ export default function Compliance() {
 				<div className="flex w-full">
 					<div className="relative w-full h-full aspect-[16/9] bg-[#171717]">
 						<DotPattern
-							width={25}
-							height={25}
+							width={20}
+							height={20}
 							cx={1}
 							cy={1}
 							cr={1}
