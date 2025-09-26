@@ -7,8 +7,9 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { workDivisions } from "@/components/block/career/career-filter";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
-export default function CareerList() {
+function CareerListContent() {
 	const searchParams = useSearchParams();
 
 	const careers = [
@@ -109,5 +110,13 @@ export default function CareerList() {
 			</LayoutLine>
 			<HorizontalBorder />
 		</LayoutLine>
+	);
+}
+
+export default function CareerList() {
+	return (
+		<Suspense fallback={null}>
+			<CareerListContent />
+		</Suspense>
 	);
 }

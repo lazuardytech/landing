@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import { Combobox } from "@/components/ui/combobox";
 import HorizontalBorder from "@/components/ui/horizontal-border";
 import LayoutLine from "@/components/ui/layout-line";
@@ -70,7 +71,7 @@ export const workDivisions = [
 	},
 ];
 
-export default function CareerFilter() {
+function CareerFilterContent() {
 	const router = useRouter();
 	const searchParams = useSearchParams();
 
@@ -135,5 +136,13 @@ export default function CareerFilter() {
 			</LayoutLine>
 			<HorizontalBorder className="opacity-0 md:opacity-100" />
 		</>
+	);
+}
+
+export default function CareerFilter() {
+	return (
+		<Suspense fallback={null}>
+			<CareerFilterContent />
+		</Suspense>
 	);
 }
