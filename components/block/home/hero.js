@@ -1,15 +1,90 @@
+"use client";
+
 import HeroVideo from "@/components/block/home/hero-video";
 import { Button } from "@/components/ui/button";
 import LayoutLine from "@/components/ui/layout-line";
 import Paragraph from "@/components/ui/paragraph";
 import Title from "@/components/ui/title";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
+	const [text, setText] = useState("software agency");
+	const phrases = [
+		"",
+		"strategy.",
+		"solutions.",
+		"workflow.",
+		"process.",
+		"automation.",
+		"product.",
+		"brand.",
+		"business.",
+		"agency.",
+		"plan.",
+	];
+	const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
+	const [isDeleting, setIsDeleting] = useState(false);
+	const [typedText, setTypedText] = useState("");
+	const [showCursor, setShowCursor] = useState(true);
+	const [baseText, setBaseText] = useState("");
+	const basePhrase = "because you do deserve better ";
+	const typingDelay = 100;
+	const deletingDelay = 50;
+	const pauseDelay = 2000;
+
+	useEffect(() => {
+		const cursorInterval = setInterval(() => {
+			setShowCursor((prev) => !prev);
+		}, 500);
+
+		return () => clearInterval(cursorInterval);
+	}, []);
+
+	useEffect(() => {
+		let i = 0;
+		const typeBaseText = () => {
+			if (i <= basePhrase.length) {
+				setBaseText(basePhrase.slice(0, i));
+				i++;
+				setTimeout(typeBaseText, 47); // Changed from typingDelay to 50
+			}
+		};
+		typeBaseText();
+	}, []);
+
+	useEffect(() => {
+		const currentPhrase = phrases[currentPhraseIndex];
+
+		const timeout = setTimeout(
+			() => {
+				if (!isDeleting) {
+					if (typedText === currentPhrase) {
+						setTimeout(() => setIsDeleting(true), pauseDelay);
+						return;
+					}
+					setTypedText(currentPhrase.substring(0, typedText.length + 1));
+				} else {
+					if (typedText === "") {
+						setIsDeleting(false);
+						setCurrentPhraseIndex((current) => (current + 1) % phrases.length);
+						return;
+					}
+					setTypedText(currentPhrase.substring(0, typedText.length - 1));
+				}
+			},
+			isDeleting ? deletingDelay : typingDelay,
+		);
+
+		return () => clearTimeout(timeout);
+	}, [typedText, isDeleting, currentPhraseIndex]);
+
 	return (
 		<LayoutLine className="pt-[14vh] md:pt-[22vh] px-8">
 			<Title className="text-3xl md:text-6xl text-justify">
-				We Build What the World Hasn&apos;t Seen Yet.
+				{baseText}
+				<span>{typedText}</span>
+				{showCursor ? "|" : ""}
 			</Title>
 			<div className="grid grid-cols-1 md:grid-cols-2 w-full mt-8 md:mt-8">
 				<div className="w-full flex space-x-2 justify-start">
