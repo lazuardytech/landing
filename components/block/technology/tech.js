@@ -120,16 +120,16 @@ export default function Tech() {
 						title="Hardware"
 						description="The platform where your hardware assembled."
 						items={[
-							"Rasberry Pi",
+							"Raspberry Pi",
 							"Arduino",
 							"ESP32",
-							"Rasberry Pi",
+							"Raspberry Pi",
 							"Arduino",
 							"ESP32",
-							"Rasberry Pi",
+							"Raspberry Pi",
 							"Arduino",
 							"ESP32",
-							"Rasberry Pi",
+							"Raspberry Pi",
 						]}
 					/>
 					<TechItems
