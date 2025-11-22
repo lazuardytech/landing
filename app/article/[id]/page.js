@@ -20,8 +20,6 @@ export const getArticle = cache(async (id) => {
 export async function generateStaticParams() {
 	const articles = await fetchMediumRss();
 
-	console.log(JSON.stringify(articles));
-
 	return articles.map((article) => ({
 		id: String(article.id),
 	}));
